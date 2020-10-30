@@ -10,6 +10,12 @@ h1 {
     font-family: monk;
 }
 
+.main-header {
+    background-color:#FFA924;
+    padding: 10px;
+    text-align: center;
+}
+
 footer {
     position: fixed;
     left: 0;
