@@ -1,8 +1,9 @@
 
 function getTimeStamp(){
-    moment().format('LTS');
+  return moment().format('LTS');
+    
 }
 
 function getDateStamp (){
-    moment().format('LL');
+  return moment().format('LL');
 }
