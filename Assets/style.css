@@ -16,6 +16,17 @@ h1 {
     text-align: center;
 }
 
+.picOfTheDay{
+    background-color: #95C4FC;
+    border: 5px solid;
+    border-color:#FFA924;
+}
+
+#potdIMG {
+    width: 600px;
+    height: 400px;
+}
+
 footer {
     position: fixed;
     left: 0;
