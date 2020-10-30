@@ -10,13 +10,26 @@ h1 {
     font-family: monk;
 }
 
+.buttonStyle {
+    border: 5px solid;
+    border-color:#FFA924;
+}
+
 .main-header {
     background-color:#FFA924;
     padding: 10px;
     text-align: center;
 }
 
+.headerBox {
+    color: #283758;
+    background-color: #95C4FC;
+    border: 5px solid;
+    border-color:#FFA924;
+}
+
 .picOfTheDay{
+    color: #283758;
     background-color: #95C4FC;
     border: 5px solid;
     border-color:#FFA924;
