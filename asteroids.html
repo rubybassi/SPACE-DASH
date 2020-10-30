@@ -8,11 +8,15 @@
 
     <!-- add icon link -->
     <link rel = "icon" 
-      href = "#"
+      href = "Assets/images/logos/Icon.png"
       type = "image/x-icon"
-    />
+      />
 
+    <!-- reset style stylesheet -->
     <link rel="stylesheet" href="Assets/reset.css">
+
+    <!-- semantic ui style stylesheet -->
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.13/semantic.min.css">
     
     <!-- My basic site style stylesheet -->
     <link rel="stylesheet" type="text/css" href="Assets/style.css"/>
@@ -21,7 +25,62 @@
 </head>
 
 <body>
-   <header>
+    <div id="wrapper" class=" ui grid ">
+        <div class="row">
+            <div id="neo-asteroid" class="four wide column">
+                <h1>near earth asteroids</h1>
+                <p id="neo-asteroid-list-container"> </p>
+            </div>
+
+            <div class="twelve wide column">
+              <div class="ui grid">
+                
+                <div class="sixteen wide column">
+                  <h1>space-dash</h1>
+                </div>
+                <div class="eleven wide column">
+                  <h1>space-dash</h1>
+                </div>
+
+                <div class="five wide column">
+                  <div class="row">
+                    <div class="two wide column">
+                      <p id="date">date </p>
+                    </div>
+                    <div class="two wide column">
+                      <p id="time">time </p>
+                    </div>
+                  </div>
+                </div>
+
+                <div id="space-windscreen" class="sixteen wide column">
+                    <img id="the-sun" class="planets" alt="the sun" src="Assets/images/planets/sun.png"/>
+                    <img id="mercury" class="planets" alt="mercury" src="Assets/images/planets/mercury.png"/>
+                    <img id="venus" class="planets" alt="venus" src="Assets/images/planets/venus.png"/>
+                    <img id="earth" class="planets" alt="earth" src="Assets/images/planets/earth.png"/>
+                    <img id="the-moon" class="planets" alt="the-moon" src="Assets/images/planets/moon.png"/>
+                    <img id="mars" class="planets" alt="mars" src="Assets/images/planets/mars.png"/>
+                    <img id="jupiter" class="planets" alt="jupiter" src="Assets/images/planets/jupiter.png"/>
+                    <img id="saturn" class="planets" alt="saturn" src="Assets/images/planets/Saturn.png"/>
+                    <img id="uranus" class="planets" alt="uranus" src="Assets/images/planets/uranus.png"/>
+                    <img id="neptune" class="planets" alt="neptune" src="Assets/images/planets/neptune.png"/>
+                    <img id="pluto" class="planets" alt="pluto" src="Assets/images/planets/pluto.png"/>
+                    <!-- <img id="the-comet" alt="the-comet" src="Assets/images/planets/comet.png"/> -->
+                </div>
+
+
+              </div>
+               
+            </div>
+
+        </div>
+        
+   
+    </div>
+
+
+
+   <!-- <header>
 
    </header>
 
@@ -31,32 +90,30 @@
 
    <section>
        <div id="space-background">
-           <img id="the-sun"/>
-           <img id="mercury"/>
-           <img id="venus"/>
-           <img id="earth"/>
-           <img id="the-moon"/>
-           <img id="mars"/>
-           <img id="jupiter"/>
-           <img id="saturn"/>
-           <img id="uranus"/>
-           <img id="neptune"/>
-           <img id="pluto"/>
-           <img id="the-comet"/>
+           
        </div>
    </section>
 
    <section id="control-dash">
 
-   </section>
+   </section> -->
 
-   <footer>
+   <footer> © Copyright 2020</footer>
 
-   </footer>
+   <!-- jQuery CDN -->
+   <script
+   type="text/javascript"
+   src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js">
+   </script>
 
-   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+   <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
-   <script src="script.js"></script>
+   <script type="text/javascript" src="script.js"></script>
+   <script type="text/javascript" src="asteroids.js"></script>
+
+   <!-- semantic cdn  -->
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.13/semantic.min.js"></script>
 
 
 </body>
