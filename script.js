@@ -1,17 +1,8 @@
 $(document).ready(function () {
-
-    function getTimeStamp(){
-  return moment().format('LTS');
-    
-}
-
-function getDateStamp (){
-  return moment().format('LL');
-}
-
+       
     // AJAX call for picture of the day
     const queryURL = "https://api.nasa.gov/planetary/apod?api_key=TlvltHK45BcgABDzpncHUblvxpst0Cv0BNwk2flA"
-
+    
     // ajax call for UV
     $.ajax({
         url: queryURL,
@@ -21,10 +12,26 @@ function getDateStamp (){
         const mainPicTitle = pictureOfTheDay.title
         $("#picHeader").text(mainPicTitle);
         $('#potdIMG').attr("src", mainPic);
-
+        
     });
-
-
+    
+    let dateOfDay = getDateStamp();
+    let timeOfDay = getTimeStamp();
+    console.log(timeOfDay);
+    console.log(dateOfDay);
+    
+    $("#date-header").text(dateOfDay);
+    $("#time-header").text(timeOfDay);
 
 });
+
+function getTimeStamp(){
+    return moment().format('LTS');
+    
+      
+  }
+  
+  function getDateStamp (){
+    return moment().format('LL');
+  }
 
