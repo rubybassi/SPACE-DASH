@@ -10,7 +10,7 @@
     <link rel = "icon" 
       href = "Assets/images/logos/Icon.png"
       type = "image/x-icon"
-      />
+    />
 
     <!-- reset style stylesheet -->
     <link rel="stylesheet" href="Assets/reset.css">
@@ -25,7 +25,7 @@
 </head>
 
 <body>
-    <div id="wrapper" class=" ui grid ">
+    <div id="wrapper" class=" ui grid container">
         <div class="row">
             <div id="neo-asteroid" class="four wide column">
                 <h1>near earth asteroids</h1>
@@ -39,11 +39,26 @@
                   <h1>space-dash</h1>
                 </div>
                 <div class="eleven wide column">
-                  <h1>space-dash</h1>
+                  <div class="ui grid">
+                    <div class="six wide column">
+                      <img alt="hot earth ballon" 
+                        src="Assets/images/space-men/hot-earth-balloon.png" 
+                        width="100%" 
+                      />
+                    </div>
+                    <div class="ten wide column">
+                      <p>Welcome to mission control.</p>
+                      <p>Here you can get data on the planets your team will be visiting and any nearby orbiting objects to report on.</p>
+                      <p>Click on a planet below to learn more about it.</p>
+                    </div>
+                  </div>
                 </div>
 
                 <div class="five wide column">
                   <div class="row">
+                    <div class="two wide column">
+                      <h1 id="home"><a href="index.html">home</a></h1>
+                    </div>
                     <div class="two wide column">
                       <p id="date">date </p>
                     </div>

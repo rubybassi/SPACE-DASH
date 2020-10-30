@@ -1,7 +1,3 @@
-div#wrapper {
-    margin: 10px;
-}
-
 div.column {
     border: 2px solid;
     border-color: #95C4FC;
@@ -31,6 +27,7 @@ h1 {
 p {
     color: #283758;
     padding: 2px;
+    background-color: #95C4FC ;
 }
 
 p#date, p#time {
