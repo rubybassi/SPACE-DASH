@@ -63,7 +63,9 @@ $(document).ready(function(){
             console.log("no change has been chosen");
             return adjustedNameReference = referenceToChange;
         }
+    
     }
+    
 
     function moonNameClicked() {
 
@@ -169,7 +171,6 @@ $(document).ready(function(){
 
         };
 
-
     }
     
 
@@ -178,7 +179,6 @@ $(document).ready(function(){
     // const formatedTestDate = testDate.replaceAll("/","-");
     // console.log(formatedTestDate);
     // console.log(moment("YYYYMMDD"));
-
 
     
     function nasaAjaxCallAsteroid(passbodyid) {
@@ -206,37 +206,46 @@ $(document).ready(function(){
 
     }
 
-
     function dealWithAsteroidData(DealWneoData){
         console.log("Asteroid data = ",DealWneoData);
-        console.log("Asteroid count = ",DealWneoData.count)
-        console.log("Asteroid count = ",DealWneoData.data[0][0])
-        console.log("Asteroid count = ",DealWneoData.data[0][3])
+        console.log("Asteroid count = ",DealWneoData.count);
+        // console.log("Asteroid count = ",DealWneoData.data[0][0]);
+        // console.log("Asteroid count = ",DealWneoData.data[0][3]);
 
-        neoAsteriodListContainer.html(
-            DealWneoData.count + " asteroids have close-approach status. <br/>" +
-            "<h3>Top 5 closest:</h3><br/>" +
-            "Name: " + DealWneoData.data[0][0] + "<br/>" +
-            "Date: " + DealWneoData.data[0][3] + "<br/>" +
-            "Approach speed: " + DealWneoData.data[0][7] + " km/s <br/><br/>" +
+        let asteroidCount = DealWneoData.count;
 
-            "Name: " + DealWneoData.data[1][0] + "<br/>" +
-            "Date: " + DealWneoData.data[1][3] + "<br/>" +
-            "Approach speed: " + DealWneoData.data[1][7] + " km/s <br/><br/>" +
+        if (asteroidCount == "0"){
 
-            "Name: " + DealWneoData.data[2][0] + "<br/>" +
-            "Date: " + DealWneoData.data[2][3] + "<br/>" +
-            "Approach speed: " + DealWneoData.data[2][7] + " km/s <br/><br/>" +
+            console.log("no asteroids");
+            neoAsteriodListContainer.text("There have been no asteroids pass close by at this time");
 
-            "Name: " + DealWneoData.data[3][0] + "<br/>" +
-            "Date: " + DealWneoData.data[3][3] + "<br/>" +
-            "Approach speed: " + DealWneoData.data[3][7] + " km/s <br/><br/>" +
+        } else {
 
-            "Name: " + DealWneoData.data[4][0] + "<br/>" +
-            "Date: " + DealWneoData.data[4][3] + "<br/>" +
-            "Approach speed: " + DealWneoData.data[4][7] + " km/s <br/><br/>"
-            
-        );
+            console.log("some asteroids");
+            neoAsteriodListContainer.html(
+                DealWneoData.count + " asteroids have close-approach status. <br/>" +
+                "<h3>Top 5 closest:</h3><br/>" +
+                "Name: " + DealWneoData.data[0][0] + "<br/>" +
+                "Date: " + DealWneoData.data[0][3] + "<br/>" +
+                "Approach speed: " + DealWneoData.data[0][7] + " km/s <br/><br/>" +
+    
+                "Name: " + DealWneoData.data[1][0] + "<br/>" +
+                "Date: " + DealWneoData.data[1][3] + "<br/>" +
+                "Approach speed: " + DealWneoData.data[1][7] + " km/s <br/><br/>" +
+    
+                "Name: " + DealWneoData.data[2][0] + "<br/>" +
+                "Date: " + DealWneoData.data[2][3] + "<br/>" +
+                "Approach speed: " + DealWneoData.data[2][7] + " km/s <br/><br/>" +
+    
+                "Name: " + DealWneoData.data[3][0] + "<br/>" +
+                "Date: " + DealWneoData.data[3][3] + "<br/>" +
+                "Approach speed: " + DealWneoData.data[3][7] + " km/s <br/><br/>" +
+    
+                "Name: " + DealWneoData.data[4][0] + "<br/>" +
+                "Date: " + DealWneoData.data[4][3] + "<br/>" +
+                "Approach speed: " + DealWneoData.data[4][7] + " km/s <br/><br/>"
+            );
+        }
 
     }
 
@@ -299,18 +308,6 @@ $(document).ready(function(){
     function issAjaxCall() {
 
     }
-
-    
-    
-
-    
-
-
-
-
-
-
-
 
 
 
