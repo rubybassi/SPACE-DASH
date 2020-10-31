@@ -1,0 +1,16 @@
+
+/* Changes size of astonaut pic */
+#astronaut {
+    height: 270px;
+    width: 270px;
+}
+
+/* gives formatting to content box */
+#textContentGallery {
+margin-bottom: 15px;
+border: 5px solid;
+border-color:#FFA924;
+color: #283758;
+background-color: #95C4FC;
+}
+

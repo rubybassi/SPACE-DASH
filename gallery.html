@@ -5,16 +5,68 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <!-- add icon link -->
+  <link rel="icon" href="Assets/images/logos/Icon.png" type="image/x-icon" />
+  <!-- reset style sheet -->
+  <link rel="stylesheet" href="Assets/reset.css" />
+  <!--Semantic UI CSS-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.13/semantic.min.css" />
+  <!-- master style sheet  -->
   <link rel="stylesheet" href="Assets/style.css" />
-
-  <title>SPACE-DASH</title>
+  <!-- gallery style sheet -->
+  <link rel="stylesheet" href="Assets/gallery.css" />
+  <title>GALLERY-DASH</title>
 </head>
 
 <body>
+  <div id="wrapper" class=" ui grid container">
+    <!-- Full bar across the top -->
+    <div class="main-header sixteen wide column">
+      <h1 class="ui header">Gallery</h1>
+    </div>
+    <!-- 4 and 12 columns, 4 for picture-->
+    <div class="four wide column">
+      <img class="ui medium rounded image" src="Assets/images/space-men/space-out-of-the-box.png" alt="astronaut in box"
+        id="astronaut" />
+    </div>
+    <!--12 for content-->
+    <div class="twelve wide column content ui card" id="textContentGallery">
+      <h2 class="header">What's in this gallery?</h2>
+      <p>blahhhhhhhhhh</p>
+    </div>
+
+
+    <div class="eight wide column">
+      <div class="apolloPics">
+        <h3 class="ui header">Apollo</h3>
+        <h5 class="ui header" id="apolloTitle"></h5>
+        <img class="ui medium rounded image" id="apolloImage">
+      </div>
+    </div>
+    <div class="eight wide column">
+      <div class="apolloPics">
+        <h3 class="ui header">Apollo</h3>
+        <h5 class="ui header" id="apolloTitle"></h5>
+        <img class="ui medium rounded image" id="apolloImage">
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.13/semantic.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
   <script src="script.js"></script>
+  <script src="gallery.js"></script>
   <!-- footer -->
   <footer> © Copyright 2020</footer>
 </body>
+
 </html>
