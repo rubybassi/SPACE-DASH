@@ -8,13 +8,14 @@
   <!-- add icon link -->
   <link rel="icon" href="Assets/images/logos/Icon.png" type="image/x-icon" />
   <!-- reset style sheet -->
-  <link rel="stylesheet" href="Assets/CSS/reset.css"/>
+  <link rel="stylesheet" href="Assets/CSS/reset.css" />
   <!--Semantic UI CSS-->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.13/semantic.min.css" />
   <!-- master style sheet  -->
-  <link rel="stylesheet" type="text/css" href="Assets/CSS/style.css"/>
+  <link rel="stylesheet" type="text/css" href="Assets/CSS/style.css" />
   <!-- gallery style sheet -->
-  <link rel="stylesheet" href="/Assets/CSS/gallery.css" />
+  <link rel="stylesheet" type="text/css" href="Assets/CSS/gallery.css" />
+
   <title>GALLERY-DASH</title>
 </head>
 
@@ -37,22 +38,54 @@
 
 
     <div class="eight wide column">
-      <div class="apolloPics">
-        <h3 class="ui header">Apollo</h3>
+      <div class="picturesBoxes">
+        <h3 class="ui header">Apollo Mission Images</h3>
         <h5 class="ui header" id="apolloTitle"></h5>
         <img class="ui medium rounded image" id="apolloImage">
+        <div class="ui buttons">
+          <button class="ui labeled icon button" id="prevButton">
+            <i class="left chevron icon"></i>
+            Previous
+          </button>
+          <button class="ui right labeled icon button" id="nextButton">
+            Next
+            <i class="right chevron icon"></i>
+          </button>
+        </div>
       </div>
     </div>
     <div class="eight wide column">
-      <div class="apolloPics">
-        <h3 class="ui header">Apollo</h3>
-        <h5 class="ui header" id="apolloTitle"></h5>
-        <img class="ui medium rounded image" id="apolloImage">
+      <div class="picturesBoxes">
+        <h3 class="ui header">The Moon</h3>
+        <h5 class="ui header" id="moonTitle"></h5>
+        <img class="ui medium rounded image" id="moonImage">
+      </div>
+    </div>
+    <div class="eight wide column">
+      <div class="picturesBoxes">
+        <h3 class="ui header">The Sun</h3>
+        <h5 class="ui header" id="sunTitle"></h5>
+        <img class="ui medium rounded image" id="sunImage">
+        <div class="ui buttons">
+          <button class="ui labeled icon button" id="prevButton">
+            <i class="left chevron icon"></i>
+            Previous
+          </button>
+          <button class="ui right labeled icon button" id="nextButton">
+            Next
+            <i class="right chevron icon"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="eight wide column">
+      <div class="picturesBoxes">
+        <h3 class="ui header">Galaxies</h3>
+        <h5 class="ui header" id="galaxiesTitle"></h5>
+        <img class="ui medium rounded image" id="galaxiesImage">
       </div>
     </div>
   </div>
-
-
 
 
 

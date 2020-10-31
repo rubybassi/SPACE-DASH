@@ -1,7 +1,9 @@
 # SPACE-DASH
 
 
-## credits 
+To access the page, please use this link; https://hannahcloves.github.io/SPACE-DASH/
+
+## Credits 
 
 Freepik vector images:
 
