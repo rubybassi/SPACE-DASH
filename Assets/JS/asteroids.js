@@ -3,18 +3,21 @@ $(document).ready(function(){
     
     
     const neoAsteriodListContainer = $("#neo-asteroid-list-container");
-   
+    const moonListContainer = $("#moon-list-container");
     
     //date and time displayed on DASH    
     const dateContainer = $("#date");
     const timeContainer = $("#time");
     
     timeContainer.html(getTimeStamp());
-    console.log("GTS =",getTimeStamp());
+    // console.log("GTS =",getTimeStamp());
     dateContainer.html(getDateStamp());
     
     const spaceWindscreen = $("#space-windscreen");
     spaceWindscreen.on("click","img", planetImgClicked);
+
+    const moonNameListItem = $("#moon-list-container");
+    moonNameListItem.on("click","p",moonNameClicked);
 
     const bodyNameSpanItm = $(".body-name");
 
@@ -32,6 +35,17 @@ $(document).ready(function(){
 
         bodyNameSpanItm.text(bodyName);
  
+    }
+
+    function moonNameClicked() {
+
+        console.log("the click is fireing");
+
+        let moonName = $(this).text();
+        console.log("moon name clicked",moonName);
+
+        solaireAjaxCall(moonName);
+
     }
 
     function solaireAjaxCall(passbodyid) {
@@ -53,13 +67,14 @@ $(document).ready(function(){
 
         const discoveredByContainer = $("#discovered");
         const equatorRadiusContainer = $("#equator");
-        // const somethingElseContainer = $("#");
+        // const orbitAroundContainer = $("#orbit-around");
         const tiltContainer = $("#tilt");
         const massContainer = $("#mass");
         const volumeContainer = $("#volume");
         const gravityContainer = $("#gravity");
 
         let isAPlanet = receivedbodyData.isPlanet;
+        console.log("is a planet?",isAPlanet);
 
         if (isAPlanet == true){
             isThisAPlanet.text("This is a planet");
@@ -69,21 +84,19 @@ $(document).ready(function(){
         
         let discoveredByWho = receivedbodyData.discoveredBy;
         let discoveredDate = receivedbodyData.discoveryDate;
-
+        
         if (discoveredByWho == "") {
             discoveredByContainer.text("There is no discovery information for this body");
         } else {
             discoveredByContainer.html("discovered by: " + discoveredByWho + "</br>" + discoveredDate);
         }
-
+        
         let equatorRadius = receivedbodyData.equaRadius;
-        // let somethingElse = receivedbodyData;
+        // let orbitAround = receivedbodyData.aroundPlanet.planet;
         let tilt = receivedbodyData.axialTilt;
         let mass = receivedbodyData.mass.massValue;
         let volume = receivedbodyData.vol.volValue;
         let gravityValue = receivedbodyData.gravity;
-
-
 
         console.log("gravity",gravityValue);
         console.log("volume",volume);
@@ -93,12 +106,41 @@ $(document).ready(function(){
         console.log("discovery date = ",discoveredDate);
         console.log("discovered by ", discoveredByWho);
 
-        
         equatorRadiusContainer.html("equatorial radius: " + equatorRadius + " km");
+
+        // if (receivedbodyData.aroundPlanet == null) {
+        //     orbitAroundContainer.text("This body does not orbit anything.");
+        // } else {
+        //     orbitAroundContainer.html(orbitAround);
+        // }
+
         tiltContainer.html("tilt angle: " + tilt + "&#176");
         massContainer.html("mass: 10^ <sup>" + mass + "</sup> kg");
         volumeContainer.html("volume: 10^ <sup>" + volume + "</sup> kg");
         gravityContainer.html("gravity: " + gravityValue + "m/s<sup>2</sup>");
+
+        // moonListContainer
+        let moonArray = receivedbodyData.moons;
+        console.log("moons",moonArray);
+
+        moonListContainer.empty();
+
+        if (moonArray == null){
+            moonListContainer.text("there are no moons.")
+        } else if (moonArray[0].moon === "La Lune"){
+
+            moonListContainer.text("The Moon");
+
+        } else {
+
+            for ( i = 0; i<moonArray.length; i++){
+                moonListContainer.append(
+                    '<p class="moon-name">' + moonArray[i].moon + "</p>"
+                );
+            }
+
+        };
+
 
     }
     

@@ -10,7 +10,7 @@ div.row {
 }
 
 div#space-windscreen {
-    background-image: url(images/planets/Space-background.png);
+    background-image: url(../images/planets/Space-background.png);
     background-repeat: repeat;
     background-size: contain;
     width: 100%;
@@ -154,6 +154,10 @@ div.planet-data-container {
     border:5px solid #FA2321;
     margin-right: 10px;
     
+}
+
+p.moon-name:hover {
+    color: #FA2321;
 }
 
 footer {
