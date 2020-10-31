@@ -1,6 +1,5 @@
 $(document).ready(function(){
 
-    
     const neoAsteriodListContainer = $("#neo-asteroid-list-container");
     const moonListContainer = $("#moon-list-container");
     
@@ -37,7 +36,6 @@ $(document).ready(function(){
  
     }
 
-
     function adjustReferenceForAjax(referenceToChange){
         console.log("referenceToChange",referenceToChange);
 
@@ -68,6 +66,7 @@ $(document).ready(function(){
     
     }
     
+
     function moonNameClicked() {
 
         console.log("the click is fireing");
@@ -172,7 +171,6 @@ $(document).ready(function(){
 
         };
 
-
     }
     
 
@@ -181,7 +179,6 @@ $(document).ready(function(){
     // const formatedTestDate = testDate.replaceAll("/","-");
     // console.log(formatedTestDate);
     // console.log(moment("YYYYMMDD"));
-
 
     
     function nasaAjaxCallAsteroid(passbodyid) {
@@ -208,7 +205,6 @@ $(document).ready(function(){
         })
 
     }
-
 
     function dealWithAsteroidData(DealWneoData){
         console.log("Asteroid data = ",DealWneoData);
@@ -250,7 +246,6 @@ $(document).ready(function(){
                 "Approach speed: " + DealWneoData.data[4][7] + " km/s <br/><br/>"
             );
         }
-
 
     }
 
@@ -313,18 +308,6 @@ $(document).ready(function(){
     function issAjaxCall() {
 
     }
-
-    
-    
-
-    
-
-
-
-
-
-
-
 
 
 
