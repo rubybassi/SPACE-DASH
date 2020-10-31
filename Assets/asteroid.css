@@ -40,59 +40,120 @@ p#date, p#time {
     margin: 15px;
 }
 
-#the-sun {
+#sun {
     width: auto;
     height: 200px;
 }
+#sun:hover {
+    transform: scale(1.1);
+}
+
+
 #mercury {
     width: auto;
     height: 40px;
     transform:translateY(-70px);
 }
+#mercury:hover {
+    transform: scale(1.3) translateY(-50px);
+}
+
 #venus {
     width: auto;
     height: 80px;
     transform:translateY(-50px);
 }
+#venus:hover {
+    transform: scale(1.1) translateY(-40px);
+}
+
 #earth {
     width: auto;
     height: 100px;
     transform:translate(20px,-40px);
 }
-#the-moon {
+#earth:hover {
+    transform: scale(1.1) translate(20px,-40px);
+}
+
+#moon {
     width: auto;
     height: 50px;
     transform:translateY(-130px);
 }
+#moon:hover {
+    transform: scale(1.3) translateY(-100px);
+}
+
 #mars {
     width: auto;
     height: 100px;
     transform:translateY(-40px);
 }
+#mars:hover {
+    transform: scale(1.1) translateY(-40px);
+}
+
 #jupiter {
     width: auto;
     height: 150px;
 }
+#jupiter:hover {
+    transform: scale(1.1);
+}
+
 #saturn {
     width: auto;
     height: 130px;
     transform:translateY(-10px);
 }
+#saturn:hover {
+    transform: scale(1.1) translateY(-10px);
+}
+
 #uranus {
     width: auto;
     height: 110px;
     transform:translateY(-20px);
 }
+#uranus:hover {
+    transform: scale(1.1) translateY(-20px);
+}
+
 #neptune {
     width: auto;
     height: 105px;
     transform:translateY(-22px);
 }
+#neptune:hover {
+    transform: scale(1.1) translateY(-22px);
+}
+
 #pluto {
     width: auto;
     height: 50px;
     transform:translate(20px,-50px);
+}
+#pluto:hover {
+    transform: scale(1.1) translate(20px,-50px);
+}
 
+/* planet information  */
+
+div.planet-info-container {
+    
+    background-color:#95C4FC;
+    border:5px solid #FA2321;
+    margin-bottom: 10px;
+
+}
+
+div.planet-data-container {
+    
+    background-color:#95C4FC;
+    border:5px solid #FA2321;
+    margin-right: 10px;
+    
 }
 
 footer {
