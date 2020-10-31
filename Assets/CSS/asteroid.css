@@ -10,7 +10,7 @@ div.row {
 }
 
 div#space-windscreen {
-    background-image: url(images/planets/Space-background.png);
+    background-image: url(../images/planets/Space-background.png);
     background-repeat: repeat;
     background-size: contain;
     width: 100%;

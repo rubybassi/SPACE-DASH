@@ -10,7 +10,7 @@ $(document).ready(function(){
     const timeContainer = $("#time");
     
     timeContainer.html(getTimeStamp());
-    console.log("GTS =",getTimeStamp());
+    // console.log("GTS =",getTimeStamp());
     dateContainer.html(getDateStamp());
     
     const spaceWindscreen = $("#space-windscreen");
@@ -67,13 +67,14 @@ $(document).ready(function(){
 
         const discoveredByContainer = $("#discovered");
         const equatorRadiusContainer = $("#equator");
-        const orbitAroundContainer = $("#orbit-around");
+        // const orbitAroundContainer = $("#orbit-around");
         const tiltContainer = $("#tilt");
         const massContainer = $("#mass");
         const volumeContainer = $("#volume");
         const gravityContainer = $("#gravity");
 
         let isAPlanet = receivedbodyData.isPlanet;
+        console.log("is a planet?",isAPlanet);
 
         if (isAPlanet == true){
             isThisAPlanet.text("This is a planet");
@@ -91,7 +92,7 @@ $(document).ready(function(){
         }
         
         let equatorRadius = receivedbodyData.equaRadius;
-        let orbitAround = receivedbodyData.aroundPlanet.planet;
+        // let orbitAround = receivedbodyData.aroundPlanet.planet;
         let tilt = receivedbodyData.axialTilt;
         let mass = receivedbodyData.mass.massValue;
         let volume = receivedbodyData.vol.volValue;
@@ -107,11 +108,11 @@ $(document).ready(function(){
 
         equatorRadiusContainer.html("equatorial radius: " + equatorRadius + " km");
 
-        if (receivedbodyData.aroundPlanet == null) {
-            orbitAroundContainer.text("This body does not orbit anything.")
-        } else {
-            orbitAroundContainer.html(orbitAround);
-        }
+        // if (receivedbodyData.aroundPlanet == null) {
+        //     orbitAroundContainer.text("This body does not orbit anything.");
+        // } else {
+        //     orbitAroundContainer.html(orbitAround);
+        // }
 
         tiltContainer.html("tilt angle: " + tilt + "&#176");
         massContainer.html("mass: 10^ <sup>" + mass + "</sup> kg");
