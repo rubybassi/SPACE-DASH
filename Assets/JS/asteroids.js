@@ -30,12 +30,42 @@ $(document).ready(function(){
         solaireAjaxCall(bodyName);
 
         //body name needs adjustment 
-        nasaAjaxCallAsteroid(bodyName);
+        let adjustedNameReference = adjustReferenceForAjax(bodyName);
+        nasaAjaxCallAsteroid(adjustedNameReference);
         // nasaAjaxCallComet(bodyName);
 
         bodyNameSpanItm.text(bodyName);
  
     }
+
+
+    function adjustReferenceForAjax(referenceToChange){
+        console.log("referenceToChange",referenceToChange);
+
+        if (referenceToChange == "mercury"){
+            console.log("mercury has been chosen");
+            return adjustedNameReference = "Merc";
+
+        }else if (referenceToChange == "jupiter"){
+            console.log("jupiter has been chosen");
+            return adjustedNameReference = "Juptr"; 
+
+        }else if (referenceToChange == "saturn"){
+            console.log("saturn has been chosen");
+            return adjustedNameReference = "Satrn";
+
+        }else if (referenceToChange == "uranus"){
+            console.log("urunas has been chosen");
+            return adjustedNameReference = "Urnus";
+
+        }else if (referenceToChange == "neptune"){
+            console.log("neptune has been chosen");
+            return adjustedNameReference = "Neptn";
+
+        }else{
+            console.log("no change has been chosen");
+            return adjustedNameReference = referenceToChange;
+        }
 
     function moonNameClicked() {
 
@@ -155,6 +185,8 @@ $(document).ready(function(){
     
     function nasaAjaxCallAsteroid(passbodyid) {
 
+        console.log("nasa Ajax has body id =", passbodyid);
+
         let dateMin = "2019-02-16"; 
         // let dateMax = "2019-03-16";
         let distMax = "10LD";
@@ -175,6 +207,7 @@ $(document).ready(function(){
         })
 
     }
+
 
     function dealWithAsteroidData(DealWneoData){
         console.log("Asteroid data = ",DealWneoData);
