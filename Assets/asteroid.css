@@ -156,6 +156,10 @@ div.planet-data-container {
     
 }
 
+p.moon-name:hover {
+    color: #FA2321;
+}
+
 footer {
     position: unset;
 }
