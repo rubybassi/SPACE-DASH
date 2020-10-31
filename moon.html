@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="">
+
+
+    <!-- add icon link -->
+    <link rel="icon" href="Assets/images/logos/Icon.png" type="image/x-icon" />
+    <!-- reset style sheet -->
+    <link rel="stylesheet" href="Assets/CSS/reset.css" />
+    <!--Semantic UI CSS-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.13/semantic.min.css" />
+    <!-- master style sheet  -->
+    <link rel="stylesheet" type="text/css" href="Assets/CSS/style.css" />
+
+    <title>Moon Phases</title>
+    <!--Personalised CSS for this html-->
+    <link rel="stylesheet" type="text/css" href="Assets/CSS/moon.css" />
+
+    <h1>The Moon</h1>
+
+
+</head>
+<img src="Assets/images/space-men/lying-on-the-moon.png" width="250" height="250" />
+
+<body>
+    <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+
+    <div class="ui red padded segment">
+        <h2 class="ui header">Phases of the Moon!</h2>
+
+        <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, nemo! Velit dignissimos inventore
+            architecto nostrum et dolorum nulla, necessitatibus qui nam dolorem illo fuga eum porro amet adipisci,
+            accusamus possimus?</p>
+
+        <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt quidem, provident, sint beatae dignissimos
+            assumenda dicta sapiente accusantium dolores commodi repellat soluta quaerat ullam quo quis doloribus,
+            laborum totam itaque.</em>
+
+        <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora officiis similique eveniet explicabo
+            impedit aperiam, sapiente odit velit? Reprehenderit eius vitae unde corporis esse cumque enim cum, quaerat
+            libero expedita!</em>
+    </div>
+
+    <div id="ex1"></div>
+
+    <script src="" async defer></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.13/semantic.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <script type="text/javascript" src="Assets/JS/script.js"></script>
+
+<!-- icon styles -->
+<link rel="stylesheet" type="text/css" href="assets\weather-icons.css"/>
+
+    <!-- © wdisseny -->
+    <div id="contain_moon" style="text-align:center;padding-top:13px;padding-bottom:13px;">
+        <div style="font-weight:bold">The Moon Today</div>
+        <div style="margin-top:-17px;margin-bottom:-37px;padding:75px;filter:drop-shadow(0 0 75px hsl(54,100%,13%))">
+        </div>
+        <div>.</div>
+        <div style="font-size:small">.</div>
+    </div>
+    <script>(function () { var d = new Date().getDate(); var m = document.querySelectorAll("#contain_moon div"); var a = new XMLHttpRequest(); var url = "https://www.icalendar37.net/lunar/api/?lang=en&month=" + (new Date().getMonth() + 1) + "&year=" + (new Date().getFullYear()) + "&size=250&lightColor=rgb(245,245,245)&shadeColor=rgb(18,18,18)&LDZ=" + new Date(new Date().getFullYear(), new Date().getMonth(), 1) / 1000 + ""; m[1].style.height = "250px"; a.onreadystatechange = function () { if (a.readyState == 4 && a.status == 200) { var b = JSON.parse(a.responseText); m[1].innerHTML = b.phase[d].svg; if (typeof moon_widget_loaded == "function") moon_widget_loaded(b); m[2].innerHTML = b.phase[d].npWidget; m[3].innerHTML = "Next full moon<br>" + b.nextFullMoon } }; a.open("GET", url, true); a.send() })()</script>
+</body>
+
+</html>
