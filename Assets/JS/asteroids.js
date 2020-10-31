@@ -1,7 +1,5 @@
 $(document).ready(function(){
 
-    
-    
     const neoAsteriodListContainer = $("#neo-asteroid-list-container");
     const moonListContainer = $("#moon-list-container");
     
@@ -38,7 +36,6 @@ $(document).ready(function(){
  
     }
 
-
     function adjustReferenceForAjax(referenceToChange){
         console.log("referenceToChange",referenceToChange);
 
@@ -66,6 +63,7 @@ $(document).ready(function(){
             console.log("no change has been chosen");
             return adjustedNameReference = referenceToChange;
         }
+    }
 
     function moonNameClicked() {
 
