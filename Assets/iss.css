@@ -23,11 +23,11 @@ red rgb (250,35,33)    #FA2321
   height: 100%;
 }
 
-#mapContainer {
-    background-color:#95C4FC;
-}
-
 .thumbtack {
     padding-top: 10%;
     padding-bottom: 0;
+}
+
+#mapid { 
+  height: 600px; 
 }

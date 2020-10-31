@@ -3,6 +3,13 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+   integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+   crossorigin=""/>
+   <!--Added Leaflet Js script here as per documentation-->
+   <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+    integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+    crossorigin=""></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css" />
     <link rel="stylesheet" href="Assets/style.css" />
     <link rel="stylesheet" href="Assets/iss.css" />
@@ -44,10 +51,8 @@
      <!-- 16 COLUMN ROW --- MAP PLACEHOLDER--> 
     <div class="sixteen wide column">
       <div class="ui padded segment" id="mapContainer">
-        <h2>Map will go here</h2>
-        <div class="ui placeholder">
-          <div class="image"></div>
-        </div>
+        <h2>Where's the ISS At?</h2>
+        <div id="mapid"></div>
       </div>
     </div> 
     <!--10 and 6 COLUMN ROW ---- LIVE STREAM INTRO AND COORDINATE BUTTON-->
