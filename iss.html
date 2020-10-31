@@ -1,18 +1,90 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>space iss</title>
-</head>
-<body>
-    <form action="">
-    <label for="">Locate the ISS</label>
-    <button id="userBtn" type="submit">Show me the coordinates</button>
-</form>
-<div id="showData">
-</div>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<script src="iss.js"></script>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css" />
+    <link rel="stylesheet" href="Assets/style.css" />
+    <link rel="stylesheet" href="Assets/iss.css" />
+    <title>ISS Locator</title>
+  </head>
+  <body>
+    <!--16 COLUMN ROW-->
+    <div class="ui grid container">
+      <div class="sixteen wide column">
+      </div>
+      <!--6 and 10 COLUMN ROW --- CARD AND ISS INFO-->
+      <div class="six wide column">
+        <div class="ui segment" id="rangerCard">
+          <div class="ui centered card">
+            <div class="ui slide masked reveal image">
+              <img
+                src="Assets/images/space-men/riding-a-rocket.png"
+                class="visible content"
+              />
+              <img
+                src="Assets/images/space-men/rocket-out-of-the-box.png"
+                class="hidden content"
+              />
+            </div>
+            <div class="center aligned content">
+              <h2>Hey Space Ranger!</h2>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="ten wide column">
+        <div class="ui red padded segment">
+          <h2 class="ui header">About the ISS</h2>
+          <p>The International Space Station is the biggest object ever flown in space. It travels around the Earth at an average speed of 27,700 km/h, completing 16 orbits per day. At night it can easily be seen from Earth, as it flies 320 kilometres above us. 16 countries, including the USA, Russia, Japan, Canada and many ESA member states worked together to build the Station.</p>
+          <p>The largest part of the ISS is a central truss to which 16 huge solar panels are attached. The modules where the astronauts live and work are attached to the centre of the truss. Europe’s biggest ISS project is the Columbus science laboratory, where astronauts can carry out scientific experiments in weightless conditions. Many different types of experiments can take place both inside and outside this space laboratory.</em>
+          <p><em>Source: https://www.esa.int/kids/en/learn/Life_in_Space/Space_Stations/The_International_Space_Station</em></p>
+        </div>
+      </div>
+     <!-- 16 COLUMN ROW --- MAP PLACEHOLDER--> 
+    <div class="sixteen wide column">
+      <div class="ui padded segment" id="mapContainer">
+        <h2>Map will go here</h2>
+        <div class="ui placeholder">
+          <div class="image"></div>
+        </div>
+      </div>
+    </div> 
+    <!--10 and 6 COLUMN ROW ---- LIVE STREAM INTRO AND COORDINATE BUTTON-->
+    <div class="ten wide column">
+      <div class="ui red padded segment">
+        <h2>ISS Live Stream</h2>
+        <strong><p>Watch live footage of earth from space!</p></strong>
+        <p>During "loss of signal" periods, you will see a blue screen. Since the station orbits the Earth once every 90 minutes, it experiences a sunrise or a sunset about every 45 minutes. When the station is in darkness, external camera video may appear black, but can sometimes provide spectacular views of lightning or city lights below.</p>
+    </div>
+    </div>
+    <div class="six wide column">
+      <div class="ui center aligned padded segment" id="btnCard">
+        <button id="userBtn" class="ui huge button">
+            Show me the ISS coordinates
+            <p><i class="thumbtack icon"></i></p>
+            <div id="showData"></div>
+        </button>    
+      </div>
+    </div>
+    <!--TWO 8 COLUMN ROW----->
+    <div class="eight wide column">
+      <div class="ui center red inverted aligned segment">
+        <div class="videoWrapper">
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/DDU-rZs-Ic4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+        </div>
+    </div>
+    <div class="eight wide column">
+      <div class="ui center red inverted aligned segment">
+        <div class="videoWrapper">
+          <iframe width="560" height="315" src="https://ustream.tv/embed/9408562" scrolling="no" allowfullscreen webkitallowfullscreen frameborder="0" style="border: 0 none transparent;"></iframe>     
+        </div>
+        </div>
+    </div>
+  </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
+    <script src="iss.js"></script>
+  </body>
 </html>
