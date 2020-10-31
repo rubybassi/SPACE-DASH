@@ -55,6 +55,7 @@
             libero expedita!</em>
     </div>
 
+    <div id="ex1"></div>
 
     <script src="" async defer></script>
 
@@ -63,6 +64,15 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
     <script src="script.js"></script>
 
+    <!-- © wdisseny -->
+    <div id="contain_moon" style="text-align:center;padding-top:13px;padding-bottom:13px;">
+        <div style="font-weight:bold">The Moon Today</div>
+        <div style="margin-top:-17px;margin-bottom:-37px;padding:75px;filter:drop-shadow(0 0 75px hsl(54,100%,13%))">
+        </div>
+        <div>.</div>
+        <div style="font-size:small">.</div>
+    </div>
+    <script>(function () { var d = new Date().getDate(); var m = document.querySelectorAll("#contain_moon div"); var a = new XMLHttpRequest(); var url = "https://www.icalendar37.net/lunar/api/?lang=en&month=" + (new Date().getMonth() + 1) + "&year=" + (new Date().getFullYear()) + "&size=250&lightColor=rgb(245,245,245)&shadeColor=rgb(18,18,18)&LDZ=" + new Date(new Date().getFullYear(), new Date().getMonth(), 1) / 1000 + ""; m[1].style.height = "250px"; a.onreadystatechange = function () { if (a.readyState == 4 && a.status == 200) { var b = JSON.parse(a.responseText); m[1].innerHTML = b.phase[d].svg; if (typeof moon_widget_loaded == "function") moon_widget_loaded(b); m[2].innerHTML = b.phase[d].npWidget; m[3].innerHTML = "Next full moon<br>" + b.nextFullMoon } }; a.open("GET", url, true); a.send() })()</script>
 </body>
 
 </html>
