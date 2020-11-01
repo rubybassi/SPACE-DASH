@@ -48,7 +48,6 @@ p#date, p#time {
     transform: scale(1.1);
 }
 
-
 #mercury {
     width: auto;
     height: 40px;
@@ -155,6 +154,19 @@ div.planet-data-container {
     margin-right: 10px;
     
 }
+
+p#moon-list-container {
+    max-height: 320px;
+    overflow-y: scroll;
+}
+
+p.moon-name {
+    font-family: 'Amatic SC', cursive;
+    font-size: xx-large;
+    margin: 0;
+    padding: 0 5px;
+}
+
 
 p.moon-name:hover {
     color: #FA2321;
