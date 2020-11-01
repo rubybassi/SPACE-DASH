@@ -6,9 +6,33 @@ body {
     background-color:#283758;
 }
 
-h1 {
-    font-family: monk;
+h1, h2 {
+    font-family: 'Bungee', cursive;
 }
+/*
+One Weight reg 400
+*/
+
+h3, h4 {
+    font-family: 'Amatic SC', cursive;
+    font-size:xx-large;
+}
+/*
+One Weight Bold 700
+*/
+
+p, h5, h6 {
+    font-family: 'Roboto','Open Sans', sans-serif;
+    font-size:larger ;
+}
+/* 
+Thin 100
+Light 300
+Regular 400
+Regular 400 italic
+Bold 700
+Bold 700 italic
+*/
 
 div#wrapper {
     margin: 10px;
@@ -55,4 +79,11 @@ footer {
     background-color: #FA2321;
     border: 5px solid;
     border-color:#95C4FC;
+}
+
+footer>p {
+    color: #283758;
+    text-align: center;
+    font-weight: bold;
+    background-color: #FA2321;
 }
