@@ -52,4 +52,9 @@ $(document).ready(function () {
 
 });
 
+const apolloNext = $("#nextApolloButton")
 
+apolloNext.on("click", function() {
+    
+    
+});
