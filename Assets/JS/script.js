@@ -15,10 +15,14 @@ $(document).ready(function () {
 
     });
 
-    let dateOfDay = getDateStamp();
-    let timeOfDay = getTimeStamp();
-    $("#date-header").text(dateOfDay);
-    $("#time-header").text(timeOfDay);
+    setInterval(function(){
+        
+        let dateOfDay = getDateStamp();
+        let timeOfDay = getTimeStamp();
+        $("#date-header").text(dateOfDay);
+        $("#time-header").text(timeOfDay);
+        
+    },1000)
 
 });
 
