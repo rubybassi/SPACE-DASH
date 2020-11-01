@@ -2,8 +2,6 @@ $(document).ready(function () {
 
     //object to hold all the seperate arrays for apollo, moon, sun and galaxy
     let completeImagesArray = { apollo: [], moon: [], sun: [], galaxy: [] }
-
-    console.log(completeImagesArray)
     // url for apollo images
     const apolloURL = "https://images-api.nasa.gov/search?q=apollo&media_type=image"
     // ajax call for apollo images
@@ -98,25 +96,27 @@ $(document).ready(function () {
     });
 
 
-    // //when next button is clicked, the next picture and title in the array will display
-    // $(".nextButton").click(function () {
-    //     let buttonGroup = $(this).parent().attr("id");
-    //     let allImageIndex = parseInt($("#" + buttonGroup + "Image").val());
-    //     allImageIndex++
-    //     let nextPhoto = completeImagesArray[allImageIndex];
-    //     $("#" + buttonGroup + "Title").text("title: " + nextPhoto.buttonGroup.title);
-    //     $("#" + buttonGroup + "Image").attr("src", nextPhoto.buttonGroup.href);
-    //     $("#" + buttonGroup + "Image").val(allImageIndex);
-    // });
+    // when next button is clicked, the next picture and title in the array will display
+    $(".nextButton").click(function () {
+        let buttonGroup = $(this).parent().attr("id");
+        console.log(buttonGroup);
+        let allImageIndex = parseInt($("#" + buttonGroup + "Image").val());
+        allImageIndex++
+        let nextPhoto = completeImagesArray[allImageIndex];
+        console.log(nextPhoto)
+        $("#" + buttonGroup + "Title").text("title: " + nextPhoto['buttonGroup'].title);
+        $("#" + buttonGroup + "Image").attr("src", nextPhoto['buttonGroup'].href);
+        $("#" + buttonGroup + "Image").val(allImageIndex);
+    });
 
-    // //when previous button is clicked, the previous picture and title in the array will display
-    // $(".previousButton").click(function () {
-    //     let buttonGroup = $(this).parent().attr("id");
-    //     let allImageIndex = parseInt($("#" + buttonGroup + "Image").val());
-    //     allImageIndex--
-    //     let nextPhoto = completeImagesArray[allImageIndex];
-    //     $("#" + buttonGroup + "Title").text("title: " + nextPhoto.buttonGroup.title);
-    //     $("#" + buttonGroup + "Image").attr("src", nextPhoto.buttonGroup.href);
-    //     $("#" + buttonGroup + "Image").val(alloImageIndex);
-    // });
+    //when previous button is clicked, the previous picture and title in the array will display
+    $(".previousButton").click(function () {
+        let buttonGroup = $(this).parent().attr("id");
+        let allImageIndex = parseInt($("#" + buttonGroup + "Image").val());
+        allImageIndex--
+        let nextPhoto = completeImagesArray[allImageIndex];
+        $("#" + buttonGroup + "Title").text("title: " + nextPhoto['buttonGroup'].title);
+        $("#" + buttonGroup + "Image").attr("src", nextPhoto['buttonGroup'].href);
+        $("#" + buttonGroup + "Image").val(alloImageIndex);
+    });
 });
