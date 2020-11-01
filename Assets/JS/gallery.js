@@ -1,9 +1,10 @@
 $(document).ready(function () {
 
-    let completeImagesArray = {apollo: [], moon: [], sun:[], galaxy:[]}
+    //object to hold all the seperate arrays for apollo, moon, sun and galaxy
+    let completeImagesArray = { apollo: [], moon: [], sun: [], galaxy: [] }
 
     console.log(completeImagesArray)
-    // AJAX call for picture of the day
+    // url for apollo images
     const apolloURL = "https://images-api.nasa.gov/search?q=apollo&media_type=image"
     // ajax call for apollo images
     $.ajax({
@@ -27,7 +28,7 @@ $(document).ready(function () {
     });
 
 
-
+    // url for moon images
     const moonURL = "https://images-api.nasa.gov/search?q=moon&media_type=image"
     // ajax call for moon images
     $.ajax({
@@ -50,6 +51,7 @@ $(document).ready(function () {
         $("#moonImage").val(0)
     });
 
+     // url for sun images
     const sunURL = "https://images-api.nasa.gov/search?q=sun&media_type=image"
     // ajax call for sun images
     $.ajax({
@@ -72,6 +74,7 @@ $(document).ready(function () {
         $("#sunImage").val(0);
     });
 
+    // url for galaxies images
     const galaxiesURL = "https://images-api.nasa.gov/search?q=galaxies&media_type=image"
     // ajax call for galaxy images
     $.ajax({
@@ -95,7 +98,7 @@ $(document).ready(function () {
     });
 
 
-
+    //when next button is clicked, the next picture and title in the array will display
     $(".nextButton").click(function () {
         let buttonGroup = $(this).parent().attr("id");
         let allImageIndex = parseInt($("#" + buttonGroup + "Image").val());
@@ -106,6 +109,7 @@ $(document).ready(function () {
         $("#" + buttonGroup + "Image").val(allImageIndex);
     });
 
+    //when previous button is clicked, the previous picture and title in the array will display
     $(".previousButton").click(function () {
         let buttonGroup = $(this).parent().attr("id");
         let allImageIndex = parseInt($("#" + buttonGroup + "Image").val());
