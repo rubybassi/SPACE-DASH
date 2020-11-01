@@ -20,7 +20,7 @@ $(document).ready(function () {
         }
         let apolloTitle = apolloImages.collection.items[0].data[0].title;
         let apolloImage = apolloImages.collection.items[0].links[0].href;
-        $("#apolloTitle").text("Title: " + apolloTitle);
+        $("#apolloTitle").text(apolloTitle);
         $("#apolloImage").attr("src", apolloImage);
         $("#apolloImage").val(0);
     });
@@ -44,7 +44,7 @@ $(document).ready(function () {
         }
         let moonTitle = moonImages.collection.items[0].data[0].title
         let moonImage = moonImages.collection.items[0].links[0].href
-        $("#moonTitle").text("Title: " + moonTitle);
+        $("#moonTitle").text(moonTitle);
         $("#moonImage").attr("src", moonImage);
         $("#moonImage").val(0)
     });
@@ -67,7 +67,7 @@ $(document).ready(function () {
         }
         let sunTitle = sunImages.collection.items[0].data[0].title
         let sunImage = sunImages.collection.items[0].links[0].href
-        $("#sunTitle").text("Title: " + sunTitle);
+        $("#sunTitle").text(sunTitle);
         $("#sunImage").attr("src", sunImage);
         $("#sunImage").val(0);
     });
@@ -90,7 +90,7 @@ $(document).ready(function () {
         }
         let galaxiesTitle = galaxiesImages.collection.items[0].data[0].title
         let galaxiesImage = galaxiesImages.collection.items[0].links[0].href
-        $("#galaxiesTitle").text("Title: " + galaxiesTitle);
+        $("#galaxiesTitle").text(galaxiesTitle);
         $("#galaxiesImage").attr("src", galaxiesImage);
         $("#galaxiesImage").val(0);
     });
@@ -104,7 +104,7 @@ $(document).ready(function () {
         allImageIndex++
         let nextPhoto = completeImagesArray[buttonGroup][allImageIndex];
         console.log(nextPhoto)
-        $("#" + buttonGroup + "Title").text("Title: " + nextPhoto.title);
+        $("#" + buttonGroup + "Title").text(nextPhoto.title);
         $("#" + buttonGroup + "Image").attr("src", nextPhoto.href);
         $("#" + buttonGroup + "Image").val(allImageIndex);
     });
@@ -115,7 +115,7 @@ $(document).ready(function () {
         let allImageIndex = parseInt($("#" + buttonGroup + "Image").val());
         allImageIndex--
         let nextPhoto = completeImagesArray[buttonGroup][allImageIndex];
-        $("#" + buttonGroup + "Title").text("Title: " + nextPhoto.title);
+        $("#" + buttonGroup + "Title").text(nextPhoto.title);
         $("#" + buttonGroup + "Image").attr("src", nextPhoto.href);
         $("#" + buttonGroup + "Image").val(allImageIndex);
     });
