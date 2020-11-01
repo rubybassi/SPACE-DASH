@@ -16,8 +16,35 @@
     <title>ISS Locator</title>
   </head>
   <body>
+    <!--16 COLUMN ROW --- ISS DASHBOARD----->
+  <div class="ui inverted segment">
+    <div class="ui red four inverted statistic">
+     <div class="value">
+        <p id="longitudeVal"></p>
+      </div> 
+      <div class="label">Longitude</div>
+    </div>
+    <div class="ui red inverted statistic">
+      <div class="value">
+        <p id="latitudeVal"></p>
+      </div> 
+      <div class="label">Latitude</div>
+    </div> 
+    <div class="ui red inverted statistic">
+      <div class="value">
+        <p id="altitudeVal"></p>
+      </div> 
+      <div class="label">Altitude</div>
+    </div>
+    <div class="ui red inverted statistic">
+      <div class="value">
+        <p id="visitbiltyVal"></p>
+      </div> 
+      <div class="label">Visibility</div>
+      </div>
+  </div>
     <!--16 COLUMN ROW-->
-    <div class="ui grid container">
+    <div class="ui grid stackable container">
       <div class="sixteen wide column">
       </div>
       <!--6 and 10 COLUMN ROW --- CARD AND ISS INFO-->
@@ -72,7 +99,7 @@
         </button>    
       </div>
     </div>
-    <!--TWO 8 COLUMN ROW----->
+    <!--TWO 8 COLUMN ROW --- EMBEDDED VIDEOS----->
     <div class="eight wide column">
       <div class="ui center red inverted aligned segment">
         <div class="videoWrapper">
@@ -86,7 +113,7 @@
           <iframe width="560" height="315" src="https://ustream.tv/embed/9408562" scrolling="no" allowfullscreen webkitallowfullscreen frameborder="0" style="border: 0 none transparent;"></iframe>     
         </div>
         </div>
-    </div>
+    </div>   
   </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
