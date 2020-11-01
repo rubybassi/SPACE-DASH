@@ -19,6 +19,11 @@ $(document).ready(function(){
 
     const bodyNameSpanItm = $(".body-name");
 
+    const onloadData = "earth";
+    console.log(onloadData);
+    solaireAjaxCall(onloadData);
+    nasaAjaxCallAsteroid(onloadData);
+
 
     function planetImgClicked(){
         
