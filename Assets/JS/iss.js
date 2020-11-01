@@ -78,7 +78,7 @@ const handleWeatherData = (data) => {
 getData();
 
 // Set interval to run getData function evey second to make marker move
-setInterval(getData, 1000);
+setInterval(getData, 5000);
 });
 
 // button event listener to render coordinates on page
