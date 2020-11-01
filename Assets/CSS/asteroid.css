@@ -1,4 +1,6 @@
-div.column {
+/* construction styling aids  */
+
+/* div.column {
     border: 2px solid;
     border-color: #95C4FC;
     padding: 12px;
@@ -7,21 +9,23 @@ div.column {
 div.row {
     border: 2px solid;
     border-color: #FFA924;
-}
+} */
 
-div#space-windscreen {
-    background-image: url(../images/planets/Space-background.png);
-    background-repeat: repeat;
-    background-size: contain;
-    width: 100%;
-    border: 5px solid #FFA924;
-}
+/* div.planet-info-container {
+    
+    background-color:#95C4FC;
+    border:5px solid #FA2321;
+    margin-bottom: 10px;
+} */
 
+
+/* general styling */
 
 h1 {
     color: #283758;
     background-color: #FFA924 ;
-    padding: 5px;
+    padding: 8px;
+    border-radius: 5px;
 }
 
 p {
@@ -30,10 +34,27 @@ p {
     background-color: #95C4FC ;
 }
 
+
 p#date, p#time {
     border: 5px solid #FFA924;
     padding: 5px;
     background-color: #95C4FC;
+}
+
+figure.six.wide.column {
+    padding: 14px;
+}
+
+/* header styling */
+
+
+/* windscreen styling */
+div#space-windscreen {
+    background-image: url(../images/planets/Space-background.png);
+    background-repeat: repeat;
+    background-size: contain;
+    width: 100%;
+    border: 5px solid #FFA924;
 }
 
 .planets {
@@ -138,23 +159,6 @@ p#date, p#time {
 }
 
 /* planet information  */
-
-div.planet-info-container {
-    
-    background-color:#95C4FC;
-    border:5px solid #FA2321;
-    margin-bottom: 10px;
-
-}
-
-div.planet-data-container {
-    
-    background-color:#95C4FC;
-    border:5px solid #FA2321;
-    margin-right: 10px;
-    
-}
-
 p#moon-list-container {
     max-height: 320px;
     overflow-y: scroll;

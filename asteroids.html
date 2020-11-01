@@ -31,27 +31,27 @@
 <body>
     <div id="wrapper" class=" ui grid container">
 
-      <div id="neo-asteroid" class="four wide column">
+      <aside id="neo-asteroid" class="four wide column">
         <h1>near <span class="body-name">earth</span> asteroids</h1>
         <p id="neo-asteroid-list-container"><span> </p>
-      </div>
+      </aside>
 
       <div class="twelve wide column">
-        <div class="ui grid">
+        <section class="ui grid">
                 
-          <div class="sixteen wide column">
+          <header class="sixteen wide column">
             <h1>space-dash</h1>
-          </div>
+          </header>
 
           <!-- hot earth balloon and paragraph welcome -->
           <div class="eleven wide column">
             <div class="ui grid">
-              <div class="six wide column">
+              <figure class="six wide column">
                 <img alt="hot earth ballon" 
                     src="Assets/images/space-men/hot-earth-balloon.png" 
                     width="100%" 
                 />
-              </div>
+              </figure>
 
               <div class="ten wide column">
                 <p>Welcome to mission control.</p>
@@ -62,11 +62,11 @@
           </div>
 
           <!-- home and date buttons -->
-          <div class="five wide column">    
+          <time class="five wide column">    
             <h1 id="home"><a href="index.html">home</a></h1>
             <p id="date">date </p>
             <p id="time">time </p>      
-          </div>
+          </time>
 
           <!-- planet vissy screen -->
           <div id="space-windscreen" class="sixteen wide column">
@@ -84,21 +84,20 @@
             <!-- <img id="the-comet" alt="the-comet" src="Assets/images/planets/comet.png"/> -->
           </div>
 
-        </div>
+        </section>
         <!-- end of twelve wide column -->
       </div>
 
-      <div class="twelve wide column">
+      <section class="twelve wide column">
         <div class="ui grid">
 
-
-          <div class="planet-info-container sixteen wide column">
+          <summary class="planet-info-container sixteen wide column">
             <h1 class="body-name">planet: name</h1>
             <h3 id="is-planet">is it a planet?</h3>
-          </div>
+          </summary>
 
           <!-- hot earth balloon and paragraph welcome -->
-          <div class="eleven wide column">
+          <details class="eleven wide column">
             
             <div class="planet-info-container three wide column">
               <h3 id="discovered">discovered by: </h3>
@@ -110,28 +109,26 @@
               <h3 id="orbit-around">Orbiting around:</h3>
             </div>
            
-          </div>
+          </details>
 
-          <!-- hot earth balloon -->
-          <div class="five wide column">    
+          <!-- lying on the moon -->
+          <figure class="five wide column">    
             <img alt="hot earth ballon" 
               src="Assets/images/space-men/lying-on-the-moon.png" 
               width="100%" 
             />     
-          </div>
-          
-          
+          </figure>
           
         </div>
-      </div>
+      </section>
 
-      <div class="four wide column">
+      <aside class="four wide column">
         <h1><span class="body-name">earth</span>'s moons</h1>
         <p id="moon-list-container"><span> </p>
-      </div>
+      </aside>
 
       <!-- data  -->
-      <div class="sixteen wide column">
+      <details class="sixteen wide column">
         <div class="ui five column grid">
           <div class="planet-info-container column">
             <h3 id="tilt">tilt angle:</h3>
@@ -153,12 +150,9 @@
             <h3 id="escape">Escape Speed: </h3>
           </div>
         </div>
-      </div>
-        
-
-        
-        
-   
+      </details>
+      
+    <!-- ends the div wrapper -->
     </div>
 
 
