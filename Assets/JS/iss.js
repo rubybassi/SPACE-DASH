@@ -1,7 +1,7 @@
-// reference variables
+// Reference variables
 const showDataDiv = $("#showData");
 const userBtn = $("#userBtn");
-// additonal global variables
+// Additonal global variables
 let longitude = "";
 let latitude = "";
 let altitude = " ";
@@ -32,7 +32,7 @@ const getTiles = L.tileLayer(
   }
 ).addTo(issMap);
 
-// Creat custom marker with Leaflet.js library
+// Create custom marker with Leaflet.js library
 const issMarker = L.icon({
   iconUrl: "Assets/images/misc/satellite.png",
   iconSize: [50, 50],
@@ -63,6 +63,11 @@ const handleWeatherData = (data) => {
   solar_lat = data.solar_lat;
   solar_lon = data.solar_lon;
   addMarker.setLatLng([latitude, latitude]);
+  // add ISS data to dashboard
+  $('#longitudeVal').text(longitude.toFixed(4));
+  $('#latitudeVal').text(latitude.toFixed(4));
+  $('#altitudeVal').text(altitude.toFixed(4));
+  $('#visitbiltyVal').text(visibility);
 };
 
 // Call function
@@ -70,7 +75,6 @@ getData();
 
 // Set interval to run getData function evey second to make marker move
 setInterval(getData, 1000);
-
 });
 
 // button event listener to render coordinates on page
@@ -84,3 +88,4 @@ $(userBtn).on("click", (event) => {
     .append(`<h2>Longitude: ${longitude}</h2>`)
     .append(`<h2>Latitude: ${latitude}</h2>`);
 });
+
