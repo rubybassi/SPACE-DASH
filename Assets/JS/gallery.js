@@ -1,9 +1,7 @@
 $(document).ready(function () {
 
     //object to hold all the seperate arrays for apollo, moon, sun and galaxy
-    let completeImagesArray = { apollo: [], moon: [], sun: [], galaxy: [] }
-
-    console.log(completeImagesArray)
+    let completeImagesArray = { apollo: [], moon: [], sun: [], galaxies: [] }
     // url for apollo images
     const apolloURL = "https://images-api.nasa.gov/search?q=apollo&media_type=image"
     // ajax call for apollo images
@@ -22,7 +20,7 @@ $(document).ready(function () {
         }
         let apolloTitle = apolloImages.collection.items[0].data[0].title;
         let apolloImage = apolloImages.collection.items[0].links[0].href;
-        $("#apolloTitle").text("Title: " + apolloTitle);
+        $("#apolloTitle").text(apolloTitle);
         $("#apolloImage").attr("src", apolloImage);
         $("#apolloImage").val(0);
     });
@@ -46,7 +44,7 @@ $(document).ready(function () {
         }
         let moonTitle = moonImages.collection.items[0].data[0].title
         let moonImage = moonImages.collection.items[0].links[0].href
-        $("#moonTitle").text("Title: " + moonTitle);
+        $("#moonTitle").text(moonTitle);
         $("#moonImage").attr("src", moonImage);
         $("#moonImage").val(0)
     });
@@ -69,7 +67,7 @@ $(document).ready(function () {
         }
         let sunTitle = sunImages.collection.items[0].data[0].title
         let sunImage = sunImages.collection.items[0].links[0].href
-        $("#sunTitle").text("Title: " + sunTitle);
+        $("#sunTitle").text(sunTitle);
         $("#sunImage").attr("src", sunImage);
         $("#sunImage").val(0);
     });
@@ -85,38 +83,40 @@ $(document).ready(function () {
             let imageGallery = galaxiesImages.collection.items[i];
             let imageTitle = imageGallery.data[0].title;
             let imageHref = imageGallery.links[0].href;
-            completeImagesArray.galaxy.push({
+            completeImagesArray.galaxies.push({
                 href: imageHref,
                 title: imageTitle
             });
         }
         let galaxiesTitle = galaxiesImages.collection.items[0].data[0].title
         let galaxiesImage = galaxiesImages.collection.items[0].links[0].href
-        $("#galaxiesTitle").text("Title: " + galaxiesTitle);
+        $("#galaxiesTitle").text(galaxiesTitle);
         $("#galaxiesImage").attr("src", galaxiesImage);
         $("#galaxiesImage").val(0);
     });
 
 
-    // //when next button is clicked, the next picture and title in the array will display
-    // $(".nextButton").click(function () {
-    //     let buttonGroup = $(this).parent().attr("id");
-    //     let allImageIndex = parseInt($("#" + buttonGroup + "Image").val());
-    //     allImageIndex++
-    //     let nextPhoto = completeImagesArray[allImageIndex];
-    //     $("#" + buttonGroup + "Title").text("title: " + nextPhoto.buttonGroup.title);
-    //     $("#" + buttonGroup + "Image").attr("src", nextPhoto.buttonGroup.href);
-    //     $("#" + buttonGroup + "Image").val(allImageIndex);
-    // });
+    // when next button is clicked, the next picture and title in the array will display
+    $(".nextButton").click(function () {
+        let buttonGroup = $(this).parent().attr("id");
+        console.log(buttonGroup);
+        let allImageIndex = parseInt($("#" + buttonGroup + "Image").val());
+        allImageIndex++
+        let nextPhoto = completeImagesArray[buttonGroup][allImageIndex];
+        console.log(nextPhoto)
+        $("#" + buttonGroup + "Title").text(nextPhoto.title);
+        $("#" + buttonGroup + "Image").attr("src", nextPhoto.href);
+        $("#" + buttonGroup + "Image").val(allImageIndex);
+    });
 
-    // //when previous button is clicked, the previous picture and title in the array will display
-    // $(".previousButton").click(function () {
-    //     let buttonGroup = $(this).parent().attr("id");
-    //     let allImageIndex = parseInt($("#" + buttonGroup + "Image").val());
-    //     allImageIndex--
-    //     let nextPhoto = completeImagesArray[allImageIndex];
-    //     $("#" + buttonGroup + "Title").text("title: " + nextPhoto.buttonGroup.title);
-    //     $("#" + buttonGroup + "Image").attr("src", nextPhoto.buttonGroup.href);
-    //     $("#" + buttonGroup + "Image").val(alloImageIndex);
-    // });
+    //when previous button is clicked, the previous picture and title in the array will display
+    $(".previousButton").click(function () {
+        let buttonGroup = $(this).parent().attr("id");
+        let allImageIndex = parseInt($("#" + buttonGroup + "Image").val());
+        allImageIndex--
+        let nextPhoto = completeImagesArray[buttonGroup][allImageIndex];
+        $("#" + buttonGroup + "Title").text(nextPhoto.title);
+        $("#" + buttonGroup + "Image").attr("src", nextPhoto.href);
+        $("#" + buttonGroup + "Image").val(allImageIndex);
+    });
 });
