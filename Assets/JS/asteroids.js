@@ -74,7 +74,12 @@ $(document).ready(function(){
         let moonName = $(this).text();
         console.log("moon name clicked",moonName);
 
-        solaireAjaxCall(moonName);
+        const moonNameadjustment1 = moonName.replaceAll("è","e");
+        const moonNameadjustment2 = moonNameadjustment1.replaceAll("é","e")
+
+        solaireAjaxCall(moonNameadjustment2);
+
+        bodyNameSpanItm.text(moonName);
 
     }
 
@@ -97,7 +102,7 @@ $(document).ready(function(){
 
         const discoveredByContainer = $("#discovered");
         const equatorRadiusContainer = $("#equator");
-        // const orbitAroundContainer = $("#orbit-around");
+        
         const tiltContainer = $("#tilt");
         const massContainer = $("#mass");
         const volumeContainer = $("#volume");
@@ -114,6 +119,8 @@ $(document).ready(function(){
         
         let discoveredByWho = receivedbodyData.discoveredBy;
         let discoveredDate = receivedbodyData.discoveryDate;
+        // console.log("discovery date = ",discoveredDate);
+        // console.log("discovered by ", discoveredByWho);
         
         if (discoveredByWho == "") {
             discoveredByContainer.text("There is no discovery information for this body");
@@ -122,27 +129,35 @@ $(document).ready(function(){
         }
         
         let equatorRadius = receivedbodyData.equaRadius;
-        // let orbitAround = receivedbodyData.aroundPlanet.planet;
+        // console.log("equator radius",equatorRadius);
+
+        if (equatorRadius == "0") {
+            let meanRadius = receivedbodyData.meanRadius;
+            equatorRadiusContainer.html("Mean radius: " + meanRadius + " km");
+
+        } else {
+            equatorRadiusContainer.html("equatorial radius: " + equatorRadius + " km");
+
+        };
+
+        const orbitAroundContainer = $("#orbit-around");
+        
+        let orbitAround = receivedbodyData.aroundPlanet;
+
+        if (orbitAround == null) {
+            orbitAroundContainer.text("This body does not orbit anything.");
+        } else {
+            orbitAroundContainer.html("Orbiting around: " + orbitAround.planet);
+        }
+
         let tilt = receivedbodyData.axialTilt;
+        // console.log("tilt",tilt);
         let mass = receivedbodyData.mass.massValue;
+        // console.log("mass",mass);
         let volume = receivedbodyData.vol.volValue;
+        // console.log("volume",volume);
         let gravityValue = receivedbodyData.gravity;
-
-        console.log("gravity",gravityValue);
-        console.log("volume",volume);
-        console.log("mass",mass);
-        console.log("tilt",tilt);
-        console.log("equator radius",equatorRadius);
-        console.log("discovery date = ",discoveredDate);
-        console.log("discovered by ", discoveredByWho);
-
-        equatorRadiusContainer.html("equatorial radius: " + equatorRadius + " km");
-
-        // if (receivedbodyData.aroundPlanet == null) {
-        //     orbitAroundContainer.text("This body does not orbit anything.");
-        // } else {
-        //     orbitAroundContainer.html(orbitAround);
-        // }
+        // console.log("gravity",gravityValue);
 
         tiltContainer.html("tilt angle: " + tilt + "&#176");
         massContainer.html("mass: 10^ <sup>" + mass + "</sup> kg");
