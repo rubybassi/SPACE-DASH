@@ -1,7 +1,7 @@
 $(document).ready(function () {
 
     //object to hold all the seperate arrays for apollo, moon, sun and galaxy
-    let completeImagesArray = { apollo: [], moon: [], sun: [], galaxy: [] }
+    let completeImagesArray = { apollo: [], moon: [], sun: [], galaxies: [] }
     // url for apollo images
     const apolloURL = "https://images-api.nasa.gov/search?q=apollo&media_type=image"
     // ajax call for apollo images
@@ -83,7 +83,7 @@ $(document).ready(function () {
             let imageGallery = galaxiesImages.collection.items[i];
             let imageTitle = imageGallery.data[0].title;
             let imageHref = imageGallery.links[0].href;
-            completeImagesArray.galaxy.push({
+            completeImagesArray.galaxies.push({
                 href: imageHref,
                 title: imageTitle
             });
@@ -102,10 +102,10 @@ $(document).ready(function () {
         console.log(buttonGroup);
         let allImageIndex = parseInt($("#" + buttonGroup + "Image").val());
         allImageIndex++
-        let nextPhoto = completeImagesArray[allImageIndex];
+        let nextPhoto = completeImagesArray[buttonGroup][allImageIndex];
         console.log(nextPhoto)
-        $("#" + buttonGroup + "Title").text("title: " + nextPhoto['buttonGroup'].title);
-        $("#" + buttonGroup + "Image").attr("src", nextPhoto['buttonGroup'].href);
+        $("#" + buttonGroup + "Title").text("Title: " + nextPhoto.title);
+        $("#" + buttonGroup + "Image").attr("src", nextPhoto.href);
         $("#" + buttonGroup + "Image").val(allImageIndex);
     });
 
@@ -114,9 +114,9 @@ $(document).ready(function () {
         let buttonGroup = $(this).parent().attr("id");
         let allImageIndex = parseInt($("#" + buttonGroup + "Image").val());
         allImageIndex--
-        let nextPhoto = completeImagesArray[allImageIndex];
-        $("#" + buttonGroup + "Title").text("title: " + nextPhoto['buttonGroup'].title);
-        $("#" + buttonGroup + "Image").attr("src", nextPhoto['buttonGroup'].href);
-        $("#" + buttonGroup + "Image").val(alloImageIndex);
+        let nextPhoto = completeImagesArray[buttonGroup][allImageIndex];
+        $("#" + buttonGroup + "Title").text("Title: " + nextPhoto.title);
+        $("#" + buttonGroup + "Image").attr("src", nextPhoto.href);
+        $("#" + buttonGroup + "Image").val(allImageIndex);
     });
 });
