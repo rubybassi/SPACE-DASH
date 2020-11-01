@@ -90,13 +90,13 @@ $(document).ready(function(){
         // get api call
         $.ajax({ url: solaireURL, method: "GET" }).then(function(passbodyData){
             
-            dealWithBodyData(passbodyData);
+            dealWithBodyData(passbodyData,passbodyid);
             
         })
     }
     
-    function dealWithBodyData(receivedbodyData){
-        console.log("body data = ",receivedbodyData);
+    function dealWithBodyData(receivedbodyData, receivedbodyid){
+        console.log("body-data = ",receivedbodyData,"body-id = ", receivedbodyid);
 
         const isThisAPlanet = $("#is-planet");
 
@@ -107,6 +107,7 @@ $(document).ready(function(){
         const massContainer = $("#mass");
         const volumeContainer = $("#volume");
         const gravityContainer = $("#gravity");
+        const escapeContainer = $("#escape")
 
         let isAPlanet = receivedbodyData.isPlanet;
         console.log("is a planet?",isAPlanet);
@@ -123,7 +124,7 @@ $(document).ready(function(){
         // console.log("discovered by ", discoveredByWho);
         
         if (discoveredByWho == "") {
-            discoveredByContainer.text("There is no discovery information for this body");
+            discoveredByContainer.text("There is no discovery information.");
         } else {
             discoveredByContainer.html("discovered by: " + discoveredByWho + "</br>" + discoveredDate);
         }
@@ -143,26 +144,55 @@ $(document).ready(function(){
         const orbitAroundContainer = $("#orbit-around");
         
         let orbitAround = receivedbodyData.aroundPlanet;
+        const planets = ["mercury", "venus", "earth", "mars", "jupiter", "saturn", "uranus", "neptune", "pluto" ];
 
         if (orbitAround == null) {
-            orbitAroundContainer.text("This body does not orbit anything.");
+
+            let checkForSunOrbit = planets.indexOf(receivedbodyid);
+            console.log("checking for orbit of the sun =",checkForSunOrbit);
+            if(checkForSunOrbit == -1){
+                orbitAroundContainer.text("This body does not orbit anything.");
+
+            }else{
+                orbitAroundContainer.text("This planet orbits The Sun.");
+            }
+
         } else {
             orbitAroundContainer.html("Orbiting around: " + orbitAround.planet);
         }
 
         let tilt = receivedbodyData.axialTilt;
         // console.log("tilt",tilt);
-        let mass = receivedbodyData.mass.massValue;
+        let density = receivedbodyData.density;
+
+        if (tilt == 0) {
+            tiltContainer.html("Density: <br/>" + density + " g/cm<sup>3</sup>");
+
+        }else {
+            tiltContainer.html("tilt angle: <br/>" + tilt + "&#176");
+        }
+
+        let massValue = receivedbodyData.mass.massValue;
+        let massExponent = receivedbodyData.mass.massExponent;
+        let massRounded = Math.round(massValue*100)/100;
         // console.log("mass",mass);
-        let volume = receivedbodyData.vol.volValue;
+        // console.log("mass rounded",massRounded);
+
+        let volumeValue = receivedbodyData.vol.volValue;
+        let volumeExponent = receivedbodyData.vol.volExponent;
+        let volumeRounded = Math.round(volumeValue*100)/100;
         // console.log("volume",volume);
+        // console.log("volume rounded",volumeRounded);
+
         let gravityValue = receivedbodyData.gravity;
         // console.log("gravity",gravityValue);
 
-        tiltContainer.html("tilt angle: " + tilt + "&#176");
-        massContainer.html("mass: 10^ <sup>" + mass + "</sup> kg");
-        volumeContainer.html("volume: 10^ <sup>" + volume + "</sup> kg");
-        gravityContainer.html("gravity: " + gravityValue + "m/s<sup>2</sup>");
+        let escapeSpeedValue = receivedbodyData.escape
+        
+        massContainer.html("mass: <br/>" + massRounded + " x 10<sup>" + massExponent + "</sup> kg");
+        volumeContainer.html("volume: <br/>" + volumeRounded + " x 10<sup>" + volumeExponent + "</sup> kg");
+        gravityContainer.html("gravity:  <br/>" + gravityValue + "m/s<sup>2</sup>");
+        escapeContainer.html("Escape Speed:  <br/>" + escapeSpeedValue + "m/s<sup>-1</sup>");
 
         // moonListContainer
         let moonArray = receivedbodyData.moons;
