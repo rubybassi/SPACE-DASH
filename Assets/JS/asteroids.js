@@ -265,7 +265,7 @@ $(document).ready(function(){
 
             console.log("some asteroids");
             neoAsteriodListContainer.html(
-                DealWneoData.count + " asteroids have close-approach status. <br/>" +
+                DealWneoData.count + " Asteroids have close-approach status. <br/>" +
                 "<h3>Top 5 closest:</h3><br/>" +
                 "Name: " + DealWneoData.data[0][0] + "<br/>" +
                 "Date: " + DealWneoData.data[0][3] + "<br/>" +
