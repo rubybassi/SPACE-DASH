@@ -3,13 +3,16 @@ $(document).ready(function(){
     const neoAsteriodListContainer = $("#neo-asteroid-list-container");
     const moonListContainer = $("#moon-list-container");
     
-    //date and time displayed on DASH    
-    const dateContainer = $("#date");
-    const timeContainer = $("#time");
-    
-    timeContainer.html(getTimeStamp());
-    // console.log("GTS =",getTimeStamp());
-    dateContainer.html(getDateStamp());
+    setInterval(function(){
+        //date and time displayed on DASH    
+        const dateContainer = $("#date");
+        const timeContainer = $("#time");
+        
+        timeContainer.html(getTimeStamp());
+        // console.log("GTS =",getTimeStamp());
+        dateContainer.html(getDateStamp());
+
+    },1000);
     
     const spaceWindscreen = $("#space-windscreen");
     spaceWindscreen.on("click","img", planetImgClicked);
