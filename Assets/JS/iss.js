@@ -18,6 +18,8 @@ $(function () {
 // Generate map with Leaflet.js library map method setting default lat, long and scale
 let issMap = L.map('mapid').setView([0, 0], 2);
 
+
+
 // Generate tiles with mapbox
 const getTiles = L.tileLayer(
   `https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}`,
@@ -25,6 +27,7 @@ const getTiles = L.tileLayer(
     attribution:
       'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery Â© <a href="https://www.mapbox.com/">Mapbox</a>',
     maxZoom: 18,
+    minZoom: 1.5,
     id: "mapbox/streets-v11",
     tileSize: 512,
     zoomOffset: -1,
@@ -62,7 +65,8 @@ const handleWeatherData = (data) => {
   daynum = data.daynum;
   solar_lat = data.solar_lat;
   solar_lon = data.solar_lon;
-  addMarker.setLatLng([latitude, latitude]);
+  issMap.setView([latitude, longitude]);
+  addMarker.setLatLng([latitude, longitude]);
   // add ISS data to dashboard
   $('#longitudeVal').text(longitude.toFixed(4));
   $('#latitudeVal').text(latitude.toFixed(4));
