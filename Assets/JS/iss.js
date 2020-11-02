@@ -11,13 +11,13 @@ let timestamp = "";
 let daynum = "";
 let solar_lat = "";
 let solar_lon = "";
+let velocity = "";
 
 // init funtion
 $(function () {
  
 // Generate map with Leaflet.js library map method setting default lat, long and scale
 let issMap = L.map('mapid').setView([0, 0], 2);
-
 
 
 // Generate tiles with mapbox
@@ -65,13 +65,19 @@ const handleWeatherData = (data) => {
   daynum = data.daynum;
   solar_lat = data.solar_lat;
   solar_lon = data.solar_lon;
+  velocity = data.velocity;
   issMap.setView([latitude, longitude]);
   addMarker.setLatLng([latitude, longitude]);
   // add ISS data to dashboard
-  $('#longitudeVal').text(longitude.toFixed(4));
-  $('#latitudeVal').text(latitude.toFixed(4));
-  $('#altitudeVal').text(altitude.toFixed(4));
+  $('#longitudeVal').text(longitude.toFixed(5));
+  $('#latitudeVal').text(latitude.toFixed(5));
+  $('#altitudeVal').text(altitude.toFixed(5));
   $('#visitbiltyVal').text(visibility);
+  $('#footprintVal').text(footprint.toFixed(5));
+  $('#daynumVal').text(daynum); //
+  $('#sollatVal').text(solar_lat.toFixed(5));
+  $('#sollongVal').text(solar_lon.toFixed(5));
+  $('#velocityVal').text(velocity.toFixed(0));
 };
 
 // Call function
@@ -79,6 +85,7 @@ getData();
 
 // Set interval to run getData function evey second to make marker move
 setInterval(getData, 5000);
+
 });
 
 // button event listener to render coordinates on page
@@ -89,7 +96,6 @@ $(userBtn).on("click", (event) => {
   // let latDecimal = latitude.toFixed(2);
   // console.log('lat has be reduced to:' , longDecimal)
   $(showDataDiv)
-    .append(`<h2>Longitude: ${longitude}</h2>`)
-    .append(`<h2>Latitude: ${latitude}</h2>`);
+    .append(`<h2>Velocity: ${velocity} mph</h2>`)
 });
 
