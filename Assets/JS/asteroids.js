@@ -21,30 +21,47 @@ $(document).ready(function(){
     moonNameListItem.on("click","p",moonNameClicked);
 
     const bodyNameSpanItm = $(".body-name");
+    const captinSpeaking = $("#captin-speaking");
+
+    const isThisAPlanet = $("#is-planet");
+
+    const discoveredByContainer = $("#discovered");
+    const equatorRadiusContainer = $("#equator");
+    const orbitAroundContainer = $("#orbit-around");
+        
+    const tiltContainer = $("#tilt");
+    const massContainer = $("#mass");
+    const volumeContainer = $("#volume");
+    const gravityContainer = $("#gravity");
+    const escapeContainer = $("#escape");
 
     const onloadData = "earth";
-    console.log(onloadData);
-    solaireAjaxCall(onloadData);
-    nasaAjaxCallAsteroid(onloadData);
+        captinSpeaking.text("Earth");
+        console.log(onloadData);
+        solaireAjaxCall(onloadData);
+        nasaAjaxCallAsteroid(onloadData);
 
 
     function planetImgClicked(){
         
         let bodyName = $(this).attr("alt");
+        // let bodyName = "no-data";
         console.log(bodyName);
  
         solaireAjaxCall(bodyName);
 
         //body name needs adjustment 
-        let adjustedNameReference = adjustReferenceForAjax(bodyName);
+        let adjustedNameReference = adjustReferenceForAsteroid(bodyName);
+        neoAsteriodListContainer.text("Fetching your asteroids...");
         nasaAjaxCallAsteroid(adjustedNameReference);
         // nasaAjaxCallComet(bodyName);
 
         bodyNameSpanItm.text(bodyName);
+        captinSpeaking.text(bodyName);
  
     }
 
-    function adjustReferenceForAjax(referenceToChange){
+    function adjustReferenceForAsteroid(referenceToChange){
         console.log("referenceToChange",referenceToChange);
 
         if (referenceToChange == "mercury"){
@@ -72,21 +89,53 @@ $(document).ready(function(){
             return adjustedNameReference = referenceToChange;
         }
     }
-    
 
     function moonNameClicked() {
 
         // console.log("the click is fireing");
 
         let moonName = $(this).text();
-        // console.log("moon name clicked",moonName);
+        console.log("moon name clicked",moonName);
 
         const moonNameadjustment1 = moonName.replaceAll("è","e");
-        const moonNameadjustment2 = moonNameadjustment1.replaceAll("é","e")
+        const moonNameadjustment2 = moonNameadjustment1.replaceAll("é","e");
 
-        solaireAjaxCall(moonNameadjustment2);
+        if (moonName == "There are no moons"){
 
-        bodyNameSpanItm.text(moonName);
+            console.log("moonName has been caught as There are no moons");
+
+            captinSpeaking.text("This is your captin speaking...");
+            isThisAPlanet.text("Woops! this is not a moon, there is no data for this action. ");
+
+            discoveredByContainer.text("");
+            equatorRadiusContainer.text("");
+            orbitAroundContainer.text("");
+            
+            tiltContainer.text("");
+            massContainer.text("");
+            volumeContainer.text("");
+            gravityContainer.text("");
+            escapeContainer.text("");
+
+        }else if (moonName == "The Moon"){
+
+            console.log("moonName has been caught as The Moon");
+
+            moonNameadjustment2 = "moon";
+            solaireAjaxCall(moonNameadjustment2);
+    
+            bodyNameSpanItm.text(moonName);
+            captinSpeaking.text(moonName);
+
+        }else{
+            
+            solaireAjaxCall(moonNameadjustment2);
+    
+            bodyNameSpanItm.text(moonName);
+            captinSpeaking.text(moonName);
+
+        }
+
     }
 
     function solaireAjaxCall(passbodyid) {
@@ -95,25 +144,14 @@ $(document).ready(function(){
         
         // get api call
         $.ajax({ url: solaireURL, method: "GET" }).then(function(passbodyData){
-            
+
             dealWithBodyData(passbodyData,passbodyid);
             
-        })
+        }).catch(noSolaireResults);
     }
     
     function dealWithBodyData(receivedbodyData, receivedbodyid){
         console.log("body-data = ",receivedbodyData,"body-id = ", receivedbodyid);
-
-        const isThisAPlanet = $("#is-planet");
-
-        const discoveredByContainer = $("#discovered");
-        const equatorRadiusContainer = $("#equator");
-        
-        const tiltContainer = $("#tilt");
-        const massContainer = $("#mass");
-        const volumeContainer = $("#volume");
-        const gravityContainer = $("#gravity");
-        const escapeContainer = $("#escape")
 
         let isAPlanet = receivedbodyData.isPlanet;
         // console.log("is a planet?",isAPlanet);
@@ -146,8 +184,6 @@ $(document).ready(function(){
             equatorRadiusContainer.html("Equatorial Radius: " + equatorRadius + " km");
 
         };
-
-        const orbitAroundContainer = $("#orbit-around");
         
         let orbitAround = receivedbodyData.aroundPlanet;
         const planets = ["mercury", "venus", "earth", "mars", "jupiter", "saturn", "uranus", "neptune", "pluto" ];
@@ -207,10 +243,10 @@ $(document).ready(function(){
         moonListContainer.empty();
 
         if (moonArray == null){
-            moonListContainer.text("There are no moons.")
+            moonListContainer.append('<p class="moon-name"> There are no moons </p>');
         } else if (moonArray[0].moon === "La Lune"){
 
-            moonListContainer.text("The Moon");
+            moonListContainer.append('<p class="moon-name">' + "The Moon" + "</p>");
 
         } else {
 
@@ -224,6 +260,22 @@ $(document).ready(function(){
 
     }
     
+    function noSolaireResults(error){
+
+        captinSpeaking.text("This is your captin speaking...");
+        isThisAPlanet.text("I'm sorry, there has been an error fetching the data of your planet. Please try again another time. ");
+
+        discoveredByContainer.text("Warning!");
+        equatorRadiusContainer.text("Warning!");
+        orbitAroundContainer.text("Warning!");
+        
+        tiltContainer.text("This");
+        massContainer.text("is");
+        volumeContainer.text("not");
+        gravityContainer.text("a");
+        escapeContainer.text("drill.");
+
+    }
 
     // const testDate = moment().subtract(7, 'days').format("YYYY-MM-DD");
     // console.log("testDate",testDate);
@@ -253,7 +305,7 @@ $(document).ready(function(){
 
             dealWithAsteroidData(passneoData);
 
-        })
+        }).catch(noAsteroidResults);
     }
 
     function dealWithAsteroidData(DealWneoData){
@@ -267,6 +319,7 @@ $(document).ready(function(){
         if (asteroidCount == "0"){
 
             // console.log("no asteroids");
+            neoAsteriodListContainer.empty();
             neoAsteriodListContainer.text("There have been no asteroids pass close by at this time");
 
         } else {
@@ -296,6 +349,10 @@ $(document).ready(function(){
                 "Approach Speed: " + DealWneoData.data[4][7] + " km/s <br/><br/>"
             );
         }
+    }
+
+    function noAsteroidResults(error){
+        neoAsteriodListContainer.text("Sorry something crashed into your asteroids and we can't display them at this time.")
     }
 
     // function nasaAjaxCallComet(passbodyid) {

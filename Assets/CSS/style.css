@@ -38,15 +38,27 @@ div#wrapper {
     margin: 10px;
 }
 
+div.div-back-bord {
+    background-color: #124975;
+    border-radius: 5px;
+}
+
 .buttonStyle {
     border: 5px solid;
     border-color:#FFA924;
 }
 
-.main-header {
+/* .main-header {
     background-color:#FFA924;
     padding: 10px;
     text-align: center;
+} */
+
+h1 {
+    color: #283758;
+    background-color: #FFA924 ;
+    padding: 8px;
+    border-radius: 5px;
 }
 
 .headerBox {
@@ -54,6 +66,7 @@ div#wrapper {
     background-color: #95C4FC;
     border: 5px solid;
     border-color:#FFA924;
+    border-radius: 5px;
 }
 
 .picOfTheDay{
