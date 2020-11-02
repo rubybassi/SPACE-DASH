@@ -1,3 +1,17 @@
+#moonToday{    
+    display: table;    
+    margin:20px auto;
+    text-align: center;    
+    color:black;
+    border: 1px solid black;
+    padding: 5px 30px;
+    }
+    #moonToday [shadow]{
+    filter:drop-shadow(0 0 25px rgb(0,50,50));
+    padding:15px 0;
+    }
+
+
 * {
     box-sizing: border-box;
 }
@@ -10,23 +24,4 @@ body {
 div#wrapper {
     margin: 10px;
 }
-
-.buttonStyle {
-    border: 5px solid;
-    border-color:#FFA924;
-}
-
-
-#ex1{    
-    display: table;    
-    margin:20px auto;
-    text-align: center;    
-    color:black;
-    border: 1px solid black;
-    padding: 5px 30px;
-    }
-    #ex1 [shadow]{
-    filter:drop-shadow(0 0 25px rgb(0,50,50));
-    padding:15px 0;
-    }
 
