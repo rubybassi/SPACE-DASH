@@ -21,13 +21,6 @@
 
 /* general styling */
 
-h1 {
-    color: #283758;
-    background-color: #FFA924 ;
-    padding: 8px;
-    border-radius: 5px;
-}
-
 
 p {
     color: #283758;
@@ -38,10 +31,7 @@ p {
     padding: 5px;
 }
 
-div.div-back-bord {
-    background-color: #124975;
-    border-radius: 5px;
-}
+
 
 div.planet-control-centre {
     margin-top: 14px;
@@ -50,8 +40,9 @@ div.planet-control-centre {
 p#date, p#time {
     border: 5px solid #FFA924;
     border-radius: 5px;
-    padding: 5px;
+    padding: 8px 5px;
     background-color: #95C4FC;
+    margin: 14px 0 0 0;
 }
 
 div.eleven.wide.column {
