@@ -15,12 +15,51 @@ $(document).ready(function () {
 
     });
 
-    let dateOfDay = getDateStamp();
-    let timeOfDay = getTimeStamp();
-    $("#date-header").text(dateOfDay);
-    $("#time-header").text(timeOfDay);
+    setInterval(function(){
+        
+        let dateOfDay = getDateStamp();
+        let timeOfDay = getTimeStamp();
+        $("#date-header").text(dateOfDay);
+        $("#time-header").text(timeOfDay);
+        
+    },1000)
+
+    // visit history for ranger rank. - need to control load by specific page.
+    let visitHistory; 
+    
+    getHistory(visitHistory);
+    
+
+    function saveHistory(SVH) {
+        console.log("value received =", SVH);
+        let saveVisitHistory = localStorage.setItem("visitHistory",JSON.stringify(SVH));
+        console.log("saveVisitHistory =", saveVisitHistory);
+    }
+
+    function getHistory(GH) {
+
+        let retreiveVisitHistory = localStorage.getItem("visitHistory");
+        console.log("retreiveVisitHistory", retreiveVisitHistory);
+        
+        if (retreiveVisitHistory == null) {
+            GH = 1;
+            console.log("welcome new cadet", GH);
+            saveHistory(GH);
+            
+        } else {
+            
+            showVisitHistory = JSON.parse(retreiveVisitHistory);
+            console.log("showVisitHistory =", showVisitHistory);
+            console.log("welcome back", GH);
+            showVisitHistory++;
+            console.log("incGH = ",showVisitHistory);
+            saveHistory(showVisitHistory);
+         
+        }
+    }
 
 });
+
 
 function getTimeStamp() {
     return moment().format('LTS');

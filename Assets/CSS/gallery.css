@@ -14,3 +14,13 @@ color: #283758;
 background-color: #95C4FC;
 }
 
+.picturesBoxes {
+    border: 5px solid;
+    border-color:#FFA924;
+    color: #283758;
+    background-color: #95C4FC;
+}
+
+h1, h2, h3, h4, h5 {
+    text-align: center;
+}

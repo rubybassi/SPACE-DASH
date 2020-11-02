@@ -6,12 +6,41 @@ body {
     background-color:#283758;
 }
 
-h1 {
-    font-family: monk;
+h1, h2 {
+    font-family: 'Bungee', cursive;
 }
+/*
+One Weight reg 400
+*/
+
+h3, h4 {
+    font-family: 'Amatic SC', cursive;
+    font-size:xx-large;
+}
+/*
+One Weight Bold 700
+*/
+
+p, h5, h6 {
+    font-family: 'Roboto','Open Sans', sans-serif;
+    font-size:larger ;
+}
+/* 
+Thin 100
+Light 300
+Regular 400
+Regular 400 italic
+Bold 700
+Bold 700 italic
+*/
 
 div#wrapper {
     margin: 10px;
+}
+
+div.div-back-bord {
+    background-color: #124975;
+    border-radius: 5px;
 }
 
 .buttonStyle {
@@ -19,10 +48,17 @@ div#wrapper {
     border-color:#FFA924;
 }
 
-.main-header {
+/* .main-header {
     background-color:#FFA924;
     padding: 10px;
     text-align: center;
+} */
+
+h1 {
+    color: #283758;
+    background-color: #FFA924 ;
+    padding: 8px;
+    border-radius: 5px;
 }
 
 .headerBox {
@@ -30,6 +66,7 @@ div#wrapper {
     background-color: #95C4FC;
     border: 5px solid;
     border-color:#FFA924;
+    border-radius: 5px;
 }
 
 .picOfTheDay{
@@ -45,7 +82,6 @@ div#wrapper {
 }
 
 footer {
-    position: fixed;
     left: 0;
     bottom: 0;
     width: 100%;
@@ -56,4 +92,11 @@ footer {
     background-color: #FA2321;
     border: 5px solid;
     border-color:#95C4FC;
+}
+
+footer>p {
+    color: #283758;
+    text-align: center;
+    font-weight: bold;
+    background-color: #FA2321;
 }

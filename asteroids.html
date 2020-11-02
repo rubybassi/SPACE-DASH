@@ -17,7 +17,11 @@
 
     <!-- semantic ui style stylesheet -->
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.13/semantic.min.css">
-    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Bungee&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,700;1,400;1,700&family=Rajdhani:wght@500;700&family=Roboto:ital,wght@0,100;0,300;0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&family=Open+Sans:ital,wght@0,300;0,400;0,700;1,400;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;900&display=swap" rel="stylesheet">
     <!-- My basic site style stylesheet -->
     <link rel="stylesheet" type="text/css" href="Assets/CSS/style.css"/>
     <link rel="stylesheet" type="text/css" href="Assets/CSS/asteroid.css"/>
@@ -27,41 +31,43 @@
 <body>
     <div id="wrapper" class=" ui grid container">
 
-      <div id="neo-asteroid" class="four wide column">
-        <h1>near <span class="body-name">earth</span> asteroids</h1>
+      <div id="neo-asteroid" class="div-back-bord four wide column">
+        <h1>Near <span class="body-name">Earth</span> Asteroids</h1>
         <p id="neo-asteroid-list-container"><span> </p>
       </div>
 
       <div class="twelve wide column">
-        <div class="ui grid">
+        <section class="ui grid">
                 
           <div class="sixteen wide column">
-            <h1>space-dash</h1>
+            <h1>Space-DASH</h1>
           </div>
 
           <!-- hot earth balloon and paragraph welcome -->
           <div class="eleven wide column">
             <div class="ui grid">
-              <div class="six wide column">
+              <div id="hot-air-balloon" class="six wide column">
                 <img alt="hot earth ballon" 
-                    src="Assets/images/space-men/hot-earth-balloon.png" 
-                    width="100%" 
+                  class="ui fluid rounded image"
+                  src="Assets/images/space-men/hot-earth-balloon.png" 
+                  
+                  style="object-fit: fit-content;"
                 />
               </div>
 
-              <div class="ten wide column">
-                <p>Welcome to mission control.</p>
-                <p>Here you can get data on the planets your team will be visiting and any nearby orbiting objects to report on.</p>
-                <p>Click a planet on the 'Vissy Screen' below to learn more about it.</p>
+              <div class="ten wide column paragraph-styling">
+                <p>Welcome to mission control. <br/>
+                Here you can get data on the planets your team will be visiting and any nearby orbiting objects to report on.<br/>
+                Click a planet on the 'Vissy Screen' below to learn more about it.</p>
               </div>
             </div>
           </div>
 
           <!-- home and date buttons -->
           <div class="five wide column">    
-            <h1 id="home"><a href="index.html">home</a></h1>
-            <p id="date">date </p>
-            <p id="time">time </p>      
+            <h1 id="home"><a href="index.html">Home</a></h1>
+            <p id="date">Date </p>
+            <p id="time">Time </p>      
           </div>
 
           <!-- planet vissy screen -->
@@ -80,71 +86,79 @@
             <!-- <img id="the-comet" alt="the-comet" src="Assets/images/planets/comet.png"/> -->
           </div>
 
-        </div>
+        </section>
         <!-- end of twelve wide column -->
       </div>
 
-      <div class="twelve wide column">
-        <div class="ui grid">
+      <section class="twelve wide column">
+        <div class="planet-control-centre">
+          <div class="div-back-bord ui grid">
 
 
-          <div class="planet-info-container sixteen wide column">
-            <h1 class="body-name">planet: name</h1>
-            <h3 id="is-planet">is it a planet</h3>
-          </div>
+            <div class="planet-info-header sixteen wide column">
+              <h1 id="captin-speaking" class="">Planet Name</h1>
+              <h3 id="is-planet">Is it a planet?</h3>
+            </div>
 
-          <!-- hot earth balloon and paragraph welcome -->
-          <div class="eleven wide column">
+            <!-- hot earth balloon and paragraph welcome -->
+            <div class="eleven wide column">
+              
+              <div class="planet-info-container three wide column">
+                <h3 id="discovered">Discovered By: </h3>
+              </div>
+              <div class="planet-info-container three wide column">
+                <h3 id="equator">Equatorial Radius: </h3>
+              </div>
+              <div class="planet-info-container three wide column">
+                <h3 id="orbit-around">Orbiting Around:</h3>
+              </div>
             
-            <div class="planet-info-container three wide column">
-              <h3 id="discovered">discovered by: </h3>
             </div>
-            <div class="planet-info-container three wide column">
-              <h3 id="equator">equatorial radius: </h3>
+
+            <!-- lying on the moon -->
+            <div class="five wide column">    
+              <img alt="hot earth ballon" 
+                class="ui fluid rounded image"
+                src="Assets/images/space-men/lying-on-the-moon.png" 
+                width="100%" 
+              />     
             </div>
-            <div class="planet-info-container three wide column">
-              <h3>something else</h3>
-            </div>
-           
+            
+          </div>
+        </div>
+      </section>
+
+      <div class="planet-control-centre four wide column">
+        <h1><span class="body-name">Earth</span>'s Moons</h1>
+        <p id="moon-list-container"><span> </p>
+      </div>
+
+      <!-- data  -->
+      <div class="sixteen wide column">
+        <div class="ui five column grid">
+          <div class="column">
+            <h3 class="Planet-data" id="tilt">Tilt Angle:</h3>
           </div>
 
-          <!-- hot earth balloon -->
-          <div class="five wide column">    
-            <img alt="hot earth ballon" 
-              src="Assets/images/space-men/hot-earth-balloon.png" 
-              width="100%" 
-            />     
-          </div>
-          
-          <!-- data  -->
-          <div class="planet-info-container four wide column">
-            <h3 id="tilt">tilt angle</h3>
+          <div class="column">
+            <h3 class="Planet-data" id="mass">Mass:</h3>
           </div>
 
-          <div class="planet-info-container four wide column">
-            <h3 id="mass">mass</h3>
+          <div class="column">
+            <h3 class="Planet-data" id="volume">Volume:</h3>
+          </div>
+          
+          <div class="column">
+            <h3 class="Planet-data" id="gravity">Gravity:</h3>
           </div>
 
-          <div class="planet-info-container four wide column">
-            <h3 id="volume">volume</h3>
+          <div class="column">
+            <h3 class="Planet-data" id="escape">Escape Speed: </h3>
           </div>
-          
-          <div class="planet-info-container four wide column">
-            <h3 id="gravity">gravity</h3>
-          </div>
-          
         </div>
       </div>
-
-      <div class="four wide column">
-        <h1>near <span class="body-name">earth</span> comets</h1>
-        <p id="neo-comet-list-container"><span> </p>
-      </div>
-        
-
-        
-        
-   
+      
+    <!-- ends the div wrapper -->
     </div>
 
 
@@ -167,7 +181,7 @@
 
    </section> -->
 
-   <footer> © Copyright 2020</footer>
+   <footer><p>© Copyright 2020</p></footer>
 
    <!-- jQuery CDN -->
    <script
