@@ -32,6 +32,7 @@
 
   <!--FIXED HEADER-->
   <div class="ui top fixed labeled icon menu aligned " id="menu">
+
     <a class="item" href="/index.html">
       <i class="home icon"></i>Home
     </a>
@@ -70,7 +71,7 @@
       </div>
     </div>
 
-    <!--6 and 10 FLUID COLUMN ROW --- CARD AND ISS INFO-->
+    <!--6 and 10 FLUID COLUMN ROW / CARD AND ISS INFO-->
     <div class="ui grid stackable container">
       <div class="six wide column">
         <div class="ui segment" id="rangerCard">
@@ -102,133 +103,131 @@
         </div>
       </div>
     </div>
- 
-  <!--16 COLUMN ROW ---- COORDINATE BUTTON-->
-  <div class="ui grid stackable container">
-    <div class="column">
-      <div class="ui center aligned padded segment" id="btnCard">
-        <button id="userBtn" class=" big ui button">
-          <h2>How fast is the ISS travelling?</h2>
-          <i class="space shuttle icon"></i>
-          <div id="showData"></div>
-        </button>
+    <!--16 COLUMN ROW / COORDINATE BUTTON-->
+    <div class="ui grid stackable container">
+      <div class="column">
+        <div class="ui center aligned padded segment" id="btnCard">
+          <button id="userBtn" class=" big ui button">
+            <h2>How fast is the ISS travelling?</h2>
+            <i class="space shuttle icon"></i>
+            <div id="showData"></div>
+          </button>
+        </div>
       </div>
     </div>
   </div>
-</div>
 
+  <!--VIDEO SECTION-->
+  <div class="videoSection" id="videos">
+    <!--16 COLUMN ROW / LIVE STREAM INTRO-->
+    <div class="ui grid stackable container">
+      <div class="column">
+        <div class="ui yellow padded segment">
+          <h2>ISS Live Stream</h2>
+          <strong>
+            <p>Watch live footage of earth from space!</p>
+          </strong>
+          <p>During "loss of signal" periods, you will see a blue screen. Since the station orbits the Earth once every
+            90 minutes, it experiences a sunrise or a sunset about every 45 minutes. When the station is in darkness,
+            external camera video may appear black, but can sometimes provide spectacular views of lightning or city
+            lights below.</p>
+        </div>
+      </div>
+    </div>
+    <!--TWO 8 COLUMN ROW / EMBEDDED VIDEOS-->
+    <div class="ui grid stackable container" id="iframes">
+      <div class="eight wide column">
+        <div class="ui center red inverted aligned segment">
+          <div class="videoWrapper">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/DDU-rZs-Ic4" frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+      <div class="eight wide column">
+        <div class="ui center red inverted aligned segment">
+          <div class="videoWrapper">
+            <iframe width="560" height="315" src="https://ustream.tv/embed/9408562" scrolling="no" allowfullscreen
+              webkitallowfullscreen frameborder="0" style="border: 0 none transparent;"></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 
-<!--VIDEO SECTION-->
-<div class="videoSection" id="videos">
-  <!--16 COLUMN ROW ---- LIVE STREAM INTRO-->
-  <div class="ui grid stackable container">
-    <div class="column">
-      <div class="ui yellow padded segment">
-        <h2>ISS Live Stream</h2>
-        <strong>
-          <p>Watch live footage of earth from space!</p>
-        </strong>
-        <p>During "loss of signal" periods, you will see a blue screen. Since the station orbits the Earth once every
-          90 minutes, it experiences a sunrise or a sunset about every 45 minutes. When the station is in darkness,
-          external camera video may appear black, but can sometimes provide spectacular views of lightning or city
-          lights below.</p>
-      </div>
-    </div>
-  </div>
-  <!--TWO 8 COLUMN ROW --- EMBEDDED VIDEOS----->
-  <div class="ui grid stackable container" id="iframes">
-    <div class="eight wide column">
-      <div class="ui center red inverted aligned segment">
-        <div class="videoWrapper">
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/DDU-rZs-Ic4" frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen></iframe>
-        </div>
-      </div>
-    </div>
-    <div class="eight wide column">
-      <div class="ui center red inverted aligned segment">
-        <div class="videoWrapper">
-          <iframe width="560" height="315" src="https://ustream.tv/embed/9408562" scrolling="no" allowfullscreen
-            webkitallowfullscreen frameborder="0" style="border: 0 none transparent;"></iframe>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!--MAP SECTION-->
-<div class="dashbaordMap" id="map">
-  <!--16 COLUMN ROW --- ISS DASHBOARD----->
-  <div class="ui grid stackable container">
-    <div class="column">
-      <div class="ui red segment">
-        <h2>Collecting live data...</h2>
-        <div class="ui yellow statistic">
-          <div class="value">
-            <p id="longitudeVal"></p>
+  <!--MAP SECTION-->
+  <div class="dashbaordMap" id="map">
+    <!--16 COLUMN ROW / ISS DASHBOARD-->
+    <div class="ui grid stackable container">
+      <div class="column">
+        <div class="ui red segment">
+          <h2>Collecting live data...</h2>
+          <div class="ui yellow statistic">
+            <div class="value">
+              <p id="longitudeVal"></p>
+            </div>
+            <div class="label">Longitude</div>
           </div>
-          <div class="label">Longitude</div>
-        </div>
-        <div class="ui yellow statistic">
-          <div class="value">
-            <p id="latitudeVal"></p>
+          <div class="ui yellow statistic">
+            <div class="value">
+              <p id="latitudeVal"></p>
+            </div>
+            <div class="label">Latitude</div>
           </div>
-          <div class="label">Latitude</div>
-        </div>
-        <div class="ui yellow statistic">
-          <div class="value">
-            <p id="altitudeVal"></p>
+          <div class="ui yellow statistic">
+            <div class="value">
+              <p id="altitudeVal"></p>
+            </div>
+            <div class="label">Altitude</div>
           </div>
-          <div class="label">Altitude</div>
-        </div>
-        <div class="ui yellow statistic">
-          <div class="value">
-            <p id="visitbiltyVal"></p>
+          <div class="ui yellow statistic">
+            <div class="value">
+              <p id="visitbiltyVal"></p>
+            </div>
+            <div class="label">Visibility</div>
           </div>
-          <div class="label">Visibility</div>
-        </div>
-        <div class="ui yellow  statistic">
-          <div class="value">
-            <p id="footprintVal"></p>
+          <div class="ui yellow  statistic">
+            <div class="value">
+              <p id="footprintVal"></p>
+            </div>
+            <div class="label">Footprint</div>
           </div>
-          <div class="label">Footprint</div>
-        </div>
-        <div class="ui yellow statistic">
-          <div class="value">
-            <p id="daynumVal"></p>
+          <div class="ui yellow statistic">
+            <div class="value">
+              <p id="daynumVal"></p>
+            </div>
+            <div class="label">Daynum</div>
           </div>
-          <div class="label">Daynum</div>
-        </div>
-        <div class="ui yellow statistic">
-          <div class="value">
-            <p id="sollatVal"></p>
+          <div class="ui yellow statistic">
+            <div class="value">
+              <p id="sollatVal"></p>
+            </div>
+            <div class="label">Solar Latitude</div>
           </div>
-          <div class="label">Solar Latitude</div>
-        </div>
-        <div class="ui yellow statistic">
-          <div class="value">
-            <p id="sollongVal"></p>
+          <div class="ui yellow statistic">
+            <div class="value">
+              <p id="sollongVal"></p>
+            </div>
+            <div class="label">Solar Longitude</div>
           </div>
-          <div class="label">Solar Longitude</div>
-        </div>
-        <div class="ui yellow statistic">
-          <div class="value">
-            <p id="velocityVal"></p>
+          <div class="ui yellow statistic">
+            <div class="value">
+              <p id="velocityVal"></p>
+            </div>
+            <div class="label" data-tooltip="Velocity is the speed at which something is traveling"
+              data-position="bottom center">Velocity</div>
           </div>
-          <div class="label" data-tooltip="Velocity is the speed at which something is traveling"
-          data-position="bottom center">Velocity</div>
         </div>
       </div>
     </div>
-  </div>
-  <div class="ui grid stackable container">
-    <div class="column">
-      <div class="ui padded blue segment" id="mapContainer">
-        <h2>Where's the ISS At?</h2>
-        <div id="mapid"></div>
+    <div class="ui grid stackable container">
+      <div class="column">
+        <div class="ui padded blue segment" id="mapContainer">
+          <h2>Where's the ISS At?</h2>
+          <div id="mapid"></div>
+        </div>
       </div>
-    </div>
     </div>
   </div>
 
