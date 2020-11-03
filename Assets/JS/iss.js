@@ -84,7 +84,7 @@ const handleWeatherData = (data) => {
 getData();
 
 // Set interval to run getData function evey second to make marker move
-setInterval(getData, 5000);
+setInterval(getData, 2000);
 
 });
 
