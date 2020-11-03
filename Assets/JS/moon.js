@@ -1,42 +1,51 @@
-function load_moon_phases(obj, callback) {
-    var gets = []
-    for (var i in obj) {
-        gets.push(i + "=" + encodeURIComponent(obj[i]))
+
+const queryURL = "https://api.farmsense.net/v1/moonphases/?d=1350526582";
+//console.log(queryURL)
+$.ajax({
+    url: queryURL,
+    method: "GET"
+}).then(function (moonData) {
+
+
+
+        
     }
-    gets.push("LDZ=" + new Date(obj.year, obj.month - 1, 1) / 1000)
-    var xmlhttp = new XMLHttpRequest()
-    var url = "https://www.icalendar37.net/lunar/api/?" + gets.join("&")
-    xmlhttp.onreadystatechange = function () {
-        if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
-            callback(JSON.parse(xmlhttp.responseText))
-        }
-    }
-    xmlhttp.open("GET", url, true)
-    xmlhttp.send()
 }
 
 
-function example_1(moon) {
-    var day = new Date().getDate()
-    var dayWeek = moon.phase[day].dayWeek
-    var html = "<div>" +
-        "<b>" + moon.nameDay[dayWeek] + "</b>" +
-        "<div>" + day + " <b>" + moon.monthName + "</b> " +
-        moon.year + "</div>" +
-        "<div shadow>" + moon.phase[day].svg + "</div>" +
-        "<div>" + moon.phase[day].phaseName + " " +
-        "" + ((moon.phase[day].isPhaseLimit) ? "" : Math.round(moon.phase[day].lighting) + "%") +
-        "</div>" +
-        "</div>"
-    document.getElementById("ex1").innerHTML = html
-}
-var configMoon = {
-    lang: 'en',
-    month: new Date().getMonth() + 1,
-    year: new Date().getFullYear(),
-    size: 150,
-    lightColor: "rgb(255,255,210)",
-    shadeColor: "black",
-    texturize: false,
-}
-load_moon_phases(configMoon, example_1)
+
+    
+)
+.catch();
+
+// }).then(function (apolloImages) {
+//     for (let i = 0; i < apolloImages.collection.items.length; i++) {
+//         let imageGallery = apolloImages.collection.items[i];
+//         let imageTitle = imageGallery.data[0].title;
+//         let imageHref = imageGallery.links[0].href;
+//         completeImagesArray.apollo.push({
+//             href: imageHref,
+//             title: imageTitle
+//         })
+//     }
+//     let apolloTitle = apolloImages.collection.items[0].data[0].title;
+//     let apolloImage = apolloImages.collection.items[0].links[0].href;
+//     $("#apolloTitle").text(apolloTitle);
+//     $("#apolloImage").attr("src", apolloImage);
+//     $("#apolloImage").val(0);
+// });
+
+// moon[0].Moon
+// moon[0].Index
+// moon[0].Age
+// moon[0].Phase
+// moon[0].Distance
+// moon[0].Illumination
+// moon[0].AngularDiameter
+// moon[0].DistanceToSun
+// moon[0].SunAngularDiameter
+
+const moon = [
+]
+
+var  icon = "Assets\CSS\weather-icons.css" 
