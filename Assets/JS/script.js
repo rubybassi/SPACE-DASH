@@ -66,6 +66,6 @@ function getTimeStamp() {
 }
 
 function getDateStamp() {
-    return moment().format('LL');
+    return moment().format('ll');
 }
 

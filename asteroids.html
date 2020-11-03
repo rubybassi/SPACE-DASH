@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <title>Asteroid-DASH</title>
+    <title>ASTEROID-DASH</title>
 
     <!-- add icon link -->
     <link rel = "icon" 
@@ -20,7 +20,7 @@
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Bungee&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,700;1,400;1,700&family=Rajdhani:wght@500;700&family=Roboto:ital,wght@0,100;0,300;0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&family=Open+Sans:ital,wght@0,300;0,400;0,700;1,400;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Open+Sans:ital,wght@0,300;0,400;0,700;1,400;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;900&display=swap" rel="stylesheet">
     <!-- My basic site style stylesheet -->
     <link rel="stylesheet" type="text/css" href="Assets/CSS/style.css"/>
@@ -29,66 +29,65 @@
 </head>
 
 <body>
-    <div id="wrapper" class=" ui grid container">
+  <div id="wrapper" class=" ui grid container">
+      
+    <div class="sixteen wide column">
+      <h1>ASTEROID-DASH</h1>
+    </div>
 
-      <div id="neo-asteroid" class="div-back-bord four wide column">
-        <h1>Near <span class="body-name">Earth</span> Asteroids</h1>
-        <p id="neo-asteroid-list-container"><span> </p>
-      </div>
+    <aside id="neo-asteroid" class="div-back-bord four wide column">
+      <h2>Near <span class="body-name">Earth</span> Asteroids</h2>
+      <p id="neo-asteroid-list-container"><span> </p>
+    </aside>
 
-      <div class="twelve wide column">
-        <section class="ui grid">
-                
-          <div class="sixteen wide column">
-            <h1>Space-DASH</h1>
-          </div>
-
-          <!-- hot earth balloon and paragraph welcome -->
-          <div class="eleven wide column">
-            <div class="ui grid">
-              <div id="hot-air-balloon" class="six wide column">
-                <img alt="hot earth ballon" 
-                  class="ui fluid rounded image"
-                  src="Assets/images/space-men/hot-earth-balloon.png" 
+    <section class="twelve wide column">
+      <div class="ui grid">
+        <!-- hot earth balloon and paragraph welcome -->
+        <div class="row">
+          <div id="hot-air-balloon" class="four wide column">
+            <img alt="hot earth ballon" 
+              class="ui fluid rounded image"
+              src="Assets/images/space-men/hot-earth-balloon.png" 
                   
-                  style="object-fit: fit-content;"
-                />
-              </div>
-
-              <div class="ten wide column paragraph-styling">
-                <p>Welcome to mission control. <br/>
-                Here you can get data on the planets your team will be visiting and any nearby orbiting objects to report on.<br/>
-                Click a planet on the 'Vissy Screen' below to learn more about it.</p>
-              </div>
-            </div>
+              style="object-fit: fit-content;"
+            />
           </div>
+                
+          <article class="eight wide column paragraph-styling">
+            <p class="intro">Welcome to mission control. <br/>
+              Here you can get data on the planets your team will be visiting and any nearby orbiting objects to report on.<br/>
+              Click a planet on the 'Vissy Screen' below to learn more about it.</p>
+          </article>
 
           <!-- home and date buttons -->
-          <div class="five wide column">    
-            <h1 id="home"><a href="index.html">Home</a></h1>
-            <p id="date">Date </p>
-            <p id="time">Time </p>      
+          <div class="four wide column">    
+            <h2 id="personal"><a href="index.html">Personal</a></h2>
+            <p id="date" class="date">Date </p>
+            <p id="time" class="time">Time </p>      
           </div>
 
-          <!-- planet vissy screen -->
-          <div id="space-windscreen" class="sixteen wide column">
-            <img id="sun" class="planets" alt="sun" src="Assets/images/planets/sun.png"/>
-            <img id="mercury" class="planets" alt="mercury" src="Assets/images/planets/mercury.png"/>
-            <img id="venus" class="planets" alt="venus" src="Assets/images/planets/venus.png"/>
-            <img id="earth" class="planets" alt="earth" src="Assets/images/planets/earth.png"/>
-            <img id="moon" class="planets" alt="moon" src="Assets/images/planets/moon.png"/>
-            <img id="mars" class="planets" alt="mars" src="Assets/images/planets/mars.png"/>
-            <img id="jupiter" class="planets" alt="jupiter" src="Assets/images/planets/jupiter.png"/>
-            <img id="saturn" class="planets" alt="saturn" src="Assets/images/planets/Saturn.png"/>
-            <img id="uranus" class="planets" alt="uranus" src="Assets/images/planets/uranus.png"/>
-            <img id="neptune" class="planets" alt="neptune" src="Assets/images/planets/neptune.png"/>
-            <img id="pluto" class="planets" alt="pluto" src="Assets/images/planets/pluto.png"/>
-            <!-- <img id="the-comet" alt="the-comet" src="Assets/images/planets/comet.png"/> -->
-          </div>
-
-        </section>
-        <!-- end of twelve wide column -->
+        </div> 
+        
+        <!-- planet vissy screen -->
+        <div id="space-windscreen" class="sixteen wide column">
+          <img id="sun" class="planets" alt="sun" src="Assets/images/planets/sun.png"/>
+          <img id="mercury" class="planets" alt="mercury" src="Assets/images/planets/mercury.png"/>
+          <img id="venus" class="planets" alt="venus" src="Assets/images/planets/venus.png"/>
+          <img id="earth" class="planets" alt="earth" src="Assets/images/planets/earth.png"/>
+          <img id="moon" class="planets" alt="moon" src="Assets/images/planets/moon.png"/>
+          <img id="mars" class="planets" alt="mars" src="Assets/images/planets/mars.png"/>
+          <img id="jupiter" class="planets" alt="jupiter" src="Assets/images/planets/jupiter.png"/>
+          <img id="saturn" class="planets" alt="saturn" src="Assets/images/planets/Saturn.png"/>
+          <img id="uranus" class="planets" alt="uranus" src="Assets/images/planets/uranus.png"/>
+          <img id="neptune" class="planets" alt="neptune" src="Assets/images/planets/neptune.png"/>
+          <img id="pluto" class="planets" alt="pluto" src="Assets/images/planets/pluto.png"/>
+          <!-- <img id="the-comet" alt="the-comet" src="Assets/images/planets/comet.png"/> -->
+        </div>
+        
       </div>
+    </section>
+        <!-- end of twelve wide column -->
+  
 
       <section class="twelve wide column">
         <div class="planet-control-centre">
@@ -96,7 +95,7 @@
 
 
             <div class="planet-info-header sixteen wide column">
-              <h1 id="captin-speaking" class="">Planet Name</h1>
+              <h2 id="captin-speaking" class="">Planet Name</h2>
               <h3 id="is-planet">Is it a planet?</h3>
             </div>
 
@@ -119,7 +118,7 @@
             <div class="five wide column">    
               <img alt="hot earth ballon" 
                 class="ui fluid rounded image"
-                src="Assets/images/space-men/lying-on-the-moon.png" 
+                src="Assets/images/space-men/sitting-on-saturn.png" 
                 width="100%" 
               />     
             </div>
@@ -130,7 +129,7 @@
 
       <div class="planet-control-centre four wide column">
         <h1><span class="body-name">Earth</span>'s Moons</h1>
-        <p id="moon-list-container"><span> </p>
+        <p id="moon-list-container"> </p>
       </div>
 
       <!-- data  -->
@@ -161,25 +160,6 @@
     <!-- ends the div wrapper -->
     </div>
 
-
-
-   <!-- <header>
-
-   </header>
-
-   <aside>
-
-   </aside>
-
-   <section>
-       <div id="space-background">
-           
-       </div>
-   </section>
-
-   <section id="control-dash">
-
-   </section> -->
 
    <footer><p>© Copyright 2020</p></footer>
 
