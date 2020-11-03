@@ -300,6 +300,10 @@ footer {
 
 }
 
+div#info-panes {
+    margin: 0 0 14px 0;
+}
+
 @media screen and (min-width: 560px) and (max-width: 950px) {
     h2#personal {
         margin: 14px 0 0 0;
