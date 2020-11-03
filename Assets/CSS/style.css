@@ -38,8 +38,16 @@ Bold 700
 Bold 700 italic
 */
 
+#menu {
+    background-color: #95C4FC ;
+}
+
+#menu a {
+    color: #283758;
+  }
+
 div#wrapper {
-    margin: 10px;
+    padding-top: 72px;
 }
 
 aside.div-back-bord {
