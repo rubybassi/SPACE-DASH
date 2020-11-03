@@ -31,35 +31,28 @@ p {
     padding: 5px;
 }
 
-
+p.date, p.time {
+    margin: 14px 0 0 0;
+}
 
 div.planet-control-centre {
     margin-top: 14px;
 }
 
-p#date, p#time {
-    border: 5px solid #FFA924;
-    border-radius: 5px;
-    padding: 8px 5px;
-    background-color: #95C4FC;
-    margin: 14px 0 0 0;
+h2#personal {
+    padding: 5px 5px;
+    margin: 0 0 14px 0;
 }
+
+
 
 div.eleven.wide.column {
     padding:0;
 }
 
 div#hot-air-balloon {
-    
     border-radius: 5px;
-
 }
-
-
-/* header styling */
-
-
-
 
 /* windscreen styling */
 div#space-windscreen {
@@ -199,20 +192,33 @@ h3#is-planet {
     margin: 5px 0 5px 0;
 }
 
+h3 {
+    margin: 0;
+}
+
+h3#is-planet {
+    background-color: white;
+}
+
 h3.Planet-data {
     border: 5px solid #FA2321;
     border-radius: 5px;
     padding: 5px;
     background-color: #FFA924;
     margin: 5px 0 5px 0;
+    color: #283758;
 }
 
-p.moon-name {
+p.moon-name, p.data-name {
     font-family: 'Amatic SC', cursive;
+    font-weight: 400;
     font-size: xx-large;
     margin: 0;
     padding: 0 5px;
     border: 0;
+}
+p.data-name{
+    background-color:#FFA924 ;
 }
 
 
