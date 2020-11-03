@@ -13,6 +13,11 @@
     crossorigin=""></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css" />
 
+  <link rel = "icon" 
+      href = "Assets/images/logos/favicon.png"
+      type = "image/x-icon"
+    />
+
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Bungee&display=swap" rel="stylesheet">
   <link
@@ -46,20 +51,6 @@
       <i class="video play icon"></i>Videos
     </a>
   </div>
-
-
-
-
-  <!--INTRO SECTION
-  <div class="infoSection" id="intro">
-    <div class="ui grid stackable container">
-      <div class="column" id="megaText">
-          <h1>Welcome to the ISS</h1>
-          <h2>Discover the wonders of space</h2>
-      </div>
-    </div>
-  </div>
--->
 
   <!--INFO SECTION-->
   <div class="infoSection" id="info">
@@ -117,32 +108,31 @@
     </div>
   </div>
 
-  <!--VIDEO SECTION-->
-  <div class="videoSection" id="videos">
-    <!--16 COLUMN ROW / LIVE STREAM INTRO-->
-    <div class="ui grid stackable container">
-      <div class="column">
-        <div class="ui yellow padded segment">
-          <h2>ISS Live Stream</h2>
-          <strong>
-            <p>Watch live footage of earth from space!</p>
-          </strong>
-          <p>During "loss of signal" periods, you will see a blue screen. Since the station orbits the Earth once every
-            90 minutes, it experiences a sunrise or a sunset about every 45 minutes. When the station is in darkness,
-            external camera video may appear black, but can sometimes provide spectacular views of lightning or city
-            lights below.</p>
-        </div>
+<!--VIDEO SECTION-->
+<div class="videoSection" id="videos">
+  <!--16 COLUMN ROW / LIVE STREAM INTRO-->
+  <div class="ui grid stackable container">
+    <div class="column">
+      <div class="ui yellow padded segment">
+        <h2>ISS Live Stream</h2>
+        <strong>
+          <p>Watch live footage of earth from space!</p>
+        </strong>
+        <p>During "loss of signal" periods, you will see a blue screen. Since the station orbits the Earth once every
+          90 minutes, it experiences a sunrise or a sunset about every 45 minutes. When the station is in darkness,
+          external camera video may appear black, but can sometimes provide spectacular views of lightning or city
+          lights below.</p>
       </div>
     </div>
-    <!--TWO 8 COLUMN ROW / EMBEDDED VIDEOS-->
-    <div class="ui grid stackable container" id="iframes">
-      <div class="eight wide column">
-        <div class="ui center red inverted aligned segment">
-          <div class="videoWrapper">
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/DDU-rZs-Ic4" frameborder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowfullscreen></iframe>
-          </div>
+  </div>
+  <!--TWO 8 COLUMN ROW / EMBEDDED VIDEOS-->
+  <div class="ui grid stackable container" id="iframes">
+    <div class="eight wide column">
+      <div class="ui center red inverted aligned segment">
+        <div class="videoWrapper">
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/DDU-rZs-Ic4" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen></iframe>
         </div>
       </div>
       <div class="eight wide column">
@@ -156,18 +146,16 @@
     </div>
   </div>
 
-  <!--MAP SECTION-->
-  <div class="dashbaordMap" id="map">
-    <!--16 COLUMN ROW / ISS DASHBOARD-->
-    <div class="ui grid stackable container">
-      <div class="column">
-        <div class="ui red segment">
-          <h2>Collecting live data...</h2>
-          <div class="ui yellow statistic">
-            <div class="value">
-              <p id="longitudeVal"></p>
-            </div>
-            <div class="label">Longitude</div>
+<!--MAP SECTION-->
+<div class="dashbaordMap" id="map">
+  <!--16 COLUMN ROW / ISS DASHBOARD-->
+  <div class="ui grid stackable container">
+    <div class="column">
+      <div class="ui red segment">
+        <h2>Collecting live data...</h2>
+        <div class="ui yellow statistic">
+          <div class="value">
+            <p id="longitudeVal"></p>
           </div>
           <div class="ui yellow statistic">
             <div class="value">
