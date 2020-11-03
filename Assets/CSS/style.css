@@ -8,6 +8,10 @@ body {
 
 h1, h2 {
     font-family: 'Bungee', cursive;
+    color: #283758;
+    background-color: #FFA924 ;
+    padding: 8px;
+    border-radius: 5px;
 }
 /*
 One Weight reg 400
@@ -74,13 +78,6 @@ p.date, p.time {
     padding: 10px;
     text-align: center;
 } */
-
-h1, h2 {
-    color: #283758;
-    background-color: #FFA924 ;
-    padding: 8px;
-    border-radius: 5px;
-}
 
 h3 {
     margin: 14px 0 ;
