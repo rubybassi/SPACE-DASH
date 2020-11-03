@@ -38,9 +38,30 @@ div#wrapper {
     margin: 10px;
 }
 
+aside.div-back-bord {
+    background-color: #124975;
+    border-radius: 5px;
+}
 div.div-back-bord {
     background-color: #124975;
     border-radius: 5px;
+}
+
+p.intro{
+    background-color: white ;
+    border: 5px solid #FA2321;
+    border-radius: 5px;
+    padding: 5px;
+    color: #283758;
+    padding: 2px;
+}
+
+p.date, p.time {
+    border: 5px solid #FFA924;
+    border-radius: 5px;
+    padding: 5px 5px;
+    background-color: #95C4FC;
+    
 }
 
 .buttonStyle {
@@ -54,11 +75,15 @@ div.div-back-bord {
     text-align: center;
 } */
 
-h1 {
+h1, h2 {
     color: #283758;
     background-color: #FFA924 ;
     padding: 8px;
     border-radius: 5px;
+}
+
+h3 {
+    margin: 14px 0 ;
 }
 
 .headerBox {

@@ -170,7 +170,7 @@ $(document).ready(function(){
         if (discoveredByWho == "") {
             discoveredByContainer.text("There is no discovery information.");
         } else {
-            discoveredByContainer.html("Discovered By: " + discoveredByWho + "</br>" + discoveredDate);
+            discoveredByContainer.html('<h3 class="data-name">Discovered By:' + discoveredByWho + "</br>" + discoveredDate + '</h3>');
         }
         
         let equatorRadius = receivedbodyData.equaRadius;
@@ -178,10 +178,10 @@ $(document).ready(function(){
 
         if (equatorRadius == "0") {
             let meanRadius = receivedbodyData.meanRadius;
-            equatorRadiusContainer.html("Mean Radius: " + meanRadius + " km");
+            equatorRadiusContainer.html('<h3 class="data-name">Mean Radius:' + meanRadius + " km </h3>");
 
         } else {
-            equatorRadiusContainer.html("Equatorial Radius: " + equatorRadius + " km");
+            equatorRadiusContainer.html('<h3 class="data-name">Equatorial Radius: ' + equatorRadius + " km </h3>");
 
         };
         
@@ -200,7 +200,7 @@ $(document).ready(function(){
             }
 
         } else {
-            orbitAroundContainer.html("Orbiting Around: " + orbitAround.planet);
+            orbitAroundContainer.html('<h3 class="data-name">Orbiting Around:' + orbitAround.planet + '</h3>');
         }
 
         let tilt = receivedbodyData.axialTilt;
@@ -208,10 +208,10 @@ $(document).ready(function(){
         let density = receivedbodyData.density;
 
         if (tilt == 0) {
-            tiltContainer.html("Density: <br/>" + density + " g/cm<sup>3</sup>");
+            tiltContainer.html('<p class="data-name">Density: </p><h3>' + density + " g/cm<sup>3</sup></h3>");
 
         }else {
-            tiltContainer.html("Tilt Angle: <br/>" + tilt + "&#176");
+            tiltContainer.html('<p class="data-name">Tilt Angle: </p><h3>' + tilt + "&#176</h3>");
         }
 
         let massValue = receivedbodyData.mass.massValue;
@@ -231,10 +231,10 @@ $(document).ready(function(){
 
         let escapeSpeedValue = receivedbodyData.escape
         
-        massContainer.html("Mass: <br/>" + massRounded + " x 10<sup>" + massExponent + "</sup> kg");
-        volumeContainer.html("Volume: <br/>" + volumeRounded + " x 10<sup>" + volumeExponent + "</sup> kg");
-        gravityContainer.html("Gravity:  <br/>" + gravityValue + "m/s<sup>2</sup>");
-        escapeContainer.html("Escape Speed:  <br/>" + escapeSpeedValue + "m/s<sup>-1</sup>");
+        massContainer.html('<p class="data-name">Mass: </p><h3>' + massRounded + " x 10<sup>" + massExponent + "</sup> kg </h3>");
+        volumeContainer.html('<p class="data-name">Volume: </p><h3>' + volumeRounded + " x 10<sup>" + volumeExponent + "</sup> kg </h3>");
+        gravityContainer.html('<p class="data-name">Gravity: </p><h3>' + gravityValue + "m/s<sup>2</sup> </h3>");
+        escapeContainer.html('<p class="data-name">Escape Speed: </p><h3>' + escapeSpeedValue + "m/s<sup>-1</sup> </h3>");
 
         // moonListContainer
         let moonArray = receivedbodyData.moons;
