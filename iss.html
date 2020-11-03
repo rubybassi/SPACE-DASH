@@ -37,7 +37,6 @@
 
   <!--FIXED HEADER-->
   <div class="ui top fixed labeled icon menu aligned " id="menu">
-
     <a class="item" href="/index.html">
       <i class="home icon"></i>Home
     </a>
@@ -51,6 +50,20 @@
       <i class="video play icon"></i>Videos
     </a>
   </div>
+
+
+
+
+  <!--INTRO SECTION
+  <div class="infoSection" id="intro">
+    <div class="ui grid stackable container">
+      <div class="column" id="megaText">
+          <h1>Welcome to the ISS</h1>
+          <h2>Discover the wonders of space</h2>
+      </div>
+    </div>
+  </div>
+-->
 
   <!--INFO SECTION-->
   <div class="infoSection" id="info">
@@ -94,19 +107,21 @@
         </div>
       </div>
     </div>
-    <!--16 COLUMN ROW / COORDINATE BUTTON-->
-    <div class="ui grid stackable container">
-      <div class="column">
-        <div class="ui center aligned padded segment" id="btnCard">
-          <button id="userBtn" class=" big ui button">
-            <h2>How fast is the ISS travelling?</h2>
-            <i class="space shuttle icon"></i>
-            <div id="showData"></div>
-          </button>
-        </div>
+ 
+  <!--16 COLUMN ROW / COORDINATE BUTTON-->
+  <div class="ui grid stackable container">
+    <div class="column">
+      <div class="ui center aligned padded segment" id="btnCard">
+        <button id="userBtn" class=" big ui button">
+          <h2>How fast is the ISS travelling?</h2>
+          <i class="space shuttle icon"></i>
+          <div id="showData"></div>
+        </button>
       </div>
     </div>
   </div>
+</div>
+
 
 <!--VIDEO SECTION-->
 <div class="videoSection" id="videos">
@@ -135,16 +150,17 @@
             allowfullscreen></iframe>
         </div>
       </div>
-      <div class="eight wide column">
-        <div class="ui center red inverted aligned segment">
-          <div class="videoWrapper">
-            <iframe width="560" height="315" src="https://ustream.tv/embed/9408562" scrolling="no" allowfullscreen
-              webkitallowfullscreen frameborder="0" style="border: 0 none transparent;"></iframe>
-          </div>
+    </div>
+    <div class="eight wide column">
+      <div class="ui center red inverted aligned segment">
+        <div class="videoWrapper">
+          <iframe width="560" height="315" src="https://ustream.tv/embed/9408562" scrolling="no" allowfullscreen
+            webkitallowfullscreen frameborder="0" style="border: 0 none transparent;"></iframe>
         </div>
       </div>
     </div>
   </div>
+</div>
 
 <!--MAP SECTION-->
 <div class="dashbaordMap" id="map">
@@ -157,65 +173,67 @@
           <div class="value">
             <p id="longitudeVal"></p>
           </div>
-          <div class="ui yellow statistic">
-            <div class="value">
-              <p id="latitudeVal"></p>
-            </div>
-            <div class="label">Latitude</div>
+          <div class="label">Longitude</div>
+        </div>
+        <div class="ui yellow statistic">
+          <div class="value">
+            <p id="latitudeVal"></p>
           </div>
-          <div class="ui yellow statistic">
-            <div class="value">
-              <p id="altitudeVal"></p>
-            </div>
-            <div class="label">Altitude</div>
+          <div class="label">Latitude</div>
+        </div>
+        <div class="ui yellow statistic">
+          <div class="value">
+            <p id="altitudeVal"></p>
           </div>
-          <div class="ui yellow statistic">
-            <div class="value">
-              <p id="visitbiltyVal"></p>
-            </div>
-            <div class="label">Visibility</div>
+          <div class="label">Altitude</div>
+        </div>
+        <div class="ui yellow statistic">
+          <div class="value">
+            <p id="visitbiltyVal"></p>
           </div>
-          <div class="ui yellow  statistic">
-            <div class="value">
-              <p id="footprintVal"></p>
-            </div>
-            <div class="label">Footprint</div>
+          <div class="label">Visibility</div>
+        </div>
+        <div class="ui yellow  statistic">
+          <div class="value">
+            <p id="footprintVal"></p>
           </div>
-          <div class="ui yellow statistic">
-            <div class="value">
-              <p id="daynumVal"></p>
-            </div>
-            <div class="label">Daynum</div>
+          <div class="label">Footprint</div>
+        </div>
+        <div class="ui yellow statistic">
+          <div class="value">
+            <p id="daynumVal"></p>
           </div>
-          <div class="ui yellow statistic">
-            <div class="value">
-              <p id="sollatVal"></p>
-            </div>
-            <div class="label">Solar Latitude</div>
+          <div class="label">Daynum</div>
+        </div>
+        <div class="ui yellow statistic">
+          <div class="value">
+            <p id="sollatVal"></p>
           </div>
-          <div class="ui yellow statistic">
-            <div class="value">
-              <p id="sollongVal"></p>
-            </div>
-            <div class="label">Solar Longitude</div>
+          <div class="label">Solar Latitude</div>
+        </div>
+        <div class="ui yellow statistic">
+          <div class="value">
+            <p id="sollongVal"></p>
           </div>
-          <div class="ui yellow statistic">
-            <div class="value">
-              <p id="velocityVal"></p>
-            </div>
-            <div class="label" data-tooltip="Velocity is the speed at which something is traveling"
-              data-position="bottom center">Velocity</div>
+          <div class="label">Solar Longitude</div>
+        </div>
+        <div class="ui yellow statistic">
+          <div class="value">
+            <p id="velocityVal"></p>
           </div>
+          <div class="label" data-tooltip="Velocity is the speed at which something is traveling"
+          data-position="bottom center">Velocity</div>
         </div>
       </div>
     </div>
-    <div class="ui grid stackable container">
-      <div class="column">
-        <div class="ui padded blue segment" id="mapContainer">
-          <h2>Where's the ISS At?</h2>
-          <div id="mapid"></div>
-        </div>
+  </div>
+  <div class="ui grid stackable container">
+    <div class="column">
+      <div class="ui padded blue segment" id="mapContainer">
+        <h2>Where's the ISS At?</h2>
+        <div id="mapid"></div>
       </div>
+    </div>
     </div>
   </div>
 
