@@ -9,6 +9,27 @@ $.ajax({
         let moonName = moonData[0].Moon[0]
         console.log(moonName)
         $('#moonHeader').text(moonPhase)
+
+if (moonPhase === "Waxing Crescent") {
+    $('#todaysMoon').attr("src", "Assets/images/moon-phases/WaxingCrescent.png" )
+
+
+  }
+
+
+
+
+
+
+
 });
 
 
+// New Moon
+// Waxing Crescent
+// First Quarter
+// Waxing Gibbous
+// Full Moon
+// Waning Gibbous
+// Third Quarter
+// Waning Crescent
