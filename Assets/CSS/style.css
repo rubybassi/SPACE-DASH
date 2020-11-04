@@ -112,23 +112,13 @@ h3 {
 }
 
 footer {
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    padding: 10px;
     color: #283758;
+    background-color: #95C4FC;
     text-align: center;
     font-weight: bold;
-    background-color: #FA2321;
+    padding: 10px;
     border: 5px solid;
     border-color:#95C4FC;
-}
-
-footer>p {
-    color: #283758;
-    text-align: center;
-    font-weight: bold;
-    background-color: #FA2321;
 }
 
 span {
