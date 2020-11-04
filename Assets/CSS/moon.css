@@ -1,16 +1,3 @@
-#moonToday{    
-    display: table;    
-    margin:20px auto;
-    text-align: center;    
-    color:black;
-    border: 1px solid black;
-    padding: 5px 30px;
-    }
-    #moonToday [shadow]{
-    filter:drop-shadow(0 0 25px rgb(0,50,50));
-    padding:15px 0;
-    }
-
 
 * {
     box-sizing: border-box;
@@ -25,8 +12,23 @@ div#wrapper {
     margin: 10px;
 }
 
-h1, h2, h3, h4, h5 {
-    text-align: center;
+
+#newMoon,
+#waxingCrescent,
+#firstQuarter,
+#waxingGibbous,
+#fullMoon,
+#waningGibbous,
+#thirdQuarter,
+#waningCrescent
+ {
+
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    height: 115px;
+    width: auto;
+  
 }
 
 
