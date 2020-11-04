@@ -12,7 +12,6 @@ div#wrapper {
     margin: 10px;
 }
 
-
 #newMoon,
 #waxingCrescent,
 #firstQuarter,
@@ -31,4 +30,24 @@ div#wrapper {
   
 }
 
+#todaysMoon
+{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    height: 175px;
+    width: auto;
+  
+}
+#todaysMoonBox
+{
+    border: 5px solid;
+    border-color: #ffa924;
+    background-color: #95C4FC;
+    color: #283758;
+    border-radius: 15px;
+    height: 340px;
+    width: 100%;
+    
+}
 
