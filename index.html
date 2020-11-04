@@ -1,13 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-
   <title>SPACE-DASH</title>
-
   <!-- add icon link -->
   <link rel = "icon" 
       href = "Assets/images/logos/favicon.png"
@@ -29,12 +26,12 @@
   <!-- master style sheet  -->
   <link rel="stylesheet" type="text/css" href="Assets/CSS/style.css" />
 </head>
-
 <body>
-
   <!--FIXED HEADER-->
   <nav class="ui top fixed labeled icon mini menu aligned" id="menu">
-    <a class="item" href="index.html">
+
+    <a class="item active" href="index.html">
+
       <i class="home icon"></i>Home
     </a>
     <a class="item" href="gallery.html">
@@ -50,62 +47,105 @@
       <i class="moon icon"></i>Moon 
     </a>
   </nav>
-
-  <div id="wrapper" class=" ui grid container">
-
+  <div id="wrapper" class=" ui grid stackable container">  
+  <!--HEADER ROW-->
+   <div class="one column row">
     <div class="sixteen wide column" id="headerText">
-      <h1>SPACE-DASH</h1>
+      <div class="ui segment" id="seg1">
+        <h1>Welcome to SPACE-DASH!</h1>
+      </div>
     </div>
+   </div> 
 
-    <aside id="ranger-rank-container" class="div-back-bord four wide column">
-      <h2>Your Space Rank:</h2>
-    </aside>
-
-    <section class="twelve wide column">
-      <div class="ui grid">
-
-        <article class="twelve wide column">
-          <p class="intro"> Some content in here</p>
-        </article>
-
-        <!-- home and date buttons -->
-        <div class="four wide column">
-          <p id="date-header" class="date">Date </p>
-          <p id="time-header" class="time">Time </p>
+   <div class="one column row" id="userInput">
+      <div class="column">
+        <div class="ui action input">
+          <input type="text" placeholder="enter name" id="name">
+          <button class="ui button" id="nameBtn">Submit your name</button>
+          <div id="userName"></div>
         </div>
+      </div>
+    </div>  
 
+   <!--INTRO AND TIME ROW-->
+   <div class="three column row">
+    <div class="eight wide column">
+      <section class="ui segment" id="seg2">
+      <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Impedit nihil, omnis dolorum distinctio quo reiciendis explicabo non debitis optio. Illo delectus dolor aut rerum tempore quia inventore. Sequi, vel itaque.</p>
+      </section>
+    </div>
+      <div id="ranger-rank-container" class="four wide column">
+        <section class="ui segment" id="seg3">
+        <h2>Your Space Rank:</h2>
+        </section>
+    </div>
+      <div class="four wide column">
+        <p id="date-header" class="date">Date </p>
+        <p id="time-header" class="time">Time </p>
       </div>
-    </section>
-    <!--Picture of the day-->
-    <div class="row">
-      <div class="picOfTheDay eleven wide column">
-        <h2 class="header">Picture of the Day</h2>
-        <h3 class="header" id="picHeader">
-          </h3>
-          <img id="potdIMG" alt="Picture of the day" />
-      </div>
+   </div> 
+    <!--POTD AND ASTEROID ROW-->
+    <div class="two column row">
+    <div class="column">
+      <article class="ui padded segment" id="seg4">
+        <h2>Picture of the Day</h2>
+        <p>Information to take through from gallery page</p>
+        <img id="potdIMG" alt="Picture of the day" />
+        <form method="get" action="gallery.html">
+          <button class="big ui blue button" type="submit">
+            Show me moons
+          </button>
+        </form>
+      </article>
     </div>
 
-    <section>
-      <div class="div-back-bord four wide column">
-        <h2>Misson Control</h2>
-        <p>Information to take through from asteroides page </p>
+      <div class="column">
+        <article class="ui padded segment" id="seg5">
+          <h2>Misson Control</h2>
+          <p>Information to take through from asteroides page </p>
+          <form method="get" action="asteroids.html">
+            <button class="big ui blue button" type="submit">
+              Asteriods
+            </button>
+          </form>
+        </article>
       </div>
-    </section>
-
+    </div>
+    <!--ISS AND MOON ROW-->    
+    <div class="two column row">
+    <div class="column">
+      <article class="ui padded segment" id="seg6">
+        <h2>ISS Tracker</h2>
+        <p>Information to take through from iss page </p>
+        <form method="get" action="iss.html">
+          <button class="big ui blue button" type="submit">
+            International Space Station
+          </button>
+        </form>
+      </article>
+    </div>
+      <div class="column">
+        <article class="ui padded segment" id="seg7">
+          <h2>Moon Phase</h2>
+          <p>Information to take through from moon page </p>
+          <form method="get" action="moon.html">
+            <button class="big ui blue button" type="submit">
+              Moon Phases
+            </button>
+          </form>     
+        </article>
+      </div>
+    </div>
+  </div>
 
   <!-- footer -->
   <footer>
     <p>© Copyright 2020</p>
   </footer>
-
-
   <!---JS Files-->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.13/semantic.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
   <script type="text/javascript" src="Assets/JS/script.js"></script>
-
 </body>
-
 </html>

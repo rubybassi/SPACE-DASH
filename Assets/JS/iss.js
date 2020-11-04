@@ -15,7 +15,9 @@ let velocity = "";
 
 // init funtion
 $(function () {
- 
+
+ $('.issName').text(JSON.parse(localStorage.getItem('name'))); 
+//console.log('this works:', JSON.parse(localStorage.getItem('name')));  
 // Generate map with Leaflet.js library map method setting default lat, long and scale
 let issMap = L.map('mapid').setView([0, 0], 2);
 
@@ -77,7 +79,7 @@ const handleWeatherData = (data) => {
   $('#daynumVal').text(daynum); //
   $('#sollatVal').text(solar_lat.toFixed(5));
   $('#sollongVal').text(solar_lon.toFixed(5));
-  $('#velocityVal').text(velocity.toFixed(0));
+  $('#velocityVal').text(velocity.toFixed(2));
 };
 
 // Call function
@@ -98,4 +100,3 @@ $(userBtn).on("click", (event) => {
   $(showDataDiv)
     .append(`<h2>Velocity: ${velocity} mph</h2>`)
 });
-

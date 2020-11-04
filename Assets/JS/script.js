@@ -181,3 +181,29 @@ function getDateStamp() {
     return moment().format('ll');
 }
 
+
+// button event listener to capture user name
+const userInput = $('#name');
+$('#nameBtn').on('click', (event) => {
+  event.preventDefault();
+  $('#headerText h1').empty();
+  const name = $(userInput).val().toUpperCase();
+  if (name === "") {
+   alert("please add name");
+	} else {
+		setName(name);
+        getName(name);    
+  }
+});
+
+// save name to local storage
+const setName = (name) => {
+localStorage.setItem('name', JSON.stringify(name));
+}
+
+// retrieve name from storage
+const getName = (name) => {
+const storedName = JSON.parse(localStorage.getItem('name'));
+$('#headerText h1').text(`Hello ${storedName}! Get ready to explore the wonders of space...`);
+return storedName;    
+}
