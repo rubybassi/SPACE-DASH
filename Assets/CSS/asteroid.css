@@ -223,9 +223,6 @@ p.moon-name:hover {
     color: #FA2321;
 }
 
-footer {
-    position: unset;
-}
 
 /* media queries  */
 @media screen and (max-width: 560px ){
