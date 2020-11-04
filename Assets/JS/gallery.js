@@ -1,5 +1,7 @@
 $(document).ready(function () {
 
+    $('.galleryName').text(JSON.parse(localStorage.getItem('name')));
+
     //object to hold all the seperate arrays for apollo, moon, sun and galaxy
     let completeImagesArray = { apollo: [], moon: [], sun: [], galaxies: [] }
     // url for apollo images
@@ -49,7 +51,7 @@ $(document).ready(function () {
         $("#moonImage").val(0)
     });
 
-     // url for sun images
+    // url for sun images
     const sunURL = "https://images-api.nasa.gov/search?q=sun&media_type=image"
     // ajax call for sun images
     $.ajax({
