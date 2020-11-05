@@ -41,6 +41,7 @@ $(document).ready(function(){
         console.log(onloadData);
         solaireAjaxCall(onloadData);
         nasaAjaxCallAsteroid(onloadData);
+        $('.asteroidName').text(JSON.parse(localStorage.getItem('name'))); 
 
 
     function planetImgClicked(){
@@ -160,7 +161,7 @@ $(document).ready(function(){
         if (isAPlanet == true){
             isThisAPlanet.text("This is a planet.");
         } else {
-            isThisAPlanet.text('<h3>This is not a planet.</h3>');
+            isThisAPlanet.text('This is not a planet.');
         }
         
         let discoveredByWho = receivedbodyData.discoveredBy;
@@ -278,18 +279,18 @@ $(document).ready(function(){
 
     }
 
-    // const testDate = moment().subtract(7, 'days').format("YYYY-MM-DD");
-    // console.log("testDate",testDate);
-    // const formatedTestDate = testDate.replaceAll("/","-");
-    // console.log(formatedTestDate);
-    // console.log(moment("YYYYMMDD"));
-
+    
     
     function nasaAjaxCallAsteroid(passbodyid) {
-
+        
         // console.log("nasa Ajax has body id =", passbodyid);
+        const formatDate = moment().format("YYYY-MM-DD");
+        console.log("formatDate",formatDate);
+        
+        const todayDate = moment().format("YYYY-MM-DD");
+        console.log("todayDate", todayDate);
 
-        let dateMin = "2019-02-16"; 
+        let dateMin = todayDate; 
         // let dateMax = "2019-03-16";
         let distMax = "10LD";
         let body = passbodyid
@@ -305,12 +306,28 @@ $(document).ready(function(){
         $.ajax({ url: nasaURL, method: "GET" }).then(function(passneoData){
 
             dealWithAsteroidData(passneoData);
-
+    
         }).catch(noAsteroidResults);
+
+        // $.ajax({ url: nasaURL, method: "GET" }).then(function(passneoData){
+
+        //     console.log("passneoData count = ", passneoData.count);
+        //     const neoDataCount = passneoData.count
+        //     if ( neoDataCount > 5){
+
+        //         dealWithAsteroidData(passneoData);
+        //     } else {
+
+        //         for(count = neoDataCount; count<5; count++);
+
+        //     }
+
+
+        // }).catch(noAsteroidResults);
     }
 
     function dealWithAsteroidData(DealWneoData){
-        // console.log("Asteroid data = ",DealWneoData);
+        console.log("Asteroid data = ",DealWneoData);
         // console.log("Asteroid count = ",DealWneoData.count);
         // console.log("Asteroid count = ",DealWneoData.data[0][0]);
         // console.log("Asteroid count = ",DealWneoData.data[0][3]);
@@ -331,23 +348,28 @@ $(document).ready(function(){
                 "<h3>Top 5 closest:</h3><br/>" +
                 "Name: " + DealWneoData.data[0][0] + "<br/>" +
                 "Date: " + DealWneoData.data[0][3] + "<br/>" +
-                "Approach Speed: " + DealWneoData.data[0][7] + " km/s <br/><br/>" +
+                "Approach Speed: " + Math.round(DealWneoData.data[0][7]) + " km/s <br/>" +
+                "Approach distance: " + Math.round(DealWneoData.data[0][4]*150000000) + " km <br/><br/>" +
     
                 "Name: " + DealWneoData.data[1][0] + "<br/>" +
                 "Date: " + DealWneoData.data[1][3] + "<br/>" +
-                "Approach Speed: " + DealWneoData.data[1][7] + " km/s <br/><br/>" +
+                "Approach Speed: " + Math.round(DealWneoData.data[1][7]) + " km/s <br/>" +
+                "Approach distance: " + Math.round(DealWneoData.data[1][4]*150000000) + " km <br/><br/>" +
     
                 "Name: " + DealWneoData.data[2][0] + "<br/>" +
                 "Date: " + DealWneoData.data[2][3] + "<br/>" +
-                "Approach Speed: " + DealWneoData.data[2][7] + " km/s <br/><br/>" +
+                "Approach Speed: " + Math.round(DealWneoData.data[2][7]) + " km/s <br/>" +
+                "Approach distance: " + Math.round(DealWneoData.data[2][4]*150000000) + " km <br/><br/>" +
     
                 "Name: " + DealWneoData.data[3][0] + "<br/>" +
                 "Date: " + DealWneoData.data[3][3] + "<br/>" +
-                "Approach Speed: " + DealWneoData.data[3][7] + " km/s <br/><br/>" +
+                "Approach Speed: " + Math.round(DealWneoData.data[3][7]) + " km/s <br/>" +
+                "Approach distance: " + Math.round(DealWneoData.data[3][4]*150000000) + " km <br/><br/>" +
     
                 "Name: " + DealWneoData.data[4][0] + "<br/>" +
                 "Date: " + DealWneoData.data[4][3] + "<br/>" +
-                "Approach Speed: " + DealWneoData.data[4][7] + " km/s <br/><br/>"
+                "Approach Speed: " + Math.round(DealWneoData.data[4][7]) + " km/s <br/>" +
+                "Approach distance: " + Math.round(DealWneoData.data[4][4]*150000000) + " km <br/><br/>" 
             );
         }
     }
