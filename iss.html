@@ -30,29 +30,29 @@
 
   <link rel="stylesheet" href="Assets/CSS/style.css" />
   <link rel="stylesheet" href="Assets/CSS/iss.css" />
-  <title>ISS Locator</title>
+  <title>ISS-DASH</title>
 </head>
 
 <body>
 
   <!--FIXED HEADER-->
-  <div class="ui top fixed labeled icon mini menu aligned " id="menu">
-    <a class="item" href="/index.html">
+  <nav class="ui top fixed labeled icon mini menu aligned" id="menu">
+    <a class="item" href="index.html">
       <i class="home icon"></i>Home
     </a>
-    <a class="item" href="#info">
-      <i class="rocket icon"></i>About the ISS
+    <a class="item" href="gallery.html">
+      <i class="image icon"></i>Gallery
     </a>
-    <a class="item" href="#map">
-      <i class="map icon"></i>ISS Map
+    <a class="item" href="asteroids.html">
+      <i class="star icon"></i>Asteriods
     </a>
-    <a class="item" href="#videos">
-      <i class="video play icon"></i>Videos
+    <a class="item active" href="iss.html">
+      <i class="space shuttle icon"></i>ISS
     </a>
-  </div>
-
-
-
+    <a class="item" href="moon.html">
+      <i class="moon icon"></i>Moon 
+    </a>
+  </nav>
 
   <!--INTRO SECTION
   <div class="infoSection" id="intro">
@@ -70,9 +70,20 @@
     <div class="ui grid stackable container">
       <div class="column">
         <div class="ui segment" id="rangerBanner">
-          <h1>Welcome to the ISS</h1>
+          <h1>You've arrived to the International Space Station data control room <span class="issName"></span></h1>
         </div>
       </div>
+    </div>
+
+    <div class="ui grid stackable container">
+      <div>
+      <a class="item" href="#map">
+        <i class="map icon"></i>ISS Map
+      </a>
+      <a class="item" href="#videos">
+        <i class="video play icon"></i>Videos
+      </a>
+    </div>
     </div>
 
     <!--6 and 10 FLUID COLUMN ROW / CARD AND ISS INFO-->
@@ -113,7 +124,7 @@
     <div class="column">
       <div class="ui center aligned padded segment" id="btnCard">
         <button id="userBtn" class=" big ui button">
-          <h2>How fast is the ISS travelling?</h2>
+          <h2>Hey <span class="issName"></span>, How fast is the ISS travelling? Click the spaceship to find out!</h2>
           <i class="space shuttle icon"></i>
           <div id="showData"></div>
         </button>
@@ -230,7 +241,7 @@
   <div class="ui grid stackable container">
     <div class="column">
       <div class="ui padded blue segment" id="mapContainer">
-        <h2>Where's the ISS At?</h2>
+        <h2><span class="issName"></span> Where's the ISS At? Press zoom to see the location</h2>
         <div id="mapid"></div>
       </div>
     </div>
@@ -238,8 +249,9 @@
   </div>
 
 
+  <!-- footer -->
   <footer>
-    <p>© Copyright 2020</p>
+    © Copyright 2020
   </footer>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>

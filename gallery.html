@@ -35,19 +35,19 @@
 
   <!--FIXED HEADER-->
   <div class="ui top fixed labeled icon mini menu aligned " id="menu">
-    <a class="item" href="/index.html">
+    <a class="item" href="index.html">
       <i class="home icon"></i>Home
     </a>
-    <a class="item" href="/gallery.html">
+    <a class="item" href="gallery.html">
       <i class="image icon"></i>Gallery
     </a>
-    <a class="item" href="/asteroids.html">
+    <a class="item" href="asteroids.html">
       <i class="star icon"></i>Asteriods
     </a>
-    <a class="item" href="/iss.html">
+    <a class="item" href="iss.html">
       <i class="space shuttle icon"></i>ISS
     </a>
-    <a class="item" href="/moon.html">
+    <a class="item" href="moon.html">
       <i class="moon icon"></i>Moon 
     </a>
   </div>
@@ -67,8 +67,9 @@
     <div class="twelve wide column">
       <div class="ui red padded segment">
         <h2>What's in this gallery?</h2>
-        <p>
-
+        <p>Hey there <span class="galleryName"></span>!<p>
+          <p>
+          Welcome to the gallery page! Here you can find all kinds of cool images to show you what goes on in space!
         </p>
       </div>
     </div>
@@ -76,12 +77,12 @@
       <div class="picturesBoxes">
         <h2 class="header">Apollo Mission Images</h2>
         <h3 class="header" id="apolloTitle"></h3>
-        <img class="ui medium rounded image" id="apolloImage">
+        <img class="ui medium rounded image" id="apolloImage" alt="Apollo Images">
         <div class="ui icon buttons" id="apollo">
-          <button class="ui button large previousButton">
+          <button class="ui button large left floated previousButton">
             <i class="arrow circle left icon"></i>
           </button>
-          <button class="ui button large nextButton">
+          <button class="ui button large right floated nextButton">
             <i class="arrow circle right icon"></i>
           </button>
         </div>
@@ -91,7 +92,7 @@
       <div class="picturesBoxes">
         <h2 class="header">The Moon</h2>
         <h3 class="header" id="moonTitle"></h3>
-        <img class="ui medium rounded image" id="moonImage">
+        <img class="ui medium rounded image" id="moonImage" alt="Moon Images">
         <div class="ui icon buttons" id="moon">
           <button class="ui button large previousButton">
             <i class="arrow circle left icon"></i>
@@ -106,7 +107,7 @@
       <div class="picturesBoxes">
         <h2 class="header">The Sun</h2>
         <h3 class="header" id="sunTitle"></h3>
-        <img class="ui medium rounded image" id="sunImage">
+        <img class="ui medium rounded image" id="sunImage" alt="Sun Images">
         <div class="ui icon buttons" id="sun">
           <button class="ui button large previousButton">
             <i class="arrow circle left icon"></i>
@@ -121,7 +122,7 @@
       <div class="picturesBoxes">
         <h2 class="header">Galaxies</h2>
           <h3 class="header" id="galaxiesTitle"></h3>
-            <img class="ui medium rounded image" id="galaxiesImage">
+            <img class="ui medium rounded image" id="galaxiesImage" alt="Galaxy Images">
             <div class="ui icon buttons" id="galaxies">
               <button class="ui button large previousButton">
                 <i class="arrow circle left icon"></i>
@@ -132,10 +133,12 @@
             </div>
       </div>
     </div>
-    <!-- footer -->
-    <footer>
-      <p>© Copyright 2020</p>
-    </footer>
+  </div>
+  
+  <!-- footer -->
+  <footer>
+    © Copyright 2020
+  </footer>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.13/semantic.min.js"></script>

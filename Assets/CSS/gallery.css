@@ -19,6 +19,9 @@
   color: #283758;
   background-color: #95c4fc;
   border-radius: 15px;
+  height: 450px;
+  width: 100%;
+  
 }
 
 h3 {
@@ -32,8 +35,10 @@ h3 {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  width: 50%;
+  height: 250px;
+  width: auto;
 }
+
 
 
 
