@@ -98,17 +98,17 @@ $(document).ready(function () {
 
     //Ranger rank 
     const rangerRank = [
-        {rank: "Junior Cadet", badge: ""},
-        {rank: "Space Cadet", badge: ""},
-        {rank: "Space Scout", badge: ""},
-        {rank: "Space Ranger", badge: ""},
-        {rank: "Planetary Pilet", badge: ""},
-        {rank: "Space Captin ", badge: ""},
-        {rank: "Senior Astronaut", badge: ""},
-        {rank: "Starship Commander", badge: ""},
-        {rank: "Space Ace", badge: ""},
-        {rank: "Star Fleet Admiral", badge: ""},
-        {rank: "Galactic Hero", badge: ""},
+        {rank: "Junior Cadet", badge: 'src="Assets/images/badges/junior-cadet.png"'},
+        {rank: "Space Cadet", badge: 'src="Assets/images/badges/spaace-cadet.png"'},
+        {rank: "Space Scout", badge: 'src="Assets/images/badges/space-scout.png"'},
+        {rank: "Space Ranger", badge: 'src="Assets/images/badges/space-ranger.png"'},
+        {rank: "Planetary Pilot", badge: 'src="Assets/images/badges/Planetary-Piolt.png"'},
+        {rank: "Space Captin ", badge: 'src="Assets/images/badges/space-captian.png"'},
+        {rank: "Senior Astronaut", badge: 'src="Assets/images/badges/senior-astronaugt.png"'},
+        {rank: "Starship Commander", badge: 'src="Assets/images/badges/star-ship-commander.png"'},
+        {rank: "Space Ace", badge: 'src="Assets/images/badges/space-ace.png"'},
+        {rank: "Star Fleet Admiral", badge: 'src="Assets/images/badges/starfleet-commander.png"'},
+        {rank: "Galactic Hero", badge: 'src="Assets/images/badges/galactic-hero.png"'},
         
     ]
 
@@ -120,52 +120,52 @@ $(document).ready(function () {
 
         let retreiveVisitHistory = localStorage.getItem("visitHistory");
         console.log("retreiveVisitHistory for rank allocation =", retreiveVisitHistory);
-        // rangerRankContainer.empty();
+        rangerRankContainer.empty();
 
         if (retreiveVisitHistory == "1"){
             rangerRankContainer.append('<h2>' + GRR[0].rank + '</h2>');
-            // rangerRankContainer.append('<img alt=" ' + GRR[0].rank + 'badge " src=" ' + GRR[0].badge + ' "/>');
+            rangerRankContainer.append('<img alt=" ' + GRR[0].rank + 'badge "  ' + GRR[0].badge + 'style="width: 200px;" />');
 
         } else if (retreiveVisitHistory == "2"){
             console.log("rank level 2");
             rangerRankContainer.append('<h2>' + GRR[1].rank + '</h2>');
-            // rangerRankContainer.append('<img alt=" ' + GRR[1].rank + 'badge " src=" ' + GRR[1].badge + ' "/>');
+            rangerRankContainer.append('<img alt=" ' + GRR[1].rank + 'badge "  ' + GRR[1].badge + ' style="width: 200px;"/>');
 
         } else if (retreiveVisitHistory == "3"){
             rangerRankContainer.append('<h2>' + GRR[2].rank + '</h2>');
-            // rangerRankContainer.append('<img alt=" ' + GRR[2].rank + 'badge " src=" ' + GRR[2].badge + ' "/>');
+            rangerRankContainer.append('<img alt=" ' + GRR[2].rank + 'badge " ' + GRR[2].badge + ' style="width: 200px;"/>');
 
         } else if (retreiveVisitHistory == "4"){
             rangerRankContainer.append('<h2>' + GRR[3].rank + '</h2>');
-            // rangerRankContainer.append('<img alt=" ' + GRR[3].rank + 'badge " src=" ' + GRR[3].badge + ' "/>');
+            rangerRankContainer.append('<img alt=" ' + GRR[3].rank + 'badge "  ' + GRR[3].badge + ' style="width: 200px;"/>');
 
         } else if (retreiveVisitHistory == "5"){
             rangerRankContainer.append('<h2>' + GRR[4].rank + '</h2>');
-            // rangerRankContainer.append('<img alt=" ' + GRR[4].rank + 'badge " src=" ' + GRR[4].badge + ' "/>');
+            rangerRankContainer.append('<img alt=" ' + GRR[4].rank + 'badge " ' + GRR[4].badge + ' style="width: 200px;"/>');
 
         } else if (retreiveVisitHistory == "6"){
             rangerRankContainer.append('<h2>' + GRR[5].rank + '</h2>');
-            // rangerRankContainer.append('<img alt=" ' + GRR[5].rank + 'badge " src=" ' + GRR[5].badge + ' "/>');
+            rangerRankContainer.append('<img alt=" ' + GRR[5].rank + 'badge " ' + GRR[5].badge + 'style="width: 200px;" />');
 
         } else if (retreiveVisitHistory == "7"){
             rangerRankContainer.append('<h2>' + GRR[6].rank + '</h2>');
-            // rangerRankContainer.append('<img alt=" ' + GRR[6].rank + 'badge " src=" ' + GRR[6].badge + ' "/>');
+            rangerRankContainer.append('<img alt=" ' + GRR[6].rank + 'badge " ' + GRR[6].badge + ' style="width: 200px;"/>');
 
         } else if (retreiveVisitHistory == "8"){
             rangerRankContainer.append('<h2>' + GRR[7].rank + '</h2>');
-            // rangerRankContainer.append('<img alt=" ' + GRR[7].rank + 'badge " src=" ' + GRR[7].badge + ' "/>');
+            rangerRankContainer.append('<img alt=" ' + GRR[7].rank + 'badge " ' + GRR[7].badge + 'style="width: 200px;"/>');
 
         } else if (retreiveVisitHistory == "9"){
             rangerRankContainer.append('<h2>' + GRR[8].rank + '</h2>');
-            // rangerRankContainer.append('<img alt=" ' + GRR[8].rank + 'badge " src=" ' + GRR[8].badge + ' "/>');
+            rangerRankContainer.append('<img alt=" ' + GRR[8].rank + 'badge " ' + GRR[8].badge + 'style="width: 200px;" />');
 
         } else if (retreiveVisitHistory == "10"){
             rangerRankContainer.append('<h2>' + GRR[9].rank + '</h2>');
-            // rangerRankContainer.append('<img alt=" ' + GRR[9].rank + 'badge " src=" ' + GRR[9].badge + ' "/>');
+            rangerRankContainer.append('<img alt=" ' + GRR[9].rank + 'badge " ' + GRR[9].badge + 'style="width: 200px;" />');
 
         } else if (retreiveVisitHistory == "11"){
             rangerRankContainer.append('<h2>' + GRR[10].rank + '</h2>');
-            // rangerRankContainer.append('<img alt=" ' + GRR[10].rank + 'badge " src=" ' + GRR[10].badge + ' "/>');
+            rangerRankContainer.append('<img alt=" ' + GRR[10].rank + 'badge " ' + GRR[10].badge + 'style="width: 200px;"/>');
 
         } 
     }
