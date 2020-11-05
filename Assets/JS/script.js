@@ -126,48 +126,48 @@ $(document).ready(function () {
 
         if (retreiveVisitHistory == "1"){
             rangerRankTitle.append('<h2>' + GRR[0].rank + '</h2>');
-            rangerRankBadge.append('<img alt=" ' + GRR[0].rank + 'badge "  ' + GRR[0].badge + 'style="width: 200px;" />');
+            rangerRankBadge.append('<img alt=" ' + GRR[0].rank + 'badge "  ' + GRR[0].badge + 'style="width: 100%;" />');
 
         } else if (retreiveVisitHistory == "2"){
             console.log("rank level 2");
             rangerRankTitle.append('<h2>' + GRR[1].rank + '</h2>');
-            rangerRankBadge.append('<img alt=" ' + GRR[1].rank + 'badge "  ' + GRR[1].badge + ' style="width: 200px;"/>');
+            rangerRankBadge.append('<img alt=" ' + GRR[1].rank + 'badge "  ' + GRR[1].badge + ' style="width: 100%;"/>');
 
         } else if (retreiveVisitHistory == "3"){
             rangerRankTitle.append('<h2>' + GRR[2].rank + '</h2>');
-            rangerRankBadge.append('<img alt=" ' + GRR[2].rank + 'badge " ' + GRR[2].badge + ' style="width: 200px;"/>');
+            rangerRankBadge.append('<img alt=" ' + GRR[2].rank + 'badge " ' + GRR[2].badge + ' style="width: 100%;"/>');
 
         } else if (retreiveVisitHistory == "4"){
             rangerRankTitle.append('<h2>' + GRR[3].rank + '</h2>');
-            rangerRankBadge.append('<img alt=" ' + GRR[3].rank + 'badge "  ' + GRR[3].badge + ' style="width: 200px;"/>');
+            rangerRankBadge.append('<img alt=" ' + GRR[3].rank + 'badge "  ' + GRR[3].badge + ' style="width: 100%;"/>');
 
         } else if (retreiveVisitHistory == "5"){
             rangerRankTitle.append('<h2>' + GRR[4].rank + '</h2>');
-            rangerRankBadge.append('<img alt=" ' + GRR[4].rank + 'badge " ' + GRR[4].badge + ' style="width: 200px;"/>');
+            rangerRankBadge.append('<img alt=" ' + GRR[4].rank + 'badge " ' + GRR[4].badge + ' style="width: 100%;"/>');
 
         } else if (retreiveVisitHistory == "6"){
             rangerRankTitle.append('<h2>' + GRR[5].rank + '</h2>');
-            rangerRankBadge.append('<img alt=" ' + GRR[5].rank + 'badge " ' + GRR[5].badge + 'style="width: 200px;" />');
+            rangerRankBadge.append('<img alt=" ' + GRR[5].rank + 'badge " ' + GRR[5].badge + 'style="width: 100%;" />');
 
         } else if (retreiveVisitHistory == "7"){
             rangerRankTitle.append('<h2>' + GRR[6].rank + '</h2>');
-            rangerRankBadge.append('<img alt=" ' + GRR[6].rank + 'badge " ' + GRR[6].badge + ' style="width: 200px;"/>');
+            rangerRankBadge.append('<img alt=" ' + GRR[6].rank + 'badge " ' + GRR[6].badge + ' style="width: 100%;"/>');
 
         } else if (retreiveVisitHistory == "8"){
             rangerRankTitle.append('<h2>' + GRR[7].rank + '</h2>');
-            rangerRankBadge.append('<img alt=" ' + GRR[7].rank + 'badge " ' + GRR[7].badge + 'style="width: 200px;"/>');
+            rangerRankBadge.append('<img alt=" ' + GRR[7].rank + 'badge " ' + GRR[7].badge + 'style="width: 100%;"/>');
 
         } else if (retreiveVisitHistory == "9"){
             rangerRankTitle.append('<h2>' + GRR[8].rank + '</h2>');
-            rangerRankBadge.append('<img alt=" ' + GRR[8].rank + 'badge " ' + GRR[8].badge + 'style="width: 200px;" />');
+            rangerRankBadge.append('<img alt=" ' + GRR[8].rank + 'badge " ' + GRR[8].badge + 'style="width: 100%;" />');
 
         } else if (retreiveVisitHistory == "10"){
             rangerRankTitle.append('<h2>' + GRR[9].rank + '</h2>');
-            rangerRankBadge.append('<img alt=" ' + GRR[9].rank + 'badge " ' + GRR[9].badge + 'style="width: 200px;" />');
+            rangerRankBadge.append('<img alt=" ' + GRR[9].rank + 'badge " ' + GRR[9].badge + 'style="width: 100%;" />');
 
         } else if (retreiveVisitHistory == "11"){
             rangerRankTitle.append('<h2>' + GRR[10].rank + '</h2>');
-            rangerRankBadge.append('<img alt=" ' + GRR[10].rank + 'badge " ' + GRR[10].badge + 'style="width: 200px;"/>');
+            rangerRankBadge.append('<img alt=" ' + GRR[10].rank + 'badge " ' + GRR[10].badge + 'style="width: 100%;"/>');
 
         } 
     }
