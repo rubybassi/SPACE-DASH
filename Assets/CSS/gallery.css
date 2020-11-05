@@ -1,7 +1,7 @@
 /* Changes size of astonaut pic */
 #astronaut {
-  height: 270px;
-  width: 270px;
+  height: auto;
+  width: auto;
 }
 
 /* gives formatting to content box */
@@ -38,6 +38,7 @@ h3 {
   height: 250px;
   width: auto;
 }
+
 
 
 
