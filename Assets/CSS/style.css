@@ -178,3 +178,13 @@ footer {
     border: 5px solid;
     border-color:#95C4FC;
 }       
+
+@media screen and (max-width: 560px ){
+    div.Near-earth-objects {
+        margin: 14px 0 0 0px ;
+    }
+}
+
+@media screen and (min-width: 560px) and (max-width: 950px){
+
+}
