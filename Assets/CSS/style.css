@@ -120,25 +120,23 @@ h3 {
   margin-right: auto;
 }
 
-
-
 #headerText div {
     background-color:#FFA924;
 }
 
 #seg4, #seg5, #seg6, #seg7 {
     background-color:#95C4FC;
-  }
+}
   
-  #seg3 {
-      background-color:#124975;
-    }
+#seg3 {
+    background-color:#124975;
+}
     
-    #seg4, #seg6 {
-        border: 5px #fa2321 solid;
-    }
+#seg4, #seg6 {
+    border: 5px #fa2321 solid;
+}
     
-    #seg2, #seg3, #seg5, #seg7  {
+#seg2, #seg3, #seg5, #seg7  {
     border: 5px #FFA924 solid;
 }
 
@@ -153,8 +151,6 @@ img#mission-control {
 
 span.personal {
   color: #fa2321;
-}
-
 }
 
 footer {
