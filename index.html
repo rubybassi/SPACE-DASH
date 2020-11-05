@@ -68,22 +68,28 @@
     </div>  
 
    <!--INTRO AND TIME ROW-->
-   <div class="three column row">
-    <div class="eight wide column">
-      <section class="ui segment" id="seg2">
-      <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Impedit nihil, omnis dolorum distinctio quo reiciendis explicabo non debitis optio. Illo delectus dolor aut rerum tempore quia inventore. Sequi, vel itaque.</p>
-      </section>
-    </div>
-      <div id="ranger-rank-container" class="four wide column">
-        <section class="ui segment" id="seg3">
-        <h2>Your Space Rank:</h2>
+   <div class="two column row">
+      <div class="eight wide column">
+        <section class="ui segment" id="seg2">
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Impedit nihil, omnis dolorum distinctio quo reiciendis explicabo non debitis optio. Illo delectus dolor aut rerum tempore quia inventore. Sequi, vel itaque.</p>
         </section>
-    </div>
-      <div class="four wide column">
-        <p id="date-header" class="date">Date </p>
-        <p id="time-header" class="time">Time </p>
       </div>
-   </div> 
+
+      <div class="eight wide column ">
+        <div class="ui grid div-back-bord">
+          <div id="ranger-rank-badge" class="sixteen wide mobile eight wide computer column">
+            
+          </div>
+          <div class="sixteen wide mobile eight wide computer column">
+            <h2>Your Space Rank:</h2>
+            <div id="ranger-rank-title">Your Space Rank:</div>
+            <p id="date-header" class="date">Date </p>
+            <p id="time-header" class="time">Time </p>
+          </div>
+        </div> 
+      </div>
+    </div>
+
     <!--POTD AND ASTEROID ROW-->
     <div class="two column row">
     <div class="column">
@@ -93,7 +99,7 @@
         <img id="potdIMG" alt="Picture of the day" />
         <form method="get" action="gallery.html">
           <button class="big ui blue button" type="submit">
-            Show me moons
+             <h3>Show me moons</h3>
           </button>
         </form>
       </article>
@@ -103,9 +109,10 @@
         <article class="ui padded segment" id="seg5">
           <h2>Misson Control</h2>
           <p>Information to take through from asteroides page </p>
+          <img id="mission-control" alt="mission control" src="Assets/images/misc/Mission-control.png" width="100%"/>
           <form method="get" action="asteroids.html">
             <button class="big ui blue button" type="submit">
-              Asteriods
+              <h3>Asteriods</h3>
             </button>
           </form>
         </article>
@@ -119,7 +126,7 @@
         <p>Information to take through from iss page </p>
         <form method="get" action="iss.html">
           <button class="big ui blue button" type="submit">
-            International Space Station
+            <h3>International Space Station</h3>
           </button>
         </form>
       </article>
@@ -130,7 +137,7 @@
           <p>Information to take through from moon page </p>
           <form method="get" action="moon.html">
             <button class="big ui blue button" type="submit">
-              Moon Phases
+            <h3>Moon Phases</h3>
             </button>
           </form>     
         </article>
@@ -140,7 +147,7 @@
 
   <!-- footer -->
   <footer>
-    <p>© Copyright 2020</p>
+    © Copyright 2020
   </footer>
   <!---JS Files-->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
