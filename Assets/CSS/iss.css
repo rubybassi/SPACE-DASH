@@ -67,14 +67,14 @@ red rgb (250,35,33)    #FA2321
 }
 
 #videos {
-  background-color: black; /*fallback for image */
-  background-image: url(Assets/images/misc/iss-looking-at-earth.jpg);
+  background-color: #ffa924; /*fallback for image */
+ /* background-image: url(Assets/images/misc/iss-looking-at-earth.jpg);  */
 
 }
 
 #map {
   background-color: #283758; /*fallback for image */
-  background-image: url(Assets/images/misc/stars.jpg);
+ /* background-image: url(Assets/images/misc/stars.jpg); */
 }
 
 #map p {

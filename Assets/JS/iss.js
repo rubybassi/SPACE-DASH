@@ -4,7 +4,7 @@ const userBtn = $("#userBtn");
 // Additonal global variables
 let longitude = "";
 let latitude = "";
-let altitude = " ";
+let altitude = "";
 let visibility = "";
 let footprint = "";
 let timestamp = "";
@@ -12,15 +12,17 @@ let daynum = "";
 let solar_lat = "";
 let solar_lon = "";
 let velocity = "";
+let country = "";
+let county = "";
 
 // init funtion
 $(function () {
 
+// Gets name from local storage for personalisation  
  $('.issName').text(JSON.parse(localStorage.getItem('name'))); 
-//console.log('this works:', JSON.parse(localStorage.getItem('name')));  
+
 // Generate map with Leaflet.js library map method setting default lat, long and scale
 let issMap = L.map('mapid').setView([0, 0], 2);
-
 
 // Generate tiles with mapbox
 const getTiles = L.tileLayer(
@@ -56,7 +58,8 @@ const getData = () => {
     .then(handleWeatherData)
     .catch();
 };
-// Function to pass and reassign ISS data to global variables so can reuse for other event handlers
+
+// Function to pass and reassign ISS data to global variables so can reuse for other functions and event handlers
 const handleWeatherData = (data) => {
   longitude = data.longitude;
   latitude = data.latitude;
@@ -76,17 +79,38 @@ const handleWeatherData = (data) => {
   $('#altitudeVal').text(altitude.toFixed(5));
   $('#visitbiltyVal').text(visibility);
   $('#footprintVal').text(footprint.toFixed(5));
-  $('#daynumVal').text(daynum); //
+  $('#daynumVal').text(daynum); 
   $('#sollatVal').text(solar_lat.toFixed(5));
   $('#sollongVal').text(solar_lon.toFixed(5));
   $('#velocityVal').text(velocity.toFixed(2));
+  getLocation();
 };
 
-// Call function
+// Call ISS map and data function
 getData();
-
-// Set interval to run getData function evey second to make marker move
 setInterval(getData, 2000);
+
+// Call API for ISS reverse geolocation
+const getLocation = () => {
+  const iqkey = 'pk.0715cc466c0fd44018d880de0d78c1f2';
+  const queryUrl = `https://us1.locationiq.com/v1/reverse.php?key=${iqkey}&lat=${latitude}&lon=${longitude}&format=json`;
+  $.ajax({
+    url: queryUrl,
+  })
+    .then(handleGeolocationData)
+    .catch(function(){
+    $('#countryVal').text("The ISS is currently above the ocean");  
+    });
+};
+
+// Function to push geolocation data to DOM
+const handleGeolocationData = (data) => {
+  country = data.address.country;
+  county = data.address.county;
+  //console.log('place is:' , county , country);
+  $('#countryVal').text(country);
+  $('#countyVal').text(county);
+};
 
 });
 
@@ -94,9 +118,10 @@ setInterval(getData, 2000);
 $(userBtn).on("click", (event) => {
   event.preventDefault();
   $(showDataDiv).empty();
-  // let longDecimal = longitude.toFixed(2);
-  // let latDecimal = latitude.toFixed(2);
-  // console.log('lat has be reduced to:' , longDecimal)
   $(showDataDiv)
     .append(`<h2>Velocity: ${velocity} mph</h2>`)
 });
+
+
+
+
