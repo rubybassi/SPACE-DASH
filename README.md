@@ -65,6 +65,8 @@ We obtained correct permision for the graphics from catalyststuff and macrovecto
  [Cartoon vector created by catalyststuff - www.freepik.com]('https://www.freepik.com/vectors/cartoon')   
  [Cartoon vector created by catalyststuff - www.freepik.com]('https://www.freepik.com/vectors/cartoon')  
  [Background vector created by catalyststuff - www.freepik.com]('https://www.freepik.com/vectors/background')
+ [Logo vector created by freepik - www.freepik.com]('https://www.freepik.com/vectors/logo')
+ [Logo vector created by vextok - www.freepik.com]('https://www.freepik.com/vectors/logo')
 
  ## Badges 
 
