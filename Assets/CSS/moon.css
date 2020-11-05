@@ -1,3 +1,4 @@
+
 * {
     box-sizing: border-box;
 }
@@ -11,22 +12,48 @@ div#wrapper {
     margin: 10px;
 }
 
-.buttonStyle {
-    border: 5px solid;
-    border-color:#FFA924;
+#newMoon,
+#waxingCrescent,
+#firstQuarter,
+#waxingGibbous,
+#fullMoon,
+#waningGibbous,
+#thirdQuarter,
+#waningCrescent
+ {
+
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    height: 115px;
+    width: auto;
+  
 }
 
+#todaysMoon
+{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    height: 175px;
+    width: auto;
+  
+}
+#todaysMoonBox
+{
+    border: 5px solid;
+    border-color: #ffa924;
+    background-color: #95C4FC;
+    color: #283758;
+    border-radius: 15px;
+    height: 340px;
+    width: 100%;
+    
+}
 
-#ex1{    
-    display: table;    
-    margin:20px auto;
-    text-align: center;    
-    color:black;
-    border: 1px solid black;
-    padding: 5px 30px;
-    }
-    #ex1 [shadow]{
-    filter:drop-shadow(0 0 25px rgb(0,50,50));
-    padding:15px 0;
-    }
-
+footer
+{
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}

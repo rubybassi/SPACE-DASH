@@ -1,105 +1,157 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-
   <title>SPACE-DASH</title>
-
   <!-- add icon link -->
-  <link rel="icon" href="Assets/images/logos/Icon.png" type="image/x-icon" />
+  <link rel = "icon" 
+      href = "Assets/images/logos/favicon.png"
+      type = "image/x-icon"
+    />
   <!-- reset style sheet -->
-  <link rel="stylesheet" href="Assets/CSS/reset.css"/>
+  <link rel="stylesheet" href="Assets/CSS/reset.css" />
   <!--Semantic UI CSS-->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.13/semantic.min.css" />
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Bungee&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,700;1,400;1,700&family=Rajdhani:wght@500;700&family=Roboto:ital,wght@0,100;0,300;0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Open+Sans:ital,wght@0,300;0,400;0,700;1,400;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,700;1,400;1,700&family=Rajdhani:wght@500;700&family=Roboto:ital,wght@0,100;0,300;0,400;0,700;1,400;1,700&display=swap"
+    rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Open+Sans:ital,wght@0,300;0,400;0,700;1,400;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,700;1,400;1,700&display=swap"
+    rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;900&display=swap" rel="stylesheet">
   <!-- master style sheet  -->
-  <link rel="stylesheet" type="text/css" href="Assets/CSS/style.css"/>
+  <link rel="stylesheet" type="text/css" href="Assets/CSS/style.css" />
 </head>
-
 <body>
-  <div id="wrapper" class=" ui grid container">
-    
-    <div class="sixteen wide column">
-      <h1>SPACE-DASH</h1>
+  <!--FIXED HEADER-->
+  <nav class="ui top fixed labeled icon mini menu aligned" id="menu">
+
+    <a class="item active" href="index.html">
+
+      <i class="home icon"></i>Home
+    </a>
+    <a class="item" href="gallery.html">
+      <i class="image icon"></i>Gallery
+    </a>
+    <a class="item" href="asteroids.html">
+      <i class="star icon"></i>Asteriods
+    </a>
+    <a class="item" href="iss.html">
+      <i class="space shuttle icon"></i>ISS
+    </a>
+    <a class="item" href="moon.html">
+      <i class="moon icon"></i>Moon 
+    </a>
+  </nav>
+  <div id="wrapper" class=" ui grid stackable container">  
+  <!--HEADER ROW-->
+   <div class="one column row">
+    <div class="sixteen wide column" id="headerText">
+      <div class="ui segment" id="seg1">
+        <h1>Welcome to SPACE-DASH!</h1>
+      </div>
     </div>
+   </div> 
 
-      <aside id="ranger-rank-container" class="div-back-bord four wide column">
-        <h1>Your Space Rank:</h1>
-      </aside>
-
-      <section class="twelve wide column">
-        <div class="ui grid">
-         
-          <article class="twelve wide column">
-            <p class="intro"> Some content in here</p>
-          </article>
-
-          <!-- home and date buttons -->
-          <div class="four wide column">    
-            <p id="date-header" class="date">Date </p>
-            <p id="time-header" class="time">Time </p>      
-          </div>
-
-        </div>
-      </section>
-    
-      <div class="row">
-        <div class="picOfTheDay eleven wide column">
-          <h2 class="ui header" id="picHeader"></h2>
-          <img id="potdIMG" alt="Picture of the day" />
+   <div class="one column row" id="userInput">
+      <div class="column">
+        <div class="ui action input">
+          <input type="text" placeholder="enter name" id="name">
+          <button class="ui button" id="nameBtn">Submit your name</button>
+          <div id="userName"></div>
         </div>
       </div>
+    </div>  
 
-      <section>
-        <div class="div-back-bord">
-          <h2>Misson Control</h2>
-          <p>Information to take through from asteroides page </p>
-        </div>
-      </section>
+   <!--INTRO AND TIME ROW-->
+   <div class="two column row">
+      <div class="eight wide column">
+        <section class="ui segment" id="seg2">
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Impedit nihil, omnis dolorum distinctio quo reiciendis explicabo non debitis optio. Illo delectus dolor aut rerum tempore quia inventore. Sequi, vel itaque.</p>
+        </section>
+      </div>
 
-      <div class="row">
+      <div class="eight wide column ">
+        <div class="ui grid div-back-bord">
+          <div id="ranger-rank-badge" class="sixteen wide mobile eight wide computer column">
+            
+          </div>
+          <div class="sixteen wide mobile eight wide computer column">
+            <h2>Your Space Rank:</h2>
+            <div id="ranger-rank-title">Your Space Rank:</div>
+            <p id="date-header" class="date">Date </p>
+            <p id="time-header" class="time">Time </p>
+          </div>
+        </div> 
+      </div>
+    </div>
+
+    <!--POTD AND ASTEROID ROW-->
+    <div class="two column row">
+    <div class="column">
+      <article class="ui padded segment" id="seg4">
+        <h2>Picture of the Day</h2>
+        <p>Information to take through from gallery page</p>
+        <img id="potdIMG" alt="Picture of the day" />
         <form method="get" action="gallery.html">
           <button class="big ui blue button" type="submit">
-            Image Gallery
+            Show me moons
           </button>
         </form>
-        <form method="get" action="asteroids.html">
-          <button class="big ui blue button" type="submit">
-            Asteriods
-          </button>
-        </form>
-        <form method="get" action="iss.html">
-        <button class="big ui blue button" type="submit">
-          International Space Station
-        </button>
-        </form>
-        <form method="get" action="moon.html">
-          <button class="big ui blue button" type="submit">
-            Moon Phases
-          </button>
+      </article>
+    </div>
+
+      <div class="column">
+        <article class="ui padded segment" id="seg5">
+          <h2>Misson Control</h2>
+          <p>Information to take through from asteroides page </p>
+          <form method="get" action="asteroids.html">
+            <button class="big ui blue button" type="submit">
+              Asteriods
+            </button>
           </form>
+        </article>
+      </div>
+    </div>
+    <!--ISS AND MOON ROW-->    
+    <div class="two column row">
+    <div class="column">
+      <article class="ui padded segment" id="seg6">
+        <h2>ISS Tracker</h2>
+        <p>Information to take through from iss page </p>
+        <form method="get" action="iss.html">
+          <button class="big ui blue button" type="submit">
+            International Space Station
+          </button>
+        </form>
+      </article>
+    </div>
+      <div class="column">
+        <article class="ui padded segment" id="seg7">
+          <h2>Moon Phase</h2>
+          <p>Information to take through from moon page </p>
+          <form method="get" action="moon.html">
+            <button class="big ui blue button" type="submit">
+              Moon Phases
+            </button>
+          </form>     
+        </article>
       </div>
     </div>
   </div>
 
-  
   <!-- footer -->
-  <footer><p>© Copyright 2020</p></footer>
-
-
+  <footer>
+    © Copyright 2020
+  </footer>
   <!---JS Files-->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.13/semantic.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
   <script type="text/javascript" src="Assets/JS/script.js"></script>
-  
 </body>
-
 </html>

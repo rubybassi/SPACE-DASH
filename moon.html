@@ -1,88 +1,140 @@
 <!DOCTYPE html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-
 <html>
 
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title></title>
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title></title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="">
+  <!-- add icon link -->
+  <link rel="icon" href="Assets/images/logos/favicon.png" type="image/x-icon" />
+  <!-- reset style sheet -->
+  <link rel="stylesheet" href="Assets/CSS/reset.css" />
+  <!--Semantic UI CSS-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.13/semantic.min.css" />
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Bungee&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,700;1,400;1,700&family=Rajdhani:wght@500;700&family=Roboto:ital,wght@0,100;0,300;0,400;0,700;1,400;1,700&display=swap"
+    rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Open+Sans:ital,wght@0,300;0,400;0,700;1,400;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,700;1,400;1,700&display=swap"
+    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;900&display=swap" rel="stylesheet">
+  <!-- master style sheet  -->
+  <link rel="stylesheet" type="text/css" href="Assets/CSS/style.css" />
+  <link rel="stylesheet" type="text/css" href="Assets/CSS/weather-icons.css" />
+  <link rel="stylesheet" type="text/css" href="Assets/CSS/moon.css" />
 
-
-    <!-- add icon link -->
-    <link rel="icon" href="Assets/images/logos/Icon.png" type="image/x-icon" />
-    <!-- reset style sheet -->
-    <link rel="stylesheet" href="Assets/CSS/reset.css" />
-    <!--Semantic UI CSS-->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.13/semantic.min.css" />
-    <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Bungee&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,700;1,400;1,700&family=Rajdhani:wght@500;700&family=Roboto:ital,wght@0,100;0,300;0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Open+Sans:ital,wght@0,300;0,400;0,700;1,400;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;900&display=swap" rel="stylesheet">
-    <!-- master style sheet  -->
-    <link rel="stylesheet" type="text/css" href="Assets/CSS/style.css" />
-
-    <title>Moon Phases</title>
-    <!--Personalised CSS for this html-->
-    <link rel="stylesheet" type="text/css" href="Assets/CSS/moon.css" />
-
-    <h1>The Moon</h1>
-
+  <title>Moon Phases</title>
 
 </head>
-<img src="Assets/images/space-men/lying-on-the-moon.png" width="250" height="250" />
 
 <body>
-    <!--[if lt IE 7]>
-            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
-        <![endif]-->
+  <!-- Top Navbar -->
+  <nav class="ui top fixed labeled icon mini menu aligned " id="menu">
+    <a class="item" href="index.html">
+      <i class="home icon"></i>Home
+    </a>
+    <a class="item" href="gallery.html">
+      <i class="image icon"></i>Gallery
+    </a>
+    <a class="item" href="asteroids.html">
+      <i class="star icon"></i>Asteroids
+    </a>
+    <a class="item" href="iss.html">
+      <i class="space shuttle icon"></i>ISS
+    </a>
+    <a class="item" href="moon.html">
+      <i class="moon icon"></i>Moon
+    </a>
+  </nav>
+  <div id="wrapper" class=" ui grid stackable container">
+    <div class="main-header sixteen wide column">
+      <h1 class="header">Moon Phases</h1>
+    </div>
+    <!-- Today's Moon Box -->
+    <div class="four wide column" id="todaysMoonBox">
+      <h2 class="header">Today's Moon</h2>
+      <h6 class="header" id="moonPhase"></h6>
+      <h6 class="header" id="moonName"></h6>
+      <img class="ui medium rounded image" alt="Today's Moon" id="todaysMoon">
+    </div>
+    <!--12 for content-->
+    <div class="twelve wide column">
+      <div class="ui red padded segment">
+        <h2>Phases of the Moon</h2>
+        <p>There are 4 main lunar phases, or moon phases. These are: New Moon, First Quarter, Full Moon, and Last
+          Quarter. A New Moon is when the moon is completely dark and can not be seen in the night sky. The First
+          Quarter shows the right side of the Moon lit in the sky. A Full Moon shows the entire Moon in the sky.
+          And the Last Quarter shows the left side lit, and right side dark - the opposite of the First Quarter.
+        </p>
 
+        <p> The Moon does not produce any light on its own. Instead, we see the Moon when light from the Sun
+          reflects off the surface, like light on a mirror.</p>
 
-    <div class="ui red padded segment">
-        <h2 class="ui header">Phases of the Moon!</h2>
+        <p> Did you know that we only ever see 1 side of the Moon, because it rotates on it's axis at the same speed
+          that it orbits the Earth! The hidden half of the Moon is known as the dark side of the Moon!</p>
 
-        <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, nemo! Velit dignissimos inventore
-            architecto nostrum et dolorum nulla, necessitatibus qui nam dolorem illo fuga eum porro amet adipisci,
-            accusamus possimus?</p>
-
-        <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt quidem, provident, sint beatae dignissimos
-            assumenda dicta sapiente accusantium dolores commodi repellat soluta quaerat ullam quo quis doloribus,
-            laborum totam itaque.</em>
-
-        <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora officiis similique eveniet explicabo
-            impedit aperiam, sapiente odit velit? Reprehenderit eius vitae unde corporis esse cumque enim cum, quaerat
-            libero expedita!</em>
+      </div>
     </div>
 
-    <div id="ex1"></div>
-
-    <footer><p>© Copyright 2020</p></footer>
-
-    <script src="" async defer></script>
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.13/semantic.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
-    <script type="text/javascript" src="Assets/JS/script.js"></script>
-
-<!-- icon styles -->
-<link rel="stylesheet" type="text/css" href="/Assets/CSS/weather-icons.css"/>
-
-    <!-- © wdisseny -->
-    <div id="contain_moon" style="text-align:center;padding-top:13px;padding-bottom:13px;">
-        <div style="font-weight:bold">The Moon Today</div>
-        <div style="margin-top:-17px;margin-bottom:-37px;padding:75px;filter:drop-shadow(0 0 75px hsl(54,100%,13%))">
-        </div>
-        <div>.</div>
-        <div style="font-size:small">.</div>
+    <div class="four wide column">
+      <h2 class="header"> New Moon</h2>
+      <img class="ui medium rounded image" id="newMoon" src="Assets\images\moon-phases\NewMoon.png" alt="New Moon">
     </div>
-    <script>(function () { var d = new Date().getDate(); var m = document.querySelectorAll("#contain_moon div"); var a = new XMLHttpRequest(); var url = "https://www.icalendar37.net/lunar/api/?lang=en&month=" + (new Date().getMonth() + 1) + "&year=" + (new Date().getFullYear()) + "&size=250&lightColor=rgb(245,245,245)&shadeColor=rgb(18,18,18)&LDZ=" + new Date(new Date().getFullYear(), new Date().getMonth(), 1) / 1000 + ""; m[1].style.height = "250px"; a.onreadystatechange = function () { if (a.readyState == 4 && a.status == 200) { var b = JSON.parse(a.responseText); m[1].innerHTML = b.phase[d].svg; if (typeof moon_widget_loaded == "function") moon_widget_loaded(b); m[2].innerHTML = b.phase[d].npWidget; m[3].innerHTML = "Next full moon<br>" + b.nextFullMoon } }; a.open("GET", url, true); a.send() })()</script>
+
+    <div class="four wide column">
+      <h2 class="header"> Waxing Crescent</h2>
+      <img class="ui medium rounded image" id="waxingCrescent" src="Assets\images\moon-phases\WaxingCrescent.png"
+        alt="Waxing Crescent">
+    </div>
+    <div class="four wide column">
+      <h2 class="header"> First Quarter</h2>
+      <img class="ui medium rounded image" id="firstQuarter" src="Assets\images\moon-phases\FirstQuarter.png"
+        alt="First Quarter">
+    </div>
+    <div class="four wide column">
+      <h2 class="header"> Waxing Gibbous</h2>
+      <img class="ui medium rounded image" id="waxingGibbous" src="Assets\images\moon-phases\WaxingGibbous.png"
+        alt="Waxing Gibbous">
+    </div>
+    <div class="four wide column">
+      <h2 class="header"> Full Moon</h2>
+      <img class="ui medium rounded image" id="fullMoon" src="Assets\images\moon-phases\FullMoon.png" alt="Full Moon">
+    </div>
+    <div class="four wide column">
+      <h2 class="header"> Waning Gibbous</h2>
+      <img class="ui medium rounded image" id="waningGibbous" src="Assets\images\moon-phases\WaningGibbous.png"
+        alt="Waning Gibbous">
+    </div>
+    <div class="four wide column">
+      <h2 class="header"> Third Quarter</h2>
+      <img class="ui medium rounded image" id="thirdQuarter" src="Assets\images\moon-phases\ThirdQuarter.png"
+        alt="Third Quarter">
+    </div>
+    <div class="four wide column">
+      <h2 class="header"> Waning Crescent</h2>
+      <img class="ui medium rounded image" id="waningCrescent" src="Assets\images\moon-phases\WaningCrescent.png"
+        alt="Waning Cresent">
+
+    </div>
+  </div>
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.13/semantic.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+  <script type="text/javascript" src="Assets/JS/script.js"></script>
+  <script type="text/javascript" src="Assets/JS/moon.js"></script>
+
+  <!-- footer -->
+  <footer>
+    © Copyright 2020
+  </footer>
+
 </body>
 
 </html>

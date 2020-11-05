@@ -36,6 +36,7 @@ $(document).ready(function(){
     const escapeContainer = $("#escape");
 
     const onloadData = "earth";
+        neoAsteriodListContainer.text("Fetching your asteroids...");
         captinSpeaking.text("Earth");
         console.log(onloadData);
         solaireAjaxCall(onloadData);
@@ -159,7 +160,7 @@ $(document).ready(function(){
         if (isAPlanet == true){
             isThisAPlanet.text("This is a planet.");
         } else {
-            isThisAPlanet.text("This is not a planet.");
+            isThisAPlanet.text('<h3>This is not a planet.</h3>');
         }
         
         let discoveredByWho = receivedbodyData.discoveredBy;

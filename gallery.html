@@ -5,17 +5,24 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-  <!-- add icon link -->
-  <link rel="icon" href="Assets/images/logos/Icon.png" type="image/x-icon" />
+  <link rel = "icon" 
+      href = "Assets/images/logos/favicon.png"
+      type = "image/x-icon"
+    />
   <!-- reset style sheet -->
   <link rel="stylesheet" href="Assets/CSS/reset.css" />
   <!--Semantic UI CSS-->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.13/semantic.min.css" />
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Bungee&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,700;1,400;1,700&family=Rajdhani:wght@500;700&family=Roboto:ital,wght@0,100;0,300;0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Open+Sans:ital,wght@0,300;0,400;0,700;1,400;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,700;1,400;1,700&family=Rajdhani:wght@500;700&family=Roboto:ital,wght@0,100;0,300;0,400;0,700;1,400;1,700&display=swap"
+    rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Open+Sans:ital,wght@0,300;0,400;0,700;1,400;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,700;1,400;1,700&display=swap"
+    rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;900&display=swap" rel="stylesheet">
+
   <!-- master style sheet  -->
   <link rel="stylesheet" type="text/css" href="Assets/CSS/style.css" />
   <!-- gallery style sheet -->
@@ -25,7 +32,28 @@
 </head>
 
 <body>
-  <div id="wrapper" class=" ui grid container">
+
+  <!--FIXED HEADER-->
+  <div class="ui top fixed labeled icon mini menu aligned " id="menu">
+    <a class="item" href="index.html">
+      <i class="home icon"></i>Home
+    </a>
+    <a class="item" href="gallery.html">
+      <i class="image icon"></i>Gallery
+    </a>
+    <a class="item" href="asteroids.html">
+      <i class="star icon"></i>Asteriods
+    </a>
+    <a class="item" href="iss.html">
+      <i class="space shuttle icon"></i>ISS
+    </a>
+    <a class="item" href="moon.html">
+      <i class="moon icon"></i>Moon 
+    </a>
+  </div>
+
+  <div id="wrapper" class=" ui grid stackable container">
+
     <!-- Full bar across the top -->
     <div class="main-header sixteen wide column">
       <h1 class="header">Gallery</h1>
@@ -36,95 +64,88 @@
         id="astronaut" />
     </div>
     <!--12 for content-->
-    <div class="twelve wide column content ui card" id="textContentGallery">
-      <h2 class="header">What's in this gallery?</h2>
-      <p>blahhhhhhhhhh</p>
+    <div class="twelve wide column">
+      <div class="ui red padded segment">
+        <h2>What's in this gallery?</h2>
+        <p>Hey there <span class="galleryName"></span>!<p>
+          <p>
+          Welcome to the gallery page! Here you can find all kinds of cool images to show you what goes on in space!
+        </p>
+      </div>
     </div>
-
-
     <div class="eight wide column">
       <div class="picturesBoxes">
-        <h3 class="header">Apollo Mission Images</h3>
-        <h5 class="header" id="apolloTitle"></h5>
-          <img class="ui medium rounded image" id="apolloImage">
-        <div class="ui buttons" id="apollo">
-          <button class="ui labeled icon button previousButton">
-            <i class="left chevron icon"></i>
-            Previous
+        <h2 class="header">Apollo Mission Images</h2>
+        <h3 class="header" id="apolloTitle"></h3>
+        <img class="ui medium rounded image" id="apolloImage" alt="Apollo Images">
+        <div class="ui icon buttons" id="apollo">
+          <button class="ui button large left floated previousButton">
+            <i class="arrow circle left icon"></i>
           </button>
-          <button class="ui right labeled icon button nextButton" >
-            Next
-            <i class="right chevron icon"></i>
+          <button class="ui button large right floated nextButton">
+            <i class="arrow circle right icon"></i>
           </button>
         </div>
       </div>
     </div>
     <div class="eight wide column">
       <div class="picturesBoxes">
-        <h3 class="header">The Moon</h3>
-        <h5 class="header" id="moonTitle"></h5>
-        <img class="ui medium rounded image" id="moonImage">
-        <div class="ui buttons" id="moon">
-          <button class="ui labeled icon button previousButton" >
-            <i class="left chevron icon"></i>
-            Previous
+        <h2 class="header">The Moon</h2>
+        <h3 class="header" id="moonTitle"></h3>
+        <img class="ui medium rounded image" id="moonImage" alt="Moon Images">
+        <div class="ui icon buttons" id="moon">
+          <button class="ui button large previousButton">
+            <i class="arrow circle left icon"></i>
           </button>
-          <button class="ui right labeled icon button nextButton">
-            Next
-            <i class="right chevron icon"></i>
+          <button class="ui button large nextButton">
+            <i class="arrow circle right icon"></i>
           </button>
         </div>
       </div>
     </div>
     <div class="eight wide column">
       <div class="picturesBoxes">
-        <h3 class="header">The Sun</h3>
-        <h5 class="header" id="sunTitle"></h5>
-        <img class="ui medium rounded image" id="sunImage">
-        <div class="ui buttons" id="sun">
-          <button class="ui labeled icon button previousButton">
-            <i class="left chevron icon"></i>
-            Previous
+        <h2 class="header">The Sun</h2>
+        <h3 class="header" id="sunTitle"></h3>
+        <img class="ui medium rounded image" id="sunImage" alt="Sun Images">
+        <div class="ui icon buttons" id="sun">
+          <button class="ui button large previousButton">
+            <i class="arrow circle left icon"></i>
           </button>
-          <button class="ui right labeled icon button nextButton">
-            Next
-            <i class="right chevron icon"></i>
+          <button class="ui button large nextButton">
+            <i class="arrow circle right icon"></i>
           </button>
         </div>
       </div>
     </div>
     <div class="eight wide column">
       <div class="picturesBoxes">
-        <h3 class="header">Galaxies</h3>
-        <h5 class="header" id="galaxiesTitle"></h5>
-        <img class="ui medium rounded image" id="galaxiesImage">
-        <div class="ui buttons" id="galaxies">
-          <button class="ui labeled icon button previousButton" >
-            <i class="left chevron icon"></i>
-            Previous
-          </button>
-          <button class="ui right labeled icon button nextButton">
-            Next
-            <i class="right chevron icon"></i>
-          </button>
-        </div>
+        <h2 class="header">Galaxies</h2>
+          <h3 class="header" id="galaxiesTitle"></h3>
+            <img class="ui medium rounded image" id="galaxiesImage" alt="Galaxy Images">
+            <div class="ui icon buttons" id="galaxies">
+              <button class="ui button large previousButton">
+                <i class="arrow circle left icon"></i>
+              </button>
+              <button class="ui button large nextButton">
+                <i class="arrow circle right icon"></i>
+              </button>
+            </div>
       </div>
     </div>
   </div>
-
-
-
-
-
-  <!-- footer -->
-  <footer><p>© Copyright 2020</p></footer>
-
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.13/semantic.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
-  <script type="text/javascript" src="Assets/JS/script.js"></script>
-  <script type="text/javascript" src="Assets/JS/gallery.js"></script>
   
+  <!-- footer -->
+  <footer>
+    © Copyright 2020
+  </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.13/semantic.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <script type="text/javascript" src="Assets/JS/script.js"></script>
+    <script type="text/javascript" src="Assets/JS/gallery.js"></script>
+
 </body>
 
 </html>

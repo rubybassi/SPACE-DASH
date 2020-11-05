@@ -96,6 +96,82 @@ $(document).ready(function () {
         }
     }
 
+    //Ranger rank 
+    const rangerRank = [
+        {rank: "Junior Cadet", badge: 'src="Assets/images/badges/junior-cadet.png"'},
+        {rank: "Space Cadet", badge: 'src="Assets/images/badges/spaace-cadet.png"'},
+        {rank: "Space Scout", badge: 'src="Assets/images/badges/space-scout.png"'},
+        {rank: "Space Ranger", badge: 'src="Assets/images/badges/space-ranger.png"'},
+        {rank: "Planetary Pilot", badge: 'src="Assets/images/badges/Planetary-Piolt.png"'},
+        {rank: "Space Captin ", badge: 'src="Assets/images/badges/space-captian.png"'},
+        {rank: "Senior Astronaut", badge: 'src="Assets/images/badges/senior-astronaugt.png"'},
+        {rank: "Starship Commander", badge: 'src="Assets/images/badges/star-ship-commander.png"'},
+        {rank: "Space Ace", badge: 'src="Assets/images/badges/space-ace.png"'},
+        {rank: "Star Fleet Admiral", badge: 'src="Assets/images/badges/starfleet-commander.png"'},
+        {rank: "Galactic Hero", badge: 'src="Assets/images/badges/galactic-hero.png"'},
+        
+    ]
+
+    const rangerRankBadge = $("#ranger-rank-badge");
+    const rangerRankTitle = $("#ranger-rank-title");
+
+    getRangerRank(rangerRank);
+    
+    function getRangerRank(GRR) {
+
+        let retreiveVisitHistory = localStorage.getItem("visitHistory");
+        console.log("retreiveVisitHistory for rank allocation =", retreiveVisitHistory);
+        rangerRankTitle.empty();
+        rangerRankBadge.empty();
+
+        if (retreiveVisitHistory == "1"){
+            rangerRankTitle.append('<h2>' + GRR[0].rank + '</h2>');
+            rangerRankBadge.append('<img alt=" ' + GRR[0].rank + 'badge "  ' + GRR[0].badge + 'style="width: 200px;" />');
+
+        } else if (retreiveVisitHistory == "2"){
+            console.log("rank level 2");
+            rangerRankTitle.append('<h2>' + GRR[1].rank + '</h2>');
+            rangerRankBadge.append('<img alt=" ' + GRR[1].rank + 'badge "  ' + GRR[1].badge + ' style="width: 200px;"/>');
+
+        } else if (retreiveVisitHistory == "3"){
+            rangerRankTitle.append('<h2>' + GRR[2].rank + '</h2>');
+            rangerRankBadge.append('<img alt=" ' + GRR[2].rank + 'badge " ' + GRR[2].badge + ' style="width: 200px;"/>');
+
+        } else if (retreiveVisitHistory == "4"){
+            rangerRankTitle.append('<h2>' + GRR[3].rank + '</h2>');
+            rangerRankBadge.append('<img alt=" ' + GRR[3].rank + 'badge "  ' + GRR[3].badge + ' style="width: 200px;"/>');
+
+        } else if (retreiveVisitHistory == "5"){
+            rangerRankTitle.append('<h2>' + GRR[4].rank + '</h2>');
+            rangerRankBadge.append('<img alt=" ' + GRR[4].rank + 'badge " ' + GRR[4].badge + ' style="width: 200px;"/>');
+
+        } else if (retreiveVisitHistory == "6"){
+            rangerRankTitle.append('<h2>' + GRR[5].rank + '</h2>');
+            rangerRankBadge.append('<img alt=" ' + GRR[5].rank + 'badge " ' + GRR[5].badge + 'style="width: 200px;" />');
+
+        } else if (retreiveVisitHistory == "7"){
+            rangerRankTitle.append('<h2>' + GRR[6].rank + '</h2>');
+            rangerRankBadge.append('<img alt=" ' + GRR[6].rank + 'badge " ' + GRR[6].badge + ' style="width: 200px;"/>');
+
+        } else if (retreiveVisitHistory == "8"){
+            rangerRankTitle.append('<h2>' + GRR[7].rank + '</h2>');
+            rangerRankBadge.append('<img alt=" ' + GRR[7].rank + 'badge " ' + GRR[7].badge + 'style="width: 200px;"/>');
+
+        } else if (retreiveVisitHistory == "9"){
+            rangerRankTitle.append('<h2>' + GRR[8].rank + '</h2>');
+            rangerRankBadge.append('<img alt=" ' + GRR[8].rank + 'badge " ' + GRR[8].badge + 'style="width: 200px;" />');
+
+        } else if (retreiveVisitHistory == "10"){
+            rangerRankTitle.append('<h2>' + GRR[9].rank + '</h2>');
+            rangerRankBadge.append('<img alt=" ' + GRR[9].rank + 'badge " ' + GRR[9].badge + 'style="width: 200px;" />');
+
+        } else if (retreiveVisitHistory == "11"){
+            rangerRankTitle.append('<h2>' + GRR[10].rank + '</h2>');
+            rangerRankBadge.append('<img alt=" ' + GRR[10].rank + 'badge " ' + GRR[10].badge + 'style="width: 200px;"/>');
+
+        } 
+    }
+
 });
 
 
@@ -107,3 +183,29 @@ function getDateStamp() {
     return moment().format('ll');
 }
 
+
+// button event listener to capture user name
+const userInput = $('#name');
+$('#nameBtn').on('click', (event) => {
+  event.preventDefault();
+  $('#headerText h1').empty();
+  const name = $(userInput).val().toUpperCase();
+  if (name === "") {
+   alert("please add name");
+	} else {
+		setName(name);
+        getName(name);    
+  }
+});
+
+// save name to local storage
+const setName = (name) => {
+localStorage.setItem('name', JSON.stringify(name));
+}
+
+// retrieve name from storage
+const getName = (name) => {
+const storedName = JSON.parse(localStorage.getItem('name'));
+$('#headerText h1').text(`Hello ${storedName}! Get ready to explore the wonders of space...`);
+return storedName;    
+}

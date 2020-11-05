@@ -42,33 +42,19 @@ red rgb (250,35,33)    #FA2321
   height: 100%;
 }
 
-.space {
-  padding-top: 10%;
-  padding-bottom: 0;
-  color:#FA2321;
-}
-
 #mapid { 
   height: 300px; 
 }
-
-#menu {
-  background-color: #95C4FC ;
-}
-
-#menu a {
-  color:  black;
-}
-
+/*
 #intro {
   height: 100vh;
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(/Assets/images/misc/iss-background.jpg);
-  background-position: center; /* Center the image */
-  background-repeat: no-repeat; /* Do not repeat the image */
+  background-position: center; 
+  background-repeat: no-repeat; 
   padding-top: 72px;
   padding-bottom: 100px;
 }
-
+*/
 
 #info, #videos, #map {
   height: auto;
@@ -77,22 +63,18 @@ red rgb (250,35,33)    #FA2321
 }
 
 #info {
-  padding-top: 100px;
-}
-
-#info {
   background-color:#283758;
 }
 
 #videos {
   background-color: black; /*fallback for image */
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(/Assets/images/misc/iss-looking-at-earth.jpg);
+  background-image: url(Assets/images/misc/iss-looking-at-earth.jpg);
 
 }
 
 #map {
-  background-color: #FA2321; /*fallback for image */
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(/Assets/images/misc/stars.jpg);
+  background-color: #283758; /*fallback for image */
+  background-image: url(Assets/images/misc/stars.jpg);
 }
 
 #map p {
@@ -107,4 +89,8 @@ red rgb (250,35,33)    #FA2321
 #userBtn h2 {
   font-family: 'Amatic SC', cursive;
   font-size: 2rem;
+}
+
+div.segment {
+  background-color: chartreuse;
 }

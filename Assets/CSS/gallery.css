@@ -1,26 +1,44 @@
-
 /* Changes size of astonaut pic */
 #astronaut {
-    height: 270px;
-    width: 270px;
+  height: 270px;
+  width: 270px;
 }
 
 /* gives formatting to content box */
 #textContentGallery {
-margin-bottom: 15px;
-border: 5px solid;
-border-color:#FFA924;
-color: #283758;
-background-color: #95C4FC;
+  margin-bottom: 15px;
+  border: 5px solid;
+  border-color: #ffa924;
+  color: #283758;
+  background-color: #95c4fc;
 }
 
 .picturesBoxes {
-    border: 5px solid;
-    border-color:#FFA924;
-    color: #283758;
-    background-color: #95C4FC;
+  border: 5px solid;
+  border-color: #ffa924;
+  color: #283758;
+  background-color: #95c4fc;
+  border-radius: 15px;
+  height: 450px;
+  width: 100%;
+  
 }
 
-h1, h2, h3, h4, h5 {
-    text-align: center;
+h3 {
+  text-align: center;
 }
+
+#apolloImage,
+#moonImage,
+#sunImage,
+#galaxiesImage {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  height: 250px;
+  width: auto;
+}
+
+
+
+

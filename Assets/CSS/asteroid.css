@@ -21,7 +21,6 @@
 
 /* general styling */
 
-
 p {
     color: #283758;
     padding: 2px;
@@ -43,8 +42,6 @@ h2#personal {
     padding: 5px 5px;
     margin: 0 0 14px 0;
 }
-
-
 
 div.eleven.wide.column {
     padding:0;
@@ -226,6 +223,106 @@ p.moon-name:hover {
     color: #FA2321;
 }
 
-footer {
-    position: unset;
+
+/* media queries  */
+@media screen and (max-width: 560px ){
+
+    #neo-asteroid{
+        order: 5;
+    }
+
+    #intro-planets {
+        order: 1;
+    }
+
+    #planet-control-centre {
+        order: 2;
+    }
+
+    #moon-container {
+        order: 4;
+        background-color: #124975;
+        border-radius: 5px;
+    }
+
+    #info-panes {
+        order: 3;
+    }
+
+    #hot-air-balloon, p.intro {
+        margin: 0 0 14px 0;
+    }
+
+    h3.Planet-data {
+        margin: 0;
+        padding: 0;
+    }
+
+    div.planet-control-centre {
+        margin: 0 0 14px 0;
+    }
+
+    #sun { height: 100px; transform: translate(0px,0px);}
+    #sun:hover { transform: scale(1.1)}
+    
+    #mercury { height: 100px; transform: translate(0px,0px);}
+    #mercury:hover { transform: scale(1.1)}
+
+    #venus { height: 100px; transform: translate(0px,0px);}
+    #venus:hover { transform: scale(1.1)}
+
+    #earth { height: 100px; transform: translate(0px,0px);}
+    #earth:hover { transform: scale(1.1)}
+
+    #moon { height: 100px; transform: translate(0px,0px);}
+    #moon:hover { transform: scale(1.1)}
+
+    #mars { height: 100px; transform: translate(0px,0px);}
+    #mars:hover { transform: scale(1.1)}
+
+    #jupiter { height: 100px; transform: translate(0px,0px);}
+    #jupiter:hover { transform: scale(1.1)}
+
+    #saturn { height: 100px; transform: translate(0px,0px);}
+    #saturn:hover { transform: scale(1.1)}
+
+    #uranus { height: 100px; transform: translate(0px,0px);}
+    #uranus:hover { transform: scale(1.1)}
+
+    #neptune { height: 100px; transform: translate(0px,0px);}
+    #neptune:hover { transform: scale(1.1)}
+
+    #pluto { height: 100px; transform: translate(0px,0px);}
+    #pluto:hover { transform: scale(1.1)}
+
+}
+
+div#info-panes {
+    margin: 0 0 14px 0;
+}
+
+@media screen and (min-width: 560px) and (max-width: 950px) {
+    h2#personal {
+        margin: 14px 0 0 0;
+    }
+
+    #neo-asteroid{
+        order: 5;
+    }
+
+    #intro-planets {
+        order: 1;
+    }
+
+    #planet-control-centre {
+        order: 2;
+    }
+
+    #moon-container {
+        order: 3;
+    }
+
+    #info-panes {
+        order: 4;
+    }
 }

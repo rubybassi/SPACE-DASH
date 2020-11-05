@@ -8,6 +8,10 @@ body {
 
 h1, h2 {
     font-family: 'Bungee', cursive;
+    color: #283758;
+    background-color: #FFA924 ;
+    padding: 8px;
+    border-radius: 5px;
 }
 /*
 One Weight reg 400
@@ -34,8 +38,16 @@ Bold 700
 Bold 700 italic
 */
 
+#menu {
+    background-color: #95C4FC ;
+}
+
+#menu a {
+    color: #283758;
+  }
+
 div#wrapper {
-    margin: 10px;
+    padding-top: 72px;
 }
 
 aside.div-back-bord {
@@ -45,6 +57,9 @@ aside.div-back-bord {
 div.div-back-bord {
     background-color: #124975;
     border-radius: 5px;
+}
+div#ranger-rank-title {
+    margin: 0 0 14px 0;
 }
 
 p.intro{
@@ -75,13 +90,6 @@ p.date, p.time {
     text-align: center;
 } */
 
-h1, h2 {
-    color: #283758;
-    background-color: #FFA924 ;
-    padding: 8px;
-    border-radius: 5px;
-}
-
 h3 {
     margin: 14px 0 ;
 }
@@ -107,21 +115,39 @@ h3 {
 }
 
 footer {
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    padding: 10px;
     color: #283758;
+    background-color: #95C4FC;
     text-align: center;
     font-weight: bold;
-    background-color: #FA2321;
+    padding: 10px;
     border: 5px solid;
     border-color:#95C4FC;
 }
 
-footer>p {
-    color: #283758;
-    text-align: center;
-    font-weight: bold;
-    background-color: #FA2321;
+span {
+    color: #FA2321;
+  }
+
+  #headerText div {
+    background-color:#FFA924;
+  }
+
+  #seg4, #seg5, #seg6, #seg7 {
+    background-color:#95C4FC;
+  }
+
+ #seg3 {
+    background-color:#124975;
+}
+
+#seg4, #seg6 {
+    border: 5px red solid;
+}
+
+#seg2, #seg3, #seg5, #seg7  {
+    border: 5px #FFA924 solid;
+}
+
+#seg6 {
+    border: 5px #124975 solid;
 }

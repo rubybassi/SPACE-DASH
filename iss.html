@@ -13,6 +13,11 @@
     crossorigin=""></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css" />
 
+  <link rel = "icon" 
+      href = "Assets/images/logos/favicon.png"
+      type = "image/x-icon"
+    />
+
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Bungee&display=swap" rel="stylesheet">
   <link
@@ -25,29 +30,29 @@
 
   <link rel="stylesheet" href="Assets/CSS/style.css" />
   <link rel="stylesheet" href="Assets/CSS/iss.css" />
-  <title>ISS Locator</title>
+  <title>ISS-DASH</title>
 </head>
 
 <body>
 
   <!--FIXED HEADER-->
-  <div class="ui top fixed labeled icon menu aligned " id="menu">
-    <a class="item" href="/index.html">
+  <nav class="ui top fixed labeled icon mini menu aligned" id="menu">
+    <a class="item" href="index.html">
       <i class="home icon"></i>Home
     </a>
-    <a class="item" href="#info">
-      <i class="rocket icon"></i>About the ISS
+    <a class="item" href="gallery.html">
+      <i class="image icon"></i>Gallery
     </a>
-    <a class="item" href="#map">
-      <i class="map icon"></i>ISS Map
+    <a class="item" href="asteroids.html">
+      <i class="star icon"></i>Asteriods
     </a>
-    <a class="item" href="#videos">
-      <i class="video play icon"></i>Videos
+    <a class="item active" href="iss.html">
+      <i class="space shuttle icon"></i>ISS
     </a>
-  </div>
-
-
-
+    <a class="item" href="moon.html">
+      <i class="moon icon"></i>Moon 
+    </a>
+  </nav>
 
   <!--INTRO SECTION
   <div class="infoSection" id="intro">
@@ -65,12 +70,23 @@
     <div class="ui grid stackable container">
       <div class="column">
         <div class="ui segment" id="rangerBanner">
-          <h1>Welcome to the ISS</h1>
+          <h1>You've arrived to the International Space Station data control room <span class="issName"></span></h1>
         </div>
       </div>
     </div>
 
-    <!--6 and 10 FLUID COLUMN ROW --- CARD AND ISS INFO-->
+    <div class="ui grid stackable container">
+      <div>
+      <a class="item" href="#map">
+        <i class="map icon"></i>ISS Map
+      </a>
+      <a class="item" href="#videos">
+        <i class="video play icon"></i>Videos
+      </a>
+    </div>
+    </div>
+
+    <!--6 and 10 FLUID COLUMN ROW / CARD AND ISS INFO-->
     <div class="ui grid stackable container">
       <div class="six wide column">
         <div class="ui segment" id="rangerCard">
@@ -103,12 +119,12 @@
       </div>
     </div>
  
-  <!--16 COLUMN ROW ---- COORDINATE BUTTON-->
+  <!--16 COLUMN ROW / COORDINATE BUTTON-->
   <div class="ui grid stackable container">
     <div class="column">
       <div class="ui center aligned padded segment" id="btnCard">
         <button id="userBtn" class=" big ui button">
-          <h2>How fast is the ISS travelling?</h2>
+          <h2>Hey <span class="issName"></span>, How fast is the ISS travelling? Click the spaceship to find out!</h2>
           <i class="space shuttle icon"></i>
           <div id="showData"></div>
         </button>
@@ -120,7 +136,7 @@
 
 <!--VIDEO SECTION-->
 <div class="videoSection" id="videos">
-  <!--16 COLUMN ROW ---- LIVE STREAM INTRO-->
+  <!--16 COLUMN ROW / LIVE STREAM INTRO-->
   <div class="ui grid stackable container">
     <div class="column">
       <div class="ui yellow padded segment">
@@ -135,7 +151,7 @@
       </div>
     </div>
   </div>
-  <!--TWO 8 COLUMN ROW --- EMBEDDED VIDEOS----->
+  <!--TWO 8 COLUMN ROW / EMBEDDED VIDEOS-->
   <div class="ui grid stackable container" id="iframes">
     <div class="eight wide column">
       <div class="ui center red inverted aligned segment">
@@ -159,7 +175,7 @@
 
 <!--MAP SECTION-->
 <div class="dashbaordMap" id="map">
-  <!--16 COLUMN ROW --- ISS DASHBOARD----->
+  <!--16 COLUMN ROW / ISS DASHBOARD-->
   <div class="ui grid stackable container">
     <div class="column">
       <div class="ui red segment">
@@ -225,7 +241,7 @@
   <div class="ui grid stackable container">
     <div class="column">
       <div class="ui padded blue segment" id="mapContainer">
-        <h2>Where's the ISS At?</h2>
+        <h2><span class="issName"></span> Where's the ISS At? Press zoom to see the location</h2>
         <div id="mapid"></div>
       </div>
     </div>
@@ -233,8 +249,9 @@
   </div>
 
 
+  <!-- footer -->
   <footer>
-    <p>© Copyright 2020</p>
+    © Copyright 2020
   </footer>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
