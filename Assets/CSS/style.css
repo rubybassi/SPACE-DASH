@@ -107,8 +107,9 @@ h3 {
 }
 
 #potdIMG {
-    width: 600px;
-    height: 400px;
+    height: 250px;
+    width: auto;
+
 }
 
 footer {
