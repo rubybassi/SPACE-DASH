@@ -162,3 +162,12 @@ footer {
     border: 5px solid;
     border-color:#95C4FC;
 }       
+
+#seg2 p:last-child {
+  color:#283758;
+}
+
+.ui.blue.button {
+  background-color:#95C4FC;
+  color: #283758;
+}
