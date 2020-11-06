@@ -1,19 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
   <title>SPACE-DASH</title>
   <!-- add icon link -->
-  <link rel = "icon" 
-      href = "Assets/images/logos/favicon.png"
-      type = "image/x-icon"
-    />
+  <link rel="icon" href="Assets/images/logos/favicon.png" type="image/x-icon" />
   <!-- reset style sheet -->
   <link rel="stylesheet" href="Assets/CSS/reset.css" />
   <!--Semantic UI CSS-->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.13/semantic.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css" />
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Bungee&display=swap" rel="stylesheet">
   <link
@@ -26,12 +24,12 @@
   <!-- master style sheet  -->
   <link rel="stylesheet" type="text/css" href="Assets/CSS/style.css" />
 </head>
+
 <body>
   <!--FIXED HEADER-->
-  <nav class="ui top fixed labeled icon mini menu aligned" id="menu">
+  <nav class="ui top fixed labeled icon mini compact menu aligned" id="menu">
 
-    <a class="item active" href="index.html">
-
+    <a class="item" href="index.html">
       <i class="home icon"></i>Home
     </a>
     <a class="item" href="gallery.html">
@@ -44,20 +42,20 @@
       <i class="space shuttle icon"></i>ISS
     </a>
     <a class="item" href="moon.html">
-      <i class="moon icon"></i>Moon 
+      <i class="moon icon"></i>Moon
     </a>
   </nav>
-  <div id="wrapper" class=" ui grid stackable container">  
-  <!--HEADER ROW-->
-   <div class="one column row">
-    <div class="sixteen wide column" id="headerText">
-      <div class="ui segment" id="seg1">
-        <h1>Welcome to SPACE-DASH!</h1>
+  <div id="wrapper" class=" ui grid stackable container">
+    <!--HEADER ROW-->
+    <div class="one column row">
+      <div class="sixteen wide column" id="headerText">
+        <div class="ui segment" id="seg1">
+          <h1>Welcome to SPACE-DASH!</h1>
+        </div>
       </div>
     </div>
-   </div> 
 
-   <div class="one column row" id="userInput">
+    <div class="one column row" id="userInput">
       <div class="column">
         <div class="ui action input">
           <input type="text" placeholder="enter name" id="name">
@@ -65,17 +63,15 @@
           <div id="userName"></div>
         </div>
       </div>
-    </div>  
+    </div>
 
-   <!--INTRO AND TIME ROW-->
-   <div class="two column row">
+    <!--INTRO AND TIME ROW-->
+    <div class="two column row">
       <div class="eight wide column">
         <section class="ui segment" id="seg2">
-
         <p>Embark on a fun adventure of space discovery and learning. You’ll find everything you need to help you on your way to becoming a future astronaut.</p> 
         <p>There’s so much to discover with SPACE-DASH, such as amazing images of space captured by NASA, mission control near space objects and planetary visuals, ISS live tracking and snapshots of moon phases.</p> 
-        <p><strong>Space exploration doesn’t get any better than this!</strong></p>
-
+          <p><strong>Space exploration doesn’t get any better than this!</strong></p>
         </section>
       </div>
 
@@ -89,7 +85,7 @@
             <p id="date-header" class="date">Date </p>
             <p id="time-header" class="time">Time </p>
           </div>
-        </div> 
+        </div>
       </div>
     </div>
 
@@ -107,10 +103,18 @@
       </article>
     </div>
 
+
       <div class="column">
         <article class="ui padded segment" id="seg5">
           <h2>Misson Control</h2>
-
+          
+          <p>Information to take through from asteroides page </p>
+          <img id="mission-control" alt="mission control" src="Assets/images/misc/Mission-control.png" width="100%" />
+          <form method="get" action="asteroids.html">
+            <button class="big ui blue button" type="submit">
+              <h3>Asteriods</h3>
+            </button>
+          </form>
 
           <!-- <p class="intro">This is Misson Control, from here you can gather information on the planets and asteroids in the solar system. Manage your adventures and see where you can explore. </p> -->
           <img id="mission-control" alt="mission control" src="Assets/images/misc/Mission-control.png" width="100%"/>
@@ -135,7 +139,7 @@
         </article>
       </div>
     </div>
-    <!--ISS AND MOON ROW-->    
+    <!--ISS AND MOON ROW-->
     <div class="two column row">
     <div class="column">
       <article class="ui padded segment" id="seg6">
@@ -147,6 +151,7 @@
         </form>
       </article>
     </div>
+
       <div class="column">
         <article class="ui padded segment" id="seg7">
           <h2>Moon Phase</h2>
@@ -154,7 +159,7 @@
             <button class="tiny ui blue button" type="submit">
               <h3><i class="hand point right outline icon"></i>Take me to the moon</h3>
             </button>
-          </form>     
+          </form>
         </article>
       </div>
     </div>
@@ -170,4 +175,5 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
   <script type="text/javascript" src="Assets/JS/script.js"></script>
 </body>
+
 </html>
