@@ -51,7 +51,9 @@ div#wrapper {
     
 }
 
+
 @media screen and (min-height: 720px){
+
     footer {
         position: fixed;
         bottom: 0;

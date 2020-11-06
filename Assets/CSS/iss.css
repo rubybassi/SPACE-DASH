@@ -9,6 +9,10 @@ red rgb (250,35,33)    #FA2321
   margin: 0;
 }
 
+p {
+  color: #283758;
+}
+
 #megaText {
   padding-top: 400px;
 }
@@ -43,7 +47,7 @@ red rgb (250,35,33)    #FA2321
 }
 
 #mapid { 
-  height: 300px; 
+  height: 400px; 
 }
 /*
 #intro {
@@ -67,14 +71,14 @@ red rgb (250,35,33)    #FA2321
 }
 
 #videos {
-  background-color: black; /*fallback for image */
-  background-image: url(Assets/images/misc/iss-looking-at-earth.jpg);
+  background-color: #95C4FC; /*fallback for image */
+ /* background-image: url(Assets/images/misc/iss-looking-at-earth.jpg);  */
 
 }
 
 #map {
   background-color: #283758; /*fallback for image */
-  background-image: url(Assets/images/misc/stars.jpg);
+ /* background-image: url(Assets/images/misc/stars.jpg); */
 }
 
 #map p {
@@ -91,6 +95,19 @@ red rgb (250,35,33)    #FA2321
   font-size: 2rem;
 }
 
-div.segment {
-  background-color: chartreuse;
+#videos div.ui.padded.segment  {
+  background-color: #283758;
+  
+}
+
+#videos div.ui.padded.segment p {
+  color: #95C4FC;
+}
+
+#iframes div.ui.center.aligned.segment {
+  background-color:#283758;
+}
+
+#map div.ui.red.segment {
+  background-color: #95C4FC;
 }
