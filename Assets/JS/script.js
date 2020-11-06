@@ -1,10 +1,10 @@
 $(document).ready(function () {
 
 
-    // AJAX call for picture of the day
+    // variable to hold api link
     const queryURL = "https://api.nasa.gov/planetary/apod?api_key=TlvltHK45BcgABDzpncHUblvxpst0Cv0BNwk2flA"
 
-    // ajax call for UV
+    // ajax call for picture of the day
     $.ajax({
       url: queryURL,
       method: "GET"
@@ -16,6 +16,7 @@ $(document).ready(function () {
 
     });
 
+    // displays date and working clock
     setInterval(function(){
         
       let dateOfDay = getDateStamp();
@@ -242,7 +243,7 @@ $(document).ready(function () {
 
 });
 
-
+// functions to get time and date
 function getTimeStamp() {
   return moment().format('LTS');
 }

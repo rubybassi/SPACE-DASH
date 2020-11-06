@@ -51,6 +51,15 @@ div#hot-air-balloon {
     border-radius: 5px;
 }
 
+p.intro {
+    background-color: white;
+    border: 5px solid #fa2321;
+    border-radius: 5px;
+    padding: 5px;
+    color: #283758;
+    padding: 2px;
+  }
+
 /* windscreen styling */
 div#space-windscreen {
     background-image: url(../images/planets/Space-background.png);

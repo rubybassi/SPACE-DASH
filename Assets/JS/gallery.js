@@ -122,6 +122,7 @@ $(document).ready(function () {
         $("#" + buttonGroup + "Image").val(allImageIndex);
     });
 
+    // Gets name from local storage for personalisation  
     const fetchName = () => {
         let userName = (JSON.parse(localStorage.getItem('name'))); 
         if (userName === "" || userName === null) {
