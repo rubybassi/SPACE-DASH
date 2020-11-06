@@ -30,7 +30,7 @@ Requirments for the project included client side storage and at least two API.
 
 ## Installation
 
-The page loads everything needed to run straight from the github pages enviroment. [Access this page.](https://hannahcloves.github.io/SPACE-DASH/). 
+The page loads everything needed to run straight from the github pages enviroment. [Access this page](https://hannahcloves.github.io/SPACE-DASH/).
 
 The child can from the index.html page enter his/her name to add personalisation throughout the website. The name entered will apear on each subsequent page. 
 
@@ -92,6 +92,8 @@ Additions that I would like to make to this page, include:
 
 * Adding major "need to know" asteroids and comets to the page like the planets have been displayed. For example Hally's comet. The comet data is all available in the Solar system Api and Nasa provides close aproach data. 
 
+## Updates 
+
 #### Nasa Misson Design
 Part of the Nasa Api selection is an API called Misson Design. 
 This API provides access to the JPL/SSD small-body mission design suite. The following operation modes are available:
@@ -102,6 +104,8 @@ This API provides access to the JPL/SSD small-body mission design suite. The fol
 
 I would really like to investigate this further and hopefully generate Mission senarios the children can role play with. 
 
+#### Space Quiz
+
 
 ## Credits 
 
@@ -109,17 +113,17 @@ Freepik vector images:
 
 We obtained correct permision for the graphics from catalyststuff and macrovector. The graphics cannot be used from our site or another without permission of the owner. 
 
- [Abstract vector created by macrovector - www.freepik.com]('https://www.freepik.com/vectors/abstract')   
- [Cartoon vector created by catalyststuff - www.freepik.com]('https://www.freepik.com/vectors/cartoon')   
- [Heart vector created by catalyststuff - www.freepik.com]('https://www.freepik.com/vectors/heart')  
- [Logo vector created by catalyststuff - www.freepik.com]("https://www.freepik.com/vectors/logo")   
- [Logo vector created by catalyststuff - www.freepik.com]('https://www.freepik.com/vectors/logo')   
- [Heart vector created by catalyststuff - www.freepik.com]('https://www.freepik.com/vectors/heart')   
- [Cartoon vector created by catalyststuff - www.freepik.com]('https://www.freepik.com/vectors/cartoon')   
- [Cartoon vector created by catalyststuff - www.freepik.com]('https://www.freepik.com/vectors/cartoon')  
- [Background vector created by catalyststuff - www.freepik.com]('https://www.freepik.com/vectors/background')
- [Logo vector created by freepik - www.freepik.com]('https://www.freepik.com/vectors/logo')
- [Logo vector created by vextok - www.freepik.com]('https://www.freepik.com/vectors/logo')
+ [Abstract vector created by macrovector - www.freepik.com](https://www.freepik.com/vectors/abstract)   
+ [Cartoon vector created by catalyststuff - www.freepik.com](https://www.freepik.com/vectors/cartoon)   
+ [Heart vector created by catalyststuff - www.freepik.com](https://www.freepik.com/vectors/heart)  
+ [Logo vector created by catalyststuff - www.freepik.com](https://www.freepik.com/vectors/logo)   
+ [Logo vector created by catalyststuff - www.freepik.com](https://www.freepik.com/vectors/logo)   
+ [Heart vector created by catalyststuff - www.freepik.com](https://www.freepik.com/vectors/heart)   
+ [Cartoon vector created by catalyststuff - www.freepik.com](https://www.freepik.com/vectors/cartoon)   
+ [Cartoon vector created by catalyststuff - www.freepik.com](https://www.freepik.com/vectors/cartoon)  
+ [Background vector created by catalyststuff - www.freepik.com]('https://www.freepik.com/vectors/background)
+ [Logo vector created by freepik - www.freepik.com](https://www.freepik.com/vectors/logo)
+ [Logo vector created by vextok - www.freepik.com](https://www.freepik.com/vectors/logo)
 
  ## Badges 
 
