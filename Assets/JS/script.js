@@ -33,27 +33,27 @@ $(document).ready(function () {
 
     // session storage - this increases as each page is loaded, but the Local strorage only increases when the whole site is visited. 
     function saveSession(SS) {
-      console.log("session value received =", SS);
+      // console.log("session value received =", SS);
       let saveSessionHistory = sessionStorage.setItem("sessionHistory",JSON.stringify(SS));
     }
 
     function getSessionStorage(GSS) {
 
         let retreiveSessionHistory = sessionStorage.getItem("sessionHistory");
-        console.log("retreiveSessionHistory", retreiveSessionHistory);
+        // console.log("retreiveSessionHistory", retreiveSessionHistory);
         
         if (retreiveSessionHistory == null) {
           GSS = 1;
-          console.log("welcome session cadet", GSS);
+          // console.log("welcome session cadet", GSS);
           saveSession(GSS);
             
         } else {
             
           showSessionHistory = JSON.parse(retreiveSessionHistory);
-          console.log("showSessionHistory =", showSessionHistory);
-          console.log("Still in the same session", showSessionHistory);
+          // console.log("showSessionHistory =", showSessionHistory);
+          // console.log("Still in the same session", showSessionHistory);
           showSessionHistory++;
-          console.log("GSS = ",showSessionHistory);
+          // console.log("GSS = ",showSessionHistory);
           saveSession(showSessionHistory);
          
         }
@@ -61,7 +61,7 @@ $(document).ready(function () {
 
     // local storage this only increases when the whole site is visited, while session storage increses each page load. 
     function saveHistory(SVH) {
-      console.log("visit value received =", SVH);
+      // console.log("visit value received =", SVH);
       let saveVisitHistory = localStorage.setItem("visitHistory",JSON.stringify(SVH));
       // console.log("saveVisitHistory =", saveVisitHistory);
     }
@@ -69,28 +69,28 @@ $(document).ready(function () {
     function getHistory(GH) {
 
         let retreiveVisitHistory = localStorage.getItem("visitHistory");
-        console.log("retreiveVisitHistory", retreiveVisitHistory);
+        // console.log("retreiveVisitHistory", retreiveVisitHistory);
         
         if (retreiveVisitHistory == null) {
           GH = 1;
-          console.log("welcome new cadet", GH);
+          // console.log("welcome new cadet", GH);
           saveHistory(GH);
             
         } else {
             
           showVisitHistory = JSON.parse(retreiveVisitHistory);
-          console.log("showVisitHistory =", showVisitHistory);
-          console.log("welcome back", showVisitHistory);
+          // console.log("showVisitHistory =", showVisitHistory);
+          // console.log("welcome back", showVisitHistory);
 
           let conditionSessionHistory = sessionStorage.getItem("sessionHistory");
-          console.log("conditionSessionHistory", conditionSessionHistory);
+          // console.log("conditionSessionHistory", conditionSessionHistory);
           if (conditionSessionHistory <= 1 ){
             showVisitHistory++;
-            console.log("GH = ",showVisitHistory);
+            // console.log("GH = ",showVisitHistory);
             saveHistory(showVisitHistory);
 
           } else{
-            console.log("your still here", showVisitHistory);
+            // console.log("your still here", showVisitHistory);
           }
          
         }
@@ -120,7 +120,7 @@ $(document).ready(function () {
     function getRangerRank(GRR) {
 
         let retreiveVisitHistory = localStorage.getItem("visitHistory");
-        console.log("retreiveVisitHistory for rank allocation =", retreiveVisitHistory);
+        // console.log("retreiveVisitHistory for rank allocation =", retreiveVisitHistory);
         rangerRankTitle.empty();
         rangerRankBadge.empty();
 
@@ -203,10 +203,10 @@ $(document).ready(function () {
         
 			// console.log("nasa Ajax has body id =", passbodyid);
 			const formatDate = moment().format("YYYY-MM-DD");
-			console.log("formatDate",formatDate);
+			// console.log("formatDate",formatDate);
 			
 			const todayDate = moment().format("YYYY-MM-DD");
-			console.log("todayDate", todayDate);
+			// console.log("todayDate", todayDate);
 
 			let dateMin = todayDate; 
 			// let dateMax = "2019-03-16";
@@ -229,7 +229,7 @@ $(document).ready(function () {
 	}
 
 	function dealWithAsteroidCount(DealWneoCount){
-		console.log("Asteroid data = ",DealWneoCount);
+		// console.log("Asteroid data = ",DealWneoCount);
 
 				let asteroidCount = DealWneoCount.count;
 				const noneoBox = $("h3.Near-earth-objects");
