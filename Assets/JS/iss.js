@@ -13,7 +13,6 @@ let solar_lat = "";
 let solar_lon = "";
 let velocity = "";
 let country = "";
-let county = "";
 
 // init funtion
 $(function () {
@@ -41,7 +40,7 @@ const getTiles = L.tileLayer(
 
 // Create custom marker with Leaflet.js library
 const issMarker = L.icon({
-  iconUrl: "Assets/images/misc/satellite.png",
+  iconUrl: "Assets/images/misc/iss-icon.png",
   iconSize: [50, 50],
   iconAnchor: [25, 25], // point of the icon which will correspond to marker's location
 });
@@ -56,7 +55,9 @@ const getData = () => {
     url: queryUrl,
   })
     .then(handleWeatherData)
-    .catch();
+    .catch(function(){
+      $('#countryVal').text("Whoops! The ISS can not be detected: it's possibly in stealth mode!");  
+      });
 };
 
 // Function to pass and reassign ISS data to global variables so can reuse for other functions and event handlers
@@ -86,30 +87,30 @@ const handleWeatherData = (data) => {
   getLocation();
 };
 
-// Call ISS map and data function
+// Call ISS map on load and then set interval to move iss marker
 getData();
 setInterval(getData, 2000);
 
 // Call API for ISS reverse geolocation
 const getLocation = () => {
-  const iqkey = 'pk.0715cc466c0fd44018d880de0d78c1f2';
-  const queryUrl = `https://us1.locationiq.com/v1/reverse.php?key=${iqkey}&lat=${latitude}&lon=${longitude}&format=json`;
+  //const iqkey = 'pk.0715cc466c0fd44018d880de0d78c1f2';
+  const key = 'pk.eyJ1Ijoic2FuZHlydWJ5IiwiYSI6ImNrZ3gxdWU4NTAwMnQycm52cHJocDJuMnIifQ.yEcd2QN_oOtUDi7r6u1ZSQ';
+  //const queryUrl = `https://us1.locationiq.com/v1/reverse.php?key=${iqkey}&lat=${latitude}&lon=${longitude}&format=json`;
+  const queryUrl = `https://api.mapbox.com/geocoding/v5/mapbox.places/${longitude},${latitude}.json?access_token=${key}`;  
   $.ajax({
     url: queryUrl,
   })
     .then(handleGeolocationData)
     .catch(function(){
-    $('#countryVal').text("The ISS is currently above the ocean");  
+    $('#countryVal').text("Place not detected - possibly above the ocean");  
     });
 };
 
 // Function to push geolocation data to DOM
 const handleGeolocationData = (data) => {
-  country = data.address.country;
-  county = data.address.county;
-  //console.log('place is:' , county , country);
+  country = data.features[1].place_name;
+  //country = data.address.country;
   $('#countryVal').text(country);
-  $('#countyVal').text(county);
 };
 
 });

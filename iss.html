@@ -91,7 +91,7 @@
           <div class="ui centered card">
             <div class="ui slide masked reveal image">
               <img src="Assets/images/space-men/riding-a-rocket.png" class="visible content" />
-              <img src="Assets/images/space-men/rocket-out-of-the-box.png" class="hidden content" />
+              <img src="Assets/images/misc/iss.png" class="hidden content" />
             </div>
             <div class="center aligned content">
               <h2>Hey Space Ranger!</h2>
@@ -132,40 +132,41 @@
     </div>
   </div>
 
-
-  <!--VIDEO SECTION-->
-  <div class="videoSection" id="videos">
-    <!--16 COLUMN ROW / LIVE STREAM INTRO-->
-    <div class="ui grid stackable container">
-      <div class="column">
-        <div class="ui yellow padded segment">
-          <h2>ISS Live Stream</h2>
-          <strong>
-            <p>Watch live footage of earth from space!</p>
-          </strong>
-          <p>During "loss of signal" periods, you will see a blue screen. Since the station orbits the Earth once every
-            90 minutes, it experiences a sunrise or a sunset about every 45 minutes. When the station is in darkness,
-            external camera video may appear black, but can sometimes provide spectacular views of lightning or city
-            lights below.</p>
+</div>
+<!--VIDEO SECTION-->
+<div class="videoSection" id="videos">
+  <!--16 COLUMN ROW / LIVE STREAM INTRO-->
+  <div class="ui grid stackable container">
+    <div class="column">
+      <div class="ui padded segment">
+        <h2>ISS Live Stream</h2>
+        <strong>
+          <p>Watch live footage of earth from space!</p>
+        </strong>
+        <p>During "loss of signal" periods, you will see a blue screen. Since the station orbits the Earth once every
+          90 minutes, it experiences a sunrise or a sunset about every 45 minutes. When the station is in darkness,
+          external camera video may appear black, but can sometimes provide spectacular views of lightning or city
+          lights below.</p>
         </div>
       </div>
     </div>
     <!--TWO 8 COLUMN ROW / EMBEDDED VIDEOS-->
     <div class="ui grid stackable container" id="iframes">
       <div class="eight wide column">
-        <div class="ui center red inverted aligned segment">
+        <div class="ui center aligned segment">
           <div class="videoWrapper">
             <iframe width="560" height="315" src="https://www.youtube.com/embed/DDU-rZs-Ic4" frameborder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowfullscreen></iframe>
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen></iframe>
           </div>
         </div>
       </div>
       <div class="eight wide column">
-        <div class="ui center red inverted aligned segment">
+        <div class="ui center aligned segment">
           <div class="videoWrapper">
             <iframe width="560" height="315" src="https://ustream.tv/embed/9408562" scrolling="no" allowfullscreen
-              webkitallowfullscreen frameborder="0" style="border: 0 none transparent;"></iframe>
+            webkitallowfullscreen frameborder="0" style="border: 0 none transparent;"></iframe>
+
           </div>
         </div>
       </div>
@@ -232,19 +233,14 @@
               <p id="velocityVal"></p>
             </div>
             <div class="label" data-tooltip="Velocity is the speed at which something is traveling"
-              data-position="bottom center">Velocity</div>
+            data-position="bottom center">Velocity</div>
           </div>
           <div class="ui yellow statistic">
             <div class="value">
               <p id="countryVal"></p>
             </div>
-            <div class="label">Country</div>
-          </div>
-          <div class="ui yellow statistic">
-            <div class="value">
-              <p id="countyVal"></p>
-            </div>
-            <div class="label">City</div>
+            <div class="label">Place</div>
+
           </div>
         </div>
       </div>
@@ -252,19 +248,16 @@
     <div class="ui grid stackable container">
       <div class="column">
         <div class="ui padded blue segment" id="mapContainer">
-          <h2><span class="personal issName"></span> Where's the ISS At? Press zoom to see the location</h2>
+          <h2><span class="personal issName"></span> Where's the ISS At? Zoom in to take a closer look</h2>
           <div id="mapid"></div>
         </div>
       </div>
     </div>
   </div>
-
   <!-- footer -->
-
   <footer>
     © Copyright 2020
   </footer>
-
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
   <script src="Assets/JS/iss.js"></script>
