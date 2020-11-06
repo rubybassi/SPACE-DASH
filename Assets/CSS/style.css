@@ -52,6 +52,7 @@ Bold 700 italic
 
 div#wrapper {
   padding-top: 72px;
+  margin-bottom: 14px;
 }
 
 aside.div-back-bord {
@@ -147,10 +148,25 @@ h3 {
 img#mission-control {
     border: 5px solid #283758;
     border-radius: 5px;
+    margin: 0 0 14px 0;
 }
 
 span.personal {
   color: #fa2321;
+}
+
+div.Near-earth-objects {
+    margin: 14px 0 0 10px ;
+}
+
+h2.Near-earth-objects {
+    font-size: 150%;
+}
+
+h3.Near-earth-objects {
+    color: white;
+    font-size: 400%;
+    text-align: center;
 }
 
 footer {
@@ -163,6 +179,7 @@ footer {
     border-color:#95C4FC;
 }       
 
+
 #seg2 p:last-child {
   color:#283758;
 }
@@ -170,4 +187,13 @@ footer {
 .ui.blue.button {
   background-color:#95C4FC;
   color: #283758;
+
+@media screen and (max-width: 560px ){
+    div.Near-earth-objects {
+        margin: 14px 0 0 0px ;
+    }
+}
+
+@media screen and (min-width: 560px) and (max-width: 950px){
+
 }

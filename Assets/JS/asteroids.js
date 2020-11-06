@@ -280,7 +280,6 @@ $(document).ready(function(){
     }
 
     
-    
     function nasaAjaxCallAsteroid(passbodyid) {
         
         // console.log("nasa Ajax has body id =", passbodyid);

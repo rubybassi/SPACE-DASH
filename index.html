@@ -38,7 +38,7 @@
       <i class="image icon"></i>Gallery
     </a>
     <a class="item" href="asteroids.html">
-      <i class="star icon"></i>Asteriods
+      <i class="star icon"></i>Asteroids
     </a>
     <a class="item" href="iss.html">
       <i class="space shuttle icon"></i>ISS
@@ -71,9 +71,11 @@
    <div class="two column row">
       <div class="eight wide column">
         <section class="ui segment" id="seg2">
+
         <p>Embark on a fun adventure of space discovery and learning. You’ll find everything you need to help you on your way to becoming a future astronaut.</p> 
         <p>There’s so much to discover with SPACE-DASH, such as amazing images of space captured by NASA, mission control near space objects and planetary visuals, ISS live tracking and snapshots of moon phases.</p> 
         <p><strong>Space exploration doesn’t get any better than this!</strong></p>
+
         </section>
       </div>
 
@@ -108,12 +110,28 @@
       <div class="column">
         <article class="ui padded segment" id="seg5">
           <h2>Misson Control</h2>
+
+
+          <!-- <p class="intro">This is Misson Control, from here you can gather information on the planets and asteroids in the solar system. Manage your adventures and see where you can explore. </p> -->
           <img id="mission-control" alt="mission control" src="Assets/images/misc/Mission-control.png" width="100%"/>
-          <form method="get" action="asteroids.html">
-            <button class="tiny ui blue button" type="submit">
-              <h3><i class="hand point right outline icon"></i>Take me to mission control</h3>
-            </button>
-          </form>
+          <div class="sixteen wide column">
+            <div class="ui grid">
+              <div class="eight wide tablet six wide computer column">
+                <form method="get" action="asteroids.html">
+                  <button class="tiny ui blue button" type="submit">
+                    <h3><i class="hand point right outline icon"></i>Take me to mission control</h3>
+                  </button>
+                </form>
+              </div>
+              <div class="sixteen wide tablet nine wide computer column Near-earth-objects div-back-bord ">
+                <div class="ui grid">
+                  <div class=" ten wide computer column"><h2 class="Near-earth-objects">Number of Near Earth Objects</h2></div>
+                  <div class=" six wide computer column"><h3 class="Near-earth-objects"></h3></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
         </article>
       </div>
     </div>
