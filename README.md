@@ -9,9 +9,10 @@ To including images and video utilising NASA and Solar System APIs.
 
 #### Features:
 * Picture of the day (Nasa)
+* Nasa Image Gallery
 * Find and track asteroids (Nasa)
 * ISS live feed video 
-* People in space 
+* Moon Phases 
 
 Target audience: Young learners passionate about astronomy. (primary aged)
 
@@ -25,11 +26,14 @@ Target audience: Young learners passionate about astronomy. (primary aged)
 5. Credits
 6. License
 
-## Instalation 
+## Installation 
 
 #### APIs used:   
 [Nasa](https://api.nasa.gov/)   
-[The Solar System OpenData](https://api.le-systeme-solaire.net/en/)
+[ISS](https://api.wheretheiss.at/v1/satellites/25544)   
+[mapbox](https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken})    
+[Moon Phases](https://api.farmsense.net/v1/moonphases/?d=135052658)     
+[The Solar System OpenData](https://api.le-systeme-solaire.net/en/) 
 
 Due to an insecure server usage we have had to stop using the ISS api and can no longer produce the information about the number of people in space or their details. We have changed this to feature the phases of the Moon. 
 
