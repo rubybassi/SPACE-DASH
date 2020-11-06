@@ -103,6 +103,7 @@ p.time {
   margin-right: auto;
 }
 
+/* changed background color on headertexts */
 #headerText div {
     background-color:#FFA924;
 }
@@ -132,17 +133,19 @@ p.time {
     border: 5px #124975 solid;
 }
 
-
+/* styles image in mission control */
 img#mission-control {
     border: 5px solid #283758;
     border-radius: 5px;
     margin: 0 0 14px 0;
 }
 
+/* highlights persons name across all html's */
 span.personal {
   color: #fa2321;
 }
 
+/* styling for inside mission control box */
 div.Near-earth-objects {
     margin: 14px 0 0 10px ;
 }
@@ -161,6 +164,7 @@ h3.Near-earth-objects {
   color:#283758;
 }
 
+/* overrides semantic UI styling for button */
 .ui.blue.button {
   background-color:#95C4FC;
   color: #283758;
