@@ -111,3 +111,7 @@ p {
 #map div.ui.red.segment {
   background-color: #95C4FC;
 }
+
+#userInput > p {
+  color: white;
+}

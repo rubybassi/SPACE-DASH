@@ -1,5 +1,6 @@
 $(document).ready(function () {
 
+
     // AJAX call for picture of the day
     const queryURL = "https://api.nasa.gov/planetary/apod?api_key=TlvltHK45BcgABDzpncHUblvxpst0Cv0BNwk2flA"
 
@@ -176,13 +177,16 @@ $(document).ready(function () {
 		const userInput = $('#name');
 		$('#nameBtn').on('click', (event) => {
 			event.preventDefault();
-			$('#headerText h1').empty();
 			const name = $(userInput).val().toUpperCase();
 			if (name === "") {
-			 alert("please add name");
+        localStorage.setItem('name', JSON.stringify('friend'));
+        getName(name);
+        $('#userInput').empty();
 			} else {
+        $('#headerText h1').empty();
 				setName(name);
-				getName(name);    
+        getName(name);
+        $('#userInput').empty();
 			}
 		});
 		
@@ -190,7 +194,7 @@ $(document).ready(function () {
 		const setName = (name) => {
 		localStorage.setItem('name', JSON.stringify(name));
 		}
-		
+    
 		// retrieve name from storage
 		const getName = (name) => {
 		const storedName = JSON.parse(localStorage.getItem('name'));
