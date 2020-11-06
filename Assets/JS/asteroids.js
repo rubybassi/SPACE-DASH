@@ -18,7 +18,7 @@ $(document).ready(function(){
     spaceWindscreen.on("click","img", planetImgClicked);
 
     const moonNameListItem = $("#moon-list-container");
-    moonNameListItem.on("click","p",moonNameClicked);
+    moonNameListItem.on("click touchstart","p",moonNameClicked);
 
     const bodyNameSpanItm = $(".body-name");
     const captinSpeaking = $("#captin-speaking");
