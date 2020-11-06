@@ -1,5 +1,17 @@
+// Name Title header
+const fetchName = () => {
+    let userName = (JSON.parse(localStorage.getItem('name')));
+    if (userName === "" || userName === null) {
+        $('.userName').text('friend');
+    } else {
+        $('.userName').text(JSON.parse(localStorage.getItem('name')));
+    }
+};
+fetchName();
+// Moon Data API
 const queryURL = "https://api.farmsense.net/v1/moonphases/?d=1350526582";
-console.log(queryURL)
+
+// AJAX Call for moon images for phases
 $.ajax({
     url: queryURL,
     method: "GET"
@@ -10,6 +22,7 @@ $.ajax({
     $('#moonPhase').text("Phase: " + moonPhase)
     $('#moonName').text("Name: " + moonName)
 
+    // URL links to moon .png files
     if (moonPhase === "New Moon") {
         $('#todaysMoon').attr("src", "Assets/images/moon-phases/NewMoon.png")
     }
@@ -34,6 +47,5 @@ $.ajax({
     if (moonPhase === "Waning Crescent") {
         $('#todaysMoon').attr("src", "Assets/images/moon-phases/WaningCrescent.png")
     }
-
 
 });

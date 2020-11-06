@@ -18,7 +18,7 @@ $(document).ready(function(){
     spaceWindscreen.on("click","img", planetImgClicked);
 
     const moonNameListItem = $("#moon-list-container");
-    moonNameListItem.on("click","p",moonNameClicked);
+    moonNameListItem.on("click touchstart","p",moonNameClicked);
 
     const bodyNameSpanItm = $(".body-name");
     const captinSpeaking = $("#captin-speaking");
@@ -41,7 +41,14 @@ $(document).ready(function(){
         // console.log(onloadData);
         solaireAjaxCall(onloadData);
         nasaAjaxCallAsteroid(onloadData);
-        $('.asteroidName').text(JSON.parse(localStorage.getItem('name'))); 
+        const fetchName = () => {
+          let userName = (JSON.parse(localStorage.getItem('name'))); 
+          if (userName === "" || userName === null) {
+            $('.asteroidName').text('friend');  
+          } else {
+          $('.asteroidName').text(JSON.parse(localStorage.getItem('name'))); 
+        }};
+        fetchName();  
 
 
     function planetImgClicked(){

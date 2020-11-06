@@ -121,4 +121,13 @@ $(document).ready(function () {
         $("#" + buttonGroup + "Image").attr("src", nextPhoto.href);
         $("#" + buttonGroup + "Image").val(allImageIndex);
     });
+
+    const fetchName = () => {
+        let userName = (JSON.parse(localStorage.getItem('name'))); 
+        if (userName === "" || userName === null) {
+          $('#galleryName').text('friend');  
+        } else {
+        $('#galleryName').text(JSON.parse(localStorage.getItem('name'))); 
+      }};
+      fetchName(); 
 });

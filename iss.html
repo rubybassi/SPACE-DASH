@@ -4,6 +4,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ISS-DASH</title>
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
     integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
     crossorigin="" />
@@ -13,21 +14,21 @@
     crossorigin=""></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css" />
 
-  <!-- <link rel="icon" href="Assets/images/logos/favicon.png" type="image/x-icon" /> --> -->
+  <!-- add icon link -->
+  <link rel="icon" href="Assets/images/logos/favicon.png" type="image/x-icon" />
 
   <!-- Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Bungee&display=swap" rel="stylesheet"> -->
+  <link href="https://fonts.googleapis.com/css2?family=Bungee&display=swap" rel="stylesheet">
   <link
     href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,700;1,400;1,700&family=Rajdhani:wght@500;700&family=Roboto:ital,wght@0,100;0,300;0,400;0,700;1,400;1,700&display=swap"
-    rel="stylesheet">
+    rel="stylesheet"/>
   <link
     href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Open+Sans:ital,wght@0,300;0,400;0,700;1,400;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,700;1,400;1,700&display=swap"
-    rel="stylesheet">
+    rel="stylesheet"/>
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;900&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="Assets/CSS/style.css" />
   <link rel="stylesheet" href="Assets/CSS/iss.css" />
-  <title>ISS-DASH</title>
 </head>
 
 <body>
@@ -110,7 +111,7 @@
             where the astronauts live and work are attached to the centre of the truss. Europe’s biggest ISS project is
             the Columbus science laboratory, where astronauts can carry out scientific experiments in weightless
             conditions. Many different types of experiments can take place both inside and outside this space
-            laboratory.</em>
+            laboratory.</p>
           <p><em>Source: https://www.esa.int
             </em></p>
         </div>
@@ -121,6 +122,7 @@
     <div class="ui grid stackable container">
       <div class="column">
         <div class="ui center aligned padded segment" id="btnCard">
+          <!-- button content error?  -->
           <button id="userBtn" class=" big ui button">
             <h2>Hey <span class="personal issName"></span>, How fast is the ISS travelling? Click the spaceship to find
               out!</h2>
@@ -132,7 +134,7 @@
     </div>
   </div>
 
-</div>
+
 <!--VIDEO SECTION-->
 <div class="videoSection" id="videos">
   <!--16 COLUMN ROW / LIVE STREAM INTRO-->
@@ -140,9 +142,9 @@
     <div class="column">
       <div class="ui padded segment">
         <h2>ISS Live Stream</h2>
-        <strong>
-          <p>Watch live footage of earth from space!</p>
-        </strong>
+        <p>
+          <strong>Watch live footage of earth from space!</strong>
+        </p>
         <p>During "loss of signal" periods, you will see a blue screen. Since the station orbits the Earth once every
           90 minutes, it experiences a sunrise or a sunset about every 45 minutes. When the station is in darkness,
           external camera video may appear black, but can sometimes provide spectacular views of lightning or city
