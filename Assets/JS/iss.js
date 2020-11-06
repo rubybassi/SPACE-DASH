@@ -18,7 +18,14 @@ let country = "";
 $(function () {
 
 // Gets name from local storage for personalisation  
- $('.issName').text(JSON.parse(localStorage.getItem('name'))); 
+const fetchName = () => {
+  let userName = (JSON.parse(localStorage.getItem('name'))); 
+  if (userName === "" || userName === null) {
+    $('.issName').text('friend');  
+  } else {
+  $('.issName').text(JSON.parse(localStorage.getItem('name'))); 
+}};
+fetchName()
 
 // Generate map with Leaflet.js library map method setting default lat, long and scale
 let issMap = L.map('mapid').setView([0, 0], 2);
