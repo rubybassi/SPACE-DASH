@@ -48,6 +48,11 @@ $(document).ready(function () {
           // console.log("welcome session cadet", GSS);
           saveSession(GSS);
             
+        } else if(retreiveSessionHistory > 99) {
+          GSS = 1;
+          // console.log("welcome session cadet", GSS);
+          saveSession(GSS);
+            
         } else {
             
           showSessionHistory = JSON.parse(retreiveSessionHistory);
@@ -90,8 +95,14 @@ $(document).ready(function () {
             // console.log("GH = ",showVisitHistory);
             saveHistory(showVisitHistory);
 
-          } else{
+          } else if(conditionSessionHistory > 99){
+            showVisitHistory++;
+            // console.log("GH = ",showVisitHistory);
+            saveHistory(showVisitHistory);
+            getSessionStorage(conditionSessionHistory);
+          }else {
             // console.log("your still here", showVisitHistory);
+            
           }
          
         }
