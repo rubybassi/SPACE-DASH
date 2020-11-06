@@ -13,6 +13,7 @@
   background-color: #95c4fc;
 }
 
+/* style each image box */
 .picturesBoxes {
   border: 5px solid;
   border-color: #ffa924;
@@ -24,10 +25,12 @@
   
 }
 
+/* centres the heading text */
 h3 {
   text-align: center;
 }
 
+/* styles images so they all look the same */
 #apolloImage,
 #moonImage,
 #sunImage,

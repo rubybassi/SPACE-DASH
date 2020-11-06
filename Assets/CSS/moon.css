@@ -1,17 +1,18 @@
-
+/* styling for entire page */
 * {
     box-sizing: border-box;
 }
-
+ /* styling for body */
 body {
     background-color:#283758;
 }
 
-
+/* added margin to container */
 div#wrapper {
     margin: 10px;
 }
 
+/* set format for images */
 #newMoon,
 #waxingCrescent,
 #firstQuarter,
@@ -39,6 +40,8 @@ div#wrapper {
     width: auto;
   
 }
+
+/* set styling for moon of the day box */
 #todaysMoonBox
 {
     border: 5px solid;
@@ -49,15 +52,4 @@ div#wrapper {
     height: 340px;
     width: 100%;
     
-}
-
-
-@media screen and (min-height: 720px){
-
-    footer {
-        position: fixed;
-        bottom: 0;
-        width: 100%;
-    }
-
 }
