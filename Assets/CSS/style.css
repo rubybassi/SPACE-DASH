@@ -113,6 +113,9 @@ h3 {
   width: 100%;
 }
 
+#picHeader {
+  text-align: center;
+}
 #potdIMG {
   height: auto;
   width: 75%;
@@ -187,6 +190,7 @@ footer {
 .ui.blue.button {
   background-color:#95C4FC;
   color: #283758;
+}
 
 @media screen and (max-width: 560px ){
     div.Near-earth-objects {
