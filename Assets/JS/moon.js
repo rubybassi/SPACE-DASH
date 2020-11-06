@@ -1,5 +1,14 @@
+const fetchName = () => {
+    let userName = (JSON.parse(localStorage.getItem('name'))); 
+    if (userName === "" || userName === null) {
+      $('.userName').text('friend');  
+    } else {
+    $('.userName').text(JSON.parse(localStorage.getItem('name'))); 
+  }};
+  fetchName();
+
 const queryURL = "https://api.farmsense.net/v1/moonphases/?d=1350526582";
-console.log(queryURL)
+
 $.ajax({
     url: queryURL,
     method: "GET"

@@ -2,13 +2,12 @@
 <html>
 
 <head>
+  <title>MOON-DASH</title>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title></title>
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="">
-  <!-- add icon link -->
+    <!-- add icon link -->
   <link rel="icon" href="Assets/images/logos/favicon.png" type="image/x-icon" />
   <!-- reset style sheet -->
   <link rel="stylesheet" href="Assets/CSS/reset.css" />
@@ -27,9 +26,6 @@
   <link rel="stylesheet" type="text/css" href="Assets/CSS/style.css" />
   <link rel="stylesheet" type="text/css" href="Assets/CSS/weather-icons.css" />
   <link rel="stylesheet" type="text/css" href="Assets/CSS/moon.css" />
-
-  <title>Moon Phases</title>
-
 </head>
 
 <body>
@@ -52,9 +48,16 @@
     </a>
   </nav>
   <div id="wrapper" class=" ui grid stackable container">
-    <div class="main-header sixteen wide column">
-      <h1 class="header">Moon Phases</h1>
+
+    <!--HEADER ROW-->
+    <div class="one column row">
+      <div class="sixteen wide column" id="headerText">
+        <div class="ui segment" id="seg1">
+          <h1> Welcome to MOON-DASH <span class= "userName"></span>!</h1>
+        </div>
+      </div>
     </div>
+
     <!-- Today's Moon Box -->
     <div class="four wide column" id="todaysMoonBox">
       <h2 class="header">Today's Moon</h2>
@@ -83,51 +86,48 @@
 
     <div class="four wide column">
       <h2 class="header"> New Moon</h2>
-      <img class="ui medium rounded image" id="newMoon" src="Assets\images\moon-phases\NewMoon.png" alt="New Moon">
+      <img class="ui medium rounded image" id="newMoon" src="Assets/images/moon-phases/NewMoon.png" alt="New Moon">
     </div>
 
     <div class="four wide column">
       <h2 class="header"> Waxing Crescent</h2>
-      <img class="ui medium rounded image" id="waxingCrescent" src="Assets\images\moon-phases\WaxingCrescent.png"
+      <img class="ui medium rounded image" id="waxingCrescent" src="Assets/images/moon-phases/WaxingCrescent.png"
         alt="Waxing Crescent">
     </div>
     <div class="four wide column">
       <h2 class="header"> First Quarter</h2>
-      <img class="ui medium rounded image" id="firstQuarter" src="Assets\images\moon-phases\FirstQuarter.png"
+      <img class="ui medium rounded image" id="firstQuarter" src="Assets/images/moon-phases/FirstQuarter.png"
         alt="First Quarter">
     </div>
     <div class="four wide column">
       <h2 class="header"> Waxing Gibbous</h2>
-      <img class="ui medium rounded image" id="waxingGibbous" src="Assets\images\moon-phases\WaxingGibbous.png"
+      <img class="ui medium rounded image" id="waxingGibbous" src="Assets/images/moon-phases/WaxingGibbous.png"
         alt="Waxing Gibbous">
     </div>
     <div class="four wide column">
       <h2 class="header"> Full Moon</h2>
-      <img class="ui medium rounded image" id="fullMoon" src="Assets\images\moon-phases\FullMoon.png" alt="Full Moon">
+      <img class="ui medium rounded image" id="fullMoon" src="Assets/images/moon-phases/FullMoon.png" alt="Full Moon">
     </div>
     <div class="four wide column">
       <h2 class="header"> Waning Gibbous</h2>
-      <img class="ui medium rounded image" id="waningGibbous" src="Assets\images\moon-phases\WaningGibbous.png"
+      <img class="ui medium rounded image" id="waningGibbous" src="Assets/images/moon-phases/WaningGibbous.png"
         alt="Waning Gibbous">
     </div>
     <div class="four wide column">
       <h2 class="header"> Third Quarter</h2>
-      <img class="ui medium rounded image" id="thirdQuarter" src="Assets\images\moon-phases\ThirdQuarter.png"
+      <img class="ui medium rounded image" id="thirdQuarter" src="Assets/images/moon-phases/ThirdQuarter.png"
         alt="Third Quarter">
     </div>
     <div class="four wide column">
       <h2 class="header"> Waning Crescent</h2>
-      <img class="ui medium rounded image" id="waningCrescent" src="Assets\images\moon-phases\WaningCrescent.png"
+      <img class="ui medium rounded image" id="waningCrescent" src="Assets/images/moon-phases/WaningCrescent.png"
         alt="Waning Cresent">
     </div>
   </div>
-
-
   <!-- footer -->
   <footer>
     © Copyright 2020
   </footer>
-
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.13/semantic.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
