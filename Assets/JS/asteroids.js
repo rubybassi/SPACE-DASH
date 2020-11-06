@@ -48,7 +48,7 @@ $(document).ready(function(){
         
         let bodyName = $(this).attr("alt");
         // let bodyName = "no-data";
-        console.log(bodyName);
+        console.log("bodyName" ,bodyName);
  
         solaireAjaxCall(bodyName);
 
@@ -101,6 +101,8 @@ $(document).ready(function(){
 
         const moonNameadjustment1 = moonName.replaceAll("è","e");
         const moonNameadjustment2 = moonNameadjustment1.replaceAll("é","e");
+        let moonNameadjustment3 = moonNameadjustment2.replaceAll("ï","i");
+        console.log("adjusted moon name = " + moonNameadjustment3);
 
         if (moonName == "There are no moons"){
 
@@ -119,19 +121,21 @@ $(document).ready(function(){
             gravityContainer.text("");
             escapeContainer.text("");
 
-        }else if (moonName == "The Moon"){
+        } else if (moonName == "The Moon"){
 
             console.log("moonName has been caught as The Moon");
 
-            moonNameadjustment2 = "moon";
-            solaireAjaxCall(moonNameadjustment2);
+            moonNameadjustment3 = "moon";
+            solaireAjaxCall(moonNameadjustment3);
     
             bodyNameSpanItm.text(moonName);
             captinSpeaking.text(moonName);
 
-        }else{
+        } else {
+
+            console.log("moonName hasnot been caught");
             
-            solaireAjaxCall(moonNameadjustment2);
+            solaireAjaxCall(moonNameadjustment3);
     
             bodyNameSpanItm.text(moonName);
             captinSpeaking.text(moonName);
@@ -202,7 +206,19 @@ $(document).ready(function(){
             }
 
         } else {
-            orbitAroundContainer.html('<h3 class="data-name">Orbiting Around:' + orbitAround.planet + '</h3>');
+            console.log("orbitAround.planet  = ", orbitAround.planet );
+            let frenchReferenceCatch = orbitAround.planet;
+            if (orbitAround.planet == "terre"){
+                console.log("changing french reference earth");
+                frenchReferenceCatch = "Earth";
+            } else if (orbitAround.planet == "saturne"){
+                console.log("changing french reference earth");
+                frenchReferenceCatch = "Saturn";
+            } else if (orbitAround.planet == "pluton"){
+                console.log("changing french reference earth");
+                frenchReferenceCatch = "Pluto";
+            }
+            orbitAroundContainer.html('<h3 class="data-name">Orbiting Around: ' + frenchReferenceCatch + '</h3>');
         }
 
         let tilt = receivedbodyData.axialTilt;
@@ -245,7 +261,7 @@ $(document).ready(function(){
         moonListContainer.empty();
 
         if (moonArray == null){
-            moonListContainer.append('<p class="moon-name"> There are no moons </p>');
+            moonListContainer.append('<p class="moon-name">' + "There are no moons" + '</p>');
         } else if (moonArray[0].moon === "La Lune"){
 
             moonListContainer.append('<p class="moon-name">' + "The Moon" + "</p>");
@@ -377,6 +393,7 @@ $(document).ready(function(){
         neoAsteriodListContainer.text("Sorry something crashed into your asteroids and we can't display them at this time.")
     }
 
+    // Near earth comets 
     // function nasaAjaxCallComet(passbodyid) {
 
     //     // let dateMin = "2019-02-16"; 
