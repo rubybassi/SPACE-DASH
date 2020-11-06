@@ -41,7 +41,14 @@ $(document).ready(function(){
         // console.log(onloadData);
         solaireAjaxCall(onloadData);
         nasaAjaxCallAsteroid(onloadData);
-        $('.asteroidName').text(JSON.parse(localStorage.getItem('name'))); 
+        const fetchName = () => {
+          let userName = (JSON.parse(localStorage.getItem('name'))); 
+          if (userName === "" || userName === null) {
+            $('.asteroidName').text('friend');  
+          } else {
+          $('.asteroidName').text(JSON.parse(localStorage.getItem('name'))); 
+        }};
+        fetchName();  
 
 
     function planetImgClicked(){
