@@ -38,17 +38,24 @@ $(document).ready(function(){
     const onloadData = "earth";
         neoAsteriodListContainer.text("Fetching your asteroids...");
         captinSpeaking.text("Earth");
-        console.log(onloadData);
+        // console.log(onloadData);
         solaireAjaxCall(onloadData);
         nasaAjaxCallAsteroid(onloadData);
-        $('.asteroidName').text(JSON.parse(localStorage.getItem('name'))); 
+        const fetchName = () => {
+          let userName = (JSON.parse(localStorage.getItem('name'))); 
+          if (userName === "" || userName === null) {
+            $('.asteroidName').text('friend');  
+          } else {
+          $('.asteroidName').text(JSON.parse(localStorage.getItem('name'))); 
+        }};
+        fetchName();  
 
 
     function planetImgClicked(){
         
         let bodyName = $(this).attr("alt");
         // let bodyName = "no-data";
-        console.log(bodyName);
+        // console.log("bodyName" ,bodyName);
  
         solaireAjaxCall(bodyName);
 
@@ -64,7 +71,7 @@ $(document).ready(function(){
     }
 
     function adjustReferenceForAsteroid(referenceToChange){
-        console.log("referenceToChange",referenceToChange);
+        // console.log("referenceToChange",referenceToChange);
 
         if (referenceToChange == "mercury"){
             // console.log("mercury has been chosen");
@@ -97,14 +104,16 @@ $(document).ready(function(){
         // console.log("the click is fireing");
 
         let moonName = $(this).text();
-        console.log("moon name clicked",moonName);
+        // console.log("moon name clicked",moonName);
 
         const moonNameadjustment1 = moonName.replaceAll("è","e");
         const moonNameadjustment2 = moonNameadjustment1.replaceAll("é","e");
+        let moonNameadjustment3 = moonNameadjustment2.replaceAll("ï","i");
+        // console.log("adjusted moon name = " + moonNameadjustment3);
 
         if (moonName == "There are no moons"){
 
-            console.log("moonName has been caught as There are no moons");
+            // console.log("moonName has been caught as There are no moons");
 
             captinSpeaking.text("This is your captin speaking...");
             isThisAPlanet.text("Woops! this is not a moon, there is no data for this action. ");
@@ -119,19 +128,21 @@ $(document).ready(function(){
             gravityContainer.text("");
             escapeContainer.text("");
 
-        }else if (moonName == "The Moon"){
+        } else if (moonName == "The Moon"){
 
-            console.log("moonName has been caught as The Moon");
+            // console.log("moonName has been caught as The Moon");
 
-            moonNameadjustment2 = "moon";
-            solaireAjaxCall(moonNameadjustment2);
+            moonNameadjustment3 = "moon";
+            solaireAjaxCall(moonNameadjustment3);
     
             bodyNameSpanItm.text(moonName);
             captinSpeaking.text(moonName);
 
-        }else{
+        } else {
+
+            // console.log("moonName hasnot been caught");
             
-            solaireAjaxCall(moonNameadjustment2);
+            solaireAjaxCall(moonNameadjustment3);
     
             bodyNameSpanItm.text(moonName);
             captinSpeaking.text(moonName);
@@ -153,7 +164,7 @@ $(document).ready(function(){
     }
     
     function dealWithBodyData(receivedbodyData, receivedbodyid){
-        console.log("body-data = ",receivedbodyData,"body-id = ", receivedbodyid);
+        // console.log("body-data = ",receivedbodyData,"body-id = ", receivedbodyid);
 
         let isAPlanet = receivedbodyData.isPlanet;
         // console.log("is a planet?",isAPlanet);
@@ -202,7 +213,19 @@ $(document).ready(function(){
             }
 
         } else {
-            orbitAroundContainer.html('<h3 class="data-name">Orbiting Around:' + orbitAround.planet + '</h3>');
+            // console.log("orbitAround.planet  = ", orbitAround.planet );
+            let frenchReferenceCatch = orbitAround.planet;
+            if (orbitAround.planet == "terre"){
+                // console.log("changing french reference earth");
+                frenchReferenceCatch = "Earth";
+            } else if (orbitAround.planet == "saturne"){
+                // console.log("changing french reference earth");
+                frenchReferenceCatch = "Saturn";
+            } else if (orbitAround.planet == "pluton"){
+                // console.log("changing french reference earth");
+                frenchReferenceCatch = "Pluto";
+            }
+            orbitAroundContainer.html('<h3 class="data-name">Orbiting Around: ' + frenchReferenceCatch + '</h3>');
         }
 
         let tilt = receivedbodyData.axialTilt;
@@ -234,9 +257,9 @@ $(document).ready(function(){
         let escapeSpeedValue = receivedbodyData.escape
         
         massContainer.html('<p class="data-name">Mass: </p><h3>' + massRounded + " x 10<sup>" + massExponent + "</sup> kg </h3>");
-        volumeContainer.html('<p class="data-name">Volume: </p><h3>' + volumeRounded + " x 10<sup>" + volumeExponent + "</sup> kg </h3>");
-        gravityContainer.html('<p class="data-name">Gravity: </p><h3>' + gravityValue + "m/s<sup>2</sup> </h3>");
-        escapeContainer.html('<p class="data-name">Escape Speed: </p><h3>' + escapeSpeedValue + "m/s<sup>-1</sup> </h3>");
+        volumeContainer.html('<p class="data-name">Volume: </p><h3>' + volumeRounded + " x 10<sup>" + volumeExponent + "</sup> kg<sup>3</sup> </h3>");
+        gravityContainer.html('<p class="data-name">Gravity: </p><h3>' + gravityValue + " ms<sup>-2</sup> </h3>");
+        escapeContainer.html('<p class="data-name">Escape Speed: </p><h3>' + escapeSpeedValue + " ms<sup>-1</sup> </h3>");
 
         // moonListContainer
         let moonArray = receivedbodyData.moons;
@@ -245,7 +268,7 @@ $(document).ready(function(){
         moonListContainer.empty();
 
         if (moonArray == null){
-            moonListContainer.append('<p class="moon-name"> There are no moons </p>');
+            moonListContainer.append('<p class="moon-name">' + "There are no moons" + '</p>');
         } else if (moonArray[0].moon === "La Lune"){
 
             moonListContainer.append('<p class="moon-name">' + "The Moon" + "</p>");
@@ -280,15 +303,14 @@ $(document).ready(function(){
     }
 
     
-    
     function nasaAjaxCallAsteroid(passbodyid) {
         
         // console.log("nasa Ajax has body id =", passbodyid);
         const formatDate = moment().format("YYYY-MM-DD");
-        console.log("formatDate",formatDate);
+        // console.log("formatDate",formatDate);
         
         const todayDate = moment().format("YYYY-MM-DD");
-        console.log("todayDate", todayDate);
+        // console.log("todayDate", todayDate);
 
         let dateMin = todayDate; 
         // let dateMax = "2019-03-16";
@@ -309,25 +331,11 @@ $(document).ready(function(){
     
         }).catch(noAsteroidResults);
 
-        // $.ajax({ url: nasaURL, method: "GET" }).then(function(passneoData){
-
-        //     console.log("passneoData count = ", passneoData.count);
-        //     const neoDataCount = passneoData.count
-        //     if ( neoDataCount > 5){
-
-        //         dealWithAsteroidData(passneoData);
-        //     } else {
-
-        //         for(count = neoDataCount; count<5; count++);
-
-        //     }
-
-
-        // }).catch(noAsteroidResults);
+        
     }
 
     function dealWithAsteroidData(DealWneoData){
-        console.log("Asteroid data = ",DealWneoData);
+        // console.log("Asteroid data = ",DealWneoData);
         // console.log("Asteroid count = ",DealWneoData.count);
         // console.log("Asteroid count = ",DealWneoData.data[0][0]);
         // console.log("Asteroid count = ",DealWneoData.data[0][3]);
@@ -340,37 +348,74 @@ $(document).ready(function(){
             neoAsteriodListContainer.empty();
             neoAsteriodListContainer.text("There have been no asteroids pass close by at this time");
 
+        } else if (asteroidCount > "5"){
+
+          // console.log("most asteroids");
+            // console.log("DealWneoData.count",Number(DealWneoData.count));
+            
+                neoAsteriodListContainer.html(function(){
+                  let htmlToBeRendered = DealWneoData.count + " Asteroids have close-approach status. <br/><br/>" + "<h3>Top 5 closest:</h3><br/>";
+
+                  for (var i = 0 ; i < 5; i++){
+                  let forLoopHtml = "Name: " + DealWneoData.data[i][0] + "<br/>" +
+                  "Date: " + DealWneoData.data[i][3] + "<br/>" +
+                  "Approach Speed: " + Math.round(DealWneoData.data[i][7]) + " km/s <br/>" +
+                  "Approach distance: " + Math.round(DealWneoData.data[i][4]*150000000) + " km <br/><br/>" 
+                  htmlToBeRendered += forLoopHtml; 
+                  };
+                  return htmlToBeRendered; 
+                }
+                
+                );
+
         } else {
 
-            console.log("some asteroids");
-            neoAsteriodListContainer.html(
-                DealWneoData.count + " Asteroids have close-approach status. <br/>" +
-                "<h3>Top 5 closest:</h3><br/>" +
-                "Name: " + DealWneoData.data[0][0] + "<br/>" +
-                "Date: " + DealWneoData.data[0][3] + "<br/>" +
-                "Approach Speed: " + Math.round(DealWneoData.data[0][7]) + " km/s <br/>" +
-                "Approach distance: " + Math.round(DealWneoData.data[0][4]*150000000) + " km <br/><br/>" +
+            // console.log("some asteroids");
+            // console.log("DealWneoData.count",Number(DealWneoData.count));
+            
+                neoAsteriodListContainer.html(function(){
+                  let htmlToBeRendered = DealWneoData.count + " Asteroids have close-approach status. <br/><br/>" + "<h3>The Asteroids are:</h3><br/>";
+
+                  for (var i = 0 ; i < Number(DealWneoData.count); i++){
+                  let forLoopHtml = "Name: " + DealWneoData.data[i][0] + "<br/>" +
+                  "Date: " + DealWneoData.data[i][3] + "<br/>" +
+                  "Approach Speed: " + Math.round(DealWneoData.data[i][7]) + " km/s <br/>" +
+                  "Approach distance: " + Math.round(DealWneoData.data[i][4]*150000000) + " km <br/><br/>" 
+                  htmlToBeRendered += forLoopHtml; 
+                  };
+                  return htmlToBeRendered; 
+                }
+                
+                );
+            
+            // neoAsteriodListContainer.html(
+            //     DealWneoData.count + " Asteroids have close-approach status. <br/><br/>" +
+            //     "<h3>Top 5 closest:</h3><br/>" +
+            //     "Name: " + DealWneoData.data[0][0] + "<br/>" +
+            //     "Date: " + DealWneoData.data[0][3] + "<br/>" +
+            //     "Approach Speed: " + Math.round(DealWneoData.data[0][7]) + " km/s <br/>" +
+            //     "Approach distance: " + Math.round(DealWneoData.data[0][4]*150000000) + " km <br/><br/>" +
     
-                "Name: " + DealWneoData.data[1][0] + "<br/>" +
-                "Date: " + DealWneoData.data[1][3] + "<br/>" +
-                "Approach Speed: " + Math.round(DealWneoData.data[1][7]) + " km/s <br/>" +
-                "Approach distance: " + Math.round(DealWneoData.data[1][4]*150000000) + " km <br/><br/>" +
+            //     "Name: " + DealWneoData.data[1][0] + "<br/>" +
+            //     "Date: " + DealWneoData.data[1][3] + "<br/>" +
+            //     "Approach Speed: " + Math.round(DealWneoData.data[1][7]) + " km/s <br/>" +
+            //     "Approach distance: " + Math.round(DealWneoData.data[1][4]*150000000) + " km <br/><br/>" +
     
-                "Name: " + DealWneoData.data[2][0] + "<br/>" +
-                "Date: " + DealWneoData.data[2][3] + "<br/>" +
-                "Approach Speed: " + Math.round(DealWneoData.data[2][7]) + " km/s <br/>" +
-                "Approach distance: " + Math.round(DealWneoData.data[2][4]*150000000) + " km <br/><br/>" +
+            //     "Name: " + DealWneoData.data[2][0] + "<br/>" +
+            //     "Date: " + DealWneoData.data[2][3] + "<br/>" +
+            //     "Approach Speed: " + Math.round(DealWneoData.data[2][7]) + " km/s <br/>" +
+            //     "Approach distance: " + Math.round(DealWneoData.data[2][4]*150000000) + " km <br/><br/>" +
     
-                "Name: " + DealWneoData.data[3][0] + "<br/>" +
-                "Date: " + DealWneoData.data[3][3] + "<br/>" +
-                "Approach Speed: " + Math.round(DealWneoData.data[3][7]) + " km/s <br/>" +
-                "Approach distance: " + Math.round(DealWneoData.data[3][4]*150000000) + " km <br/><br/>" +
+            //     "Name: " + DealWneoData.data[3][0] + "<br/>" +
+            //     "Date: " + DealWneoData.data[3][3] + "<br/>" +
+            //     "Approach Speed: " + Math.round(DealWneoData.data[3][7]) + " km/s <br/>" +
+            //     "Approach distance: " + Math.round(DealWneoData.data[3][4]*150000000) + " km <br/><br/>" +
     
-                "Name: " + DealWneoData.data[4][0] + "<br/>" +
-                "Date: " + DealWneoData.data[4][3] + "<br/>" +
-                "Approach Speed: " + Math.round(DealWneoData.data[4][7]) + " km/s <br/>" +
-                "Approach distance: " + Math.round(DealWneoData.data[4][4]*150000000) + " km <br/><br/>" 
-            );
+            //     "Name: " + DealWneoData.data[4][0] + "<br/>" +
+            //     "Date: " + DealWneoData.data[4][3] + "<br/>" +
+            //     "Approach Speed: " + Math.round(DealWneoData.data[4][7]) + " km/s <br/>" +
+            //     "Approach distance: " + Math.round(DealWneoData.data[4][4]*150000000) + " km <br/><br/>" 
+            //  );
         }
     }
 
@@ -378,6 +423,7 @@ $(document).ready(function(){
         neoAsteriodListContainer.text("Sorry something crashed into your asteroids and we can't display them at this time.")
     }
 
+    // Near earth comets 
     // function nasaAjaxCallComet(passbodyid) {
 
     //     // let dateMin = "2019-02-16"; 
