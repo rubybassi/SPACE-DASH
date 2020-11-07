@@ -72,6 +72,8 @@ If the child's session storage exceeds 100, it is reset and the local storage vi
 
 #### Asteroid Page
 
+![Asteroid page](Assets/images/screen-shots/asteroid-full.jpg)
+
 This page displays the close approach objects for all bodies selected within the Nasa API. For this API call we decided that the best input was to control what the children chose with button selectors rather than an input where spellings could be made incorrectly. 
 
 For the Nasa API call the bodies had their own ID names that had to be reconfigured when the "jupiter" button is clicked and "jupiter is sent to the API, it is caught and "juptr" sent to the API. 
