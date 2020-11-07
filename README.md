@@ -3,6 +3,8 @@
 ## Description
 This project is designed to create an interactive learning dashboard with rich media.
 To include images and video utilising NASA and other space related APIs.
+The development team including Sandy Bassi, John Goodby, Sam Wakelam and Hannah Cloves.
+
 
 #### Features:
 * Picture of the day (Nasa)
@@ -10,10 +12,13 @@ To include images and video utilising NASA and other space related APIs.
 * Find and track asteroids (Nasa)
 * Return data on difffernet bodies in the solar system. 
 * ISS live feed video 
-* ISS live position tracking
+* ISS live map position tracking
 * Moon Phases 
 
 Target audience: Young learners passionate about astronomy. (primary aged)
+
+#### User story:
+As a young space enthusiast, I want an app that gets real-time information on space and allows me to track the ISS, discover the current moon phase, view space-related images, and track asteroids so that i can enhance my learning and become a future astronaut.
 
 The motivation for the project was to create a fun learning and interactive experience for children that have an interest in space. 
 
@@ -32,7 +37,7 @@ Requirments for the project included client side storage and at least two API.
 
 The page loads everything needed to run straight from the github pages enviroment. [Access this page](https://hannahcloves.github.io/SPACE-DASH/).
 
-The child can from the index.html page enter his/her name to add personalisation throughout the website. The name entered will apear on each subsequent page. 
+The child can from the index.html page enter his/her name to add personalisation throughout the website. The name entered will apear on each subsequent page using local storage. 
 
 
 #### APIs used:   
@@ -42,7 +47,7 @@ The child can from the index.html page enter his/her name to add personalisation
 [Moon Phases](https://api.farmsense.net/v1/moonphases/?d=135052658)     
 [The Solar System OpenData](https://api.le-systeme-solaire.net/en/) 
 
-Due to an insecure server usage we have had to stop using the ISS api and can no longer produce the information about the number of people in space or their details. We have changed this to feature the phases of the Moon. 
+Due to an insecure server usage, we have had to stop using the ISS api and can no longer produce the information about the number of people in space or their details. We have changed this to feature the phases of the Moon. 
 
 ## Proposed
 
@@ -89,6 +94,14 @@ The Solar system API is used to return the information about the individual bodi
 
 Each planet selection changes the close aproach data for asteroids approaching close to that planet.
 
+#### ISS Page
+
+This page displays an interactive map that is tracking the International Space Station every 2 seconds, and shows the ISS marker move in real-time. The map itself is built with Leaflet.js library and Mapbox API, with the latter producing the map data and raster tiles.
+
+There is also a data dashboard which is collecting real-time data on the ISS including its velocity, coordinates, visibility and more – this was produced using the Where's the ISS At API. Another nice feature is the place location which uses Mapbox reverse geolocation. 
+
+Additional rich media were added to the page such as embedded YouTube live video feeds of the ISS and views of earth from space. 
+
 #### Gallery Page
 On load, this page gives a brief introduction of what you can do on this page. 
 
@@ -97,6 +110,7 @@ You can then see 4 sepearate boxes which hold different sets of images. To make 
 Apollo Mission, The Moon, The Sun and The Galaxies. 
 
 These are all pulling from the NASA Api. More specifcally the Image Library.
+
 
 ## Improvements
 
@@ -107,6 +121,9 @@ Additions that I would like to make to this page, include:
 * Adding comet data to the page simalar to the Asteroids list. This code and API call are set up in the asteroids.js file. There are far less comets than there are asteroids and so a little time is needed to find a good date period to select from. 
 
 * Adding major "need to know" asteroids and comets to the page like the planets have been displayed. For example Hally's comet. The comet data is all available in the Solar system Api and Nasa provides close aproach data. 
+
+#### Homepage 
+* Using a modal component on first page load to take the user name input rather than a static button on the page.
 
 ## Updates 
 
@@ -127,6 +144,7 @@ I would really like to investigate this further and hopefully generate Mission s
 
 #### Space Quiz
 
+We would like to incoporate a space quiz where the user can collect another badge based on their quiz score, providing another interactive element to the application, and also allowing the user to test their knowledge gained during thier site visit.
 
 ## Credits 
 
