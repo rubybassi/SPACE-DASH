@@ -68,6 +68,10 @@ Our initial design:
 
 ## Usage 
 
+## Index Page
+![Index](Assets/images/screen-shots/Index.PNG)
+![indexMobile](Assets/images/screen-shots/indexMobile.PNG)
+
 #### Ranger - Rank 
 The number of visits the child makes to the site will have an effect on their space rank. The more often they visit or the more time spent learning on the site will increase their rankings. 
 
@@ -82,7 +86,8 @@ This is a specific part of the API where NASA choosed the picture of the day.
 
 #### Asteroid Page
 
-![Asteroid page](Assets/images/screen-shots/asteroid-full.jpg)
+![Asteroid page](Assets/images/screen-shots/Asteroids.PNG)
+![asteroidsMobile](Assets/images/screen-shots/asteroidsMobile.PNG)
 
 This page displays the close approach objects for all bodies selected within the Nasa API. For this API call we decided that the best input was to control what the children chose with button selectors rather than an input where spellings could be made incorrectly. 
 
@@ -95,6 +100,8 @@ The Solar system API is used to return the information about the individual bodi
 Each planet selection changes the close aproach data for asteroids approaching close to that planet.
 
 #### ISS Page
+![ISS Page](Assets/images/screen-shots/ISS.PNG)
+![ISSMobile](Assets/images/screen-shots/ISSMobile.PNG)
 
 This page displays an interactive map that is tracking the International Space Station every 2 seconds, and shows the ISS marker move in real-time. The map itself is built with Leaflet.js library and Mapbox API, with the latter producing the map data and raster tiles.
 
@@ -103,6 +110,9 @@ There is also a data dashboard which is collecting real-time data on the ISS inc
 Additional rich media were added to the page such as embedded YouTube live video feeds of the ISS and views of earth from space. 
 
 #### Gallery Page
+![Gallery](Assets/images/screen-shots/Gallery.PNG)
+![galleryMobile](Assets/images/screen-shots/galleryMobile.PNG)
+
 On load, this page gives a brief introduction of what you can do on this page. 
 
 You can then see 4 sepearate boxes which hold different sets of images. To make it more user friendly, these have already been assigned.
@@ -111,6 +121,14 @@ Apollo Mission, The Moon, The Sun and The Galaxies.
 
 These are all pulling from the NASA Api. More specifcally the Image Library.
 
+#### Moon Phases Page
+![Moon](Assets/images/screen-shots/Moon.PNG)
+![moonMobile](Assets/images/screen-shots/moonMobile.PNG)
+
+This page gives a brief overview of the moon phases and what they are called.
+
+We then display the current moon accompanied by the name of that moon.
+We then display all the 8 different phases so you know what is coming up next!
 
 ## Improvements
 
