@@ -75,7 +75,14 @@ Currently this uses session storage to catch each page load and local storage to
 
 If the child's session storage exceeds 100, it is reset and the local storage visit history is incremented, raising their rank. 
 
+#### Picture of the Day
+The picture of the day section is pulling once again from the NASA API. 
+
+This is a specific part of the API where NASA choosed the picture of the day.
+
 #### Asteroid Page
+
+![Asteroid page](Assets/images/screen-shots/asteroid-full.jpg)
 
 This page displays the close approach objects for all bodies selected within the Nasa API. For this API call we decided that the best input was to control what the children chose with button selectors rather than an input where spellings could be made incorrectly. 
 
@@ -95,6 +102,16 @@ There is also a data dashboard which is collecting real-time data on the ISS inc
 
 Additional rich media were added to the page such as embedded YouTube live video feeds of the ISS and views of earth from space. 
 
+#### Gallery Page
+On load, this page gives a brief introduction of what you can do on this page. 
+
+You can then see 4 sepearate boxes which hold different sets of images. To make it more user friendly, these have already been assigned.
+
+Apollo Mission, The Moon, The Sun and The Galaxies. 
+
+These are all pulling from the NASA Api. More specifcally the Image Library.
+
+
 ## Improvements
 
 #### Asteroid Page
@@ -109,6 +126,11 @@ Additions that I would like to make to this page, include:
 * Using a modal component on first page load to take the user name input rather than a static button on the page.
 
 ## Updates 
+
+### Gallery Page
+Add additional boxer the ISS and the Planets to tie back into the website.
+
+Search function for a more "advance user"
 
 #### Nasa Misson Design
 Part of the Nasa Api selection is an API called Misson Design. 
