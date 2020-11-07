@@ -95,12 +95,12 @@ p {
   font-size: 2rem;
 }
 
-#videos div.ui.padded.segment  {
+#videos article.ui.padded.segment  {
   background-color: #283758;
   
 }
 
-#videos div.ui.padded.segment p {
+#videos article.ui.padded.segment p {
   color: #95C4FC;
 }
 
@@ -108,7 +108,7 @@ p {
   background-color:#283758;
 }
 
-#map div.ui.red.segment {
+#map article.ui.red.segment {
   background-color: #95C4FC;
 }
 
