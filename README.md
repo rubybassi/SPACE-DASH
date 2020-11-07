@@ -70,6 +70,11 @@ Currently this uses session storage to catch each page load and local storage to
 
 If the child's session storage exceeds 100, it is reset and the local storage visit history is incremented, raising their rank. 
 
+#### Picture of the Day
+The picture of the day section is pulling once again from the NASA API. 
+
+This is a specific part of the API where NASA choosed the picture of the day.
+
 #### Asteroid Page
 
 This page displays the close approach objects for all bodies selected within the Nasa API. For this API call we decided that the best input was to control what the children chose with button selectors rather than an input where spellings could be made incorrectly. 
@@ -82,6 +87,15 @@ The Solar system API is used to return the information about the individual bodi
 
 Each planet selection changes the close aproach data for asteroids approaching close to that planet.
 
+#### Gallery Page
+On load, this page gives a brief introduction of what you can do on this page. 
+
+You can then see 4 sepearate boxes which hold different sets of images. To make it more user friendly, these have already been assigned.
+
+Apollo Mission, The Moon, The Sun and The Galaxies. 
+
+These are all pulling from the NASA Api. More specifcally the Image Library.
+
 ## Improvements
 
 #### Asteroid Page
@@ -93,6 +107,11 @@ Additions that I would like to make to this page, include:
 * Adding major "need to know" asteroids and comets to the page like the planets have been displayed. For example Hally's comet. The comet data is all available in the Solar system Api and Nasa provides close aproach data. 
 
 ## Updates 
+
+### Gallery Page
+Add additional boxer the ISS and the Planets to tie back into the website.
+
+Search function for a more "advance user"
 
 #### Nasa Misson Design
 Part of the Nasa Api selection is an API called Misson Design. 
