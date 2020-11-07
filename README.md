@@ -35,7 +35,7 @@ Requirments for the project included client side storage and at least two API.
 
 ## Installation
 
-The page loads everything needed to run straight from the github pages enviroment. [Access this page](https://hannahcloves.github.io/SPACE-DASH/).
+The page loads everything needed to run straight from the github pages enviroment. [Access this page](https://rubybassi.github.io/SPACE-DASH/).
 
 The child can from the index.html page enter his/her name to add personalisation throughout the website. The name entered will apear on each subsequent page using local storage. 
 
